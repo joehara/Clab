@@ -10,7 +10,7 @@ if ($sess_table<>teacher) {
 <meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
 <meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
 <link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
-<meta content="text/html; charset=TIS-620" http-equiv="content-type">
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
 <style type="text/css">
 <!--
 .style1 {font-size: 36px}
@@ -74,13 +74,13 @@ if ($sess_table<>teacher) {
         
         <!-- start of middle column -->
 <div id="templatemo_middle_column"><center>
-<h1>:: Section ที่ตรวจแล้ว ::</h1></center></b><br><br>
-[ <a href="main.php"> Main</a> &gt; <a href="mstudent.php"> manage student</a>&nbsp;&gt; Section ที่ตรวจแล้ว<br><br><br>
+<h1>:: Section เธ—เธตเนเธ•เธฃเธงเธเนเธฅเนเธง ::</h1></center></b><br><br>
+[ <a href="main.php"> Main</a> &gt; <a href="mstudent.php"> manage student</a>&nbsp;&gt; Section เธ—เธตเนเธ•เธฃเธงเธเนเธฅเนเธง<br><br><br>
 <table border="0">
   <tr bgcolor="#D3D3D3"> 
     
     <td>NO.</td>
-    <td>SECTION </td><td>ปีการศึกษา</td>
+    <td>SECTION </td><td>เธเธตเธเธฒเธฃเธจเธถเธเธฉเธฒ</td>
   </tr>
   <?
 	$count=1;
@@ -90,7 +90,7 @@ $resultx=mysql_db_query($dbname,$sqlx);
 $record=mysql_fetch_array($resultx);
 
 		
-				$sql="select student.section,student.year from Check_answer,SendAnswer,student where Check_answer.ref_answer=SendAnswer.answer_id and SendAnswer.ref_student=student.student_id and student.teach='$record[name]' GROUP BY student.section";
+				$sql="select student.section,student.year from check_answer,sendAnswer,student where check_answer.ref_answer=sendanswer.answer_id and sendanswer.ref_student=student.student_id and student.teach='$record[name]' GROUP BY student.section";
  		$result=mysql_db_query($dbname,$sql);
 	while($record=mysql_fetch_array($result)) {
 		

@@ -16,7 +16,7 @@ $MM=$_POST[MM];
 <html>
 <body>
 
-<meta http-equiv="Content-Type" content="text/html; charset=TIS-620" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <?
 
 $today=date("Y-m-d H:s:i"); 
@@ -24,7 +24,7 @@ $time_today=date("H:s:i");
 
 //echo"Date Diff =".DateDiff(
 if(DateTimeDiff($today,"$time $HH:$MM:00")<0){
-echo"�ѹ���������ҵ�駹��¡��һѨ�غѹ ��سҵ���ѹ��������������";
+echo"วันที่และเวลาตั้งน้อยกว่าปัจจุบัน กรุณาตั้งวันทีและเวลา่ใหม่";
 exit();
 }
 
@@ -39,14 +39,14 @@ $num=mysql_num_rows($result);
 
 
 if($num>0){
-	echo"<a href='fix_send.php'>�ա�á�˹�����㹡���觢ͧ Section ��к�����</a>";
+	echo"<a href='fix_send.php'>มีการกำหนดเวลาในการส่งของ Section ในระบบแล้ว</a>";
 	exit();
 }
 
 $sql2="insert into time_fix values('','$section','$year','$lesson','$record[teacher_id]','$time $HH:$MM:00')";
 $result2=mysql_db_query($dbname,$sql2);
 if($result2){
-echo"<a href='fix_send.php'>���º�������Ǥ�Ѻ</a>";
+echo"<a href='fix_send.php'>เรียบร้อยแล้วครับ</a>";
 }
 ?>
 </body>

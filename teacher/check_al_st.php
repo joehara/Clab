@@ -11,7 +11,7 @@ if ($sess_table<>teacher) {
 <meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
 <meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
 <link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
-<meta content="text/html; charset=TIS-620" http-equiv="content-type">
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
 <style type="text/css">
 <!--
 .style1 {font-size: 36px}
@@ -81,7 +81,7 @@ if ($sess_table<>teacher) {
   $page=$_GET[page];
 
 	include "../connect.php";
-	$sql="select student.name,student.student_id,student.section,Proposition.proposition,SendAnswer.code,Check_answer.code_comment,Check_answer.result,Check_answer.check_date,student.code_st,Proposition.ref_lesson,Time_use.time_start from Check_answer,SendAnswer,Proposition,student,Time_use  where Check_answer.ref_answer=SendAnswer.answer_id and SendAnswer.ref_question=Proposition.question_id and SendAnswer.ref_student=student.student_id and Time_use.ref_student=student.student_id and  Check_answer.check_id='$check_id'";
+	$sql="select student.name,student.student_id,student.section,proposition.proposition,sendanswer.code,check_answer.code_comment,check_answer.result,check_answer.check_date,student.code_st,proposition.ref_lesson,time_use.time_start from check_answer,sendanswer,proposition,student,time_use  where check_answer.ref_answer=sendanswer.answer_id and sendanswer.ref_question=proposition.question_id and sendanswer.ref_student=student.student_id and time_use.ref_student=student.student_id and  check_answer.check_id='$check_id'";
 $result=mysql_db_query($dbname,$sql);
 $record=mysql_fetch_array($result);
 
@@ -100,66 +100,66 @@ $check_date=$record[check_date];
     &nbsp;<br />
  <?
 if($page<>""){
-	echo"[<a href=\"main.php\">Main</a> &gt; <a href=\"mstudent.php\">manage student</a> &gt; <a href=\"report.php\"> Section ที่ส่งงานเข้ามา</a> &gt; <a href=\"report2.php?lesson=$lesson&section=$section\">บทที่ส่งงานเข้ามา</a> &gt;<a href=\"question_report.php?lesson=$lesson&section=$section\">ผู้ส่งข้อสอบ</a>&gt;<a href=\"question_report2.php?id=$student_id&lesson=$lesson&section=$section\">โจทย์ที่ทำส่ง</a>&gt;รายละเอียด</p>";
-	}else{
+	echo"[<a href=\"main.php\">Main</a> &gt; <a href=\"mstudent.php\">manage student</a> &gt; <a href=\"report.php\"> Section เธญเธฐเนเธฃเธซเธงเนเธฒ</a> &gt; <a href=\"report2.php?lesson=$lesson&section=$section\">เธญเธฐเนเธฃ2</a> &gt;<a href=\"question_report.php?lesson=$lesson&section=$section\">เธญเธฐเนเธฃ3</a>&gt;<a href=\"question_report2.php?id=$student_id&lesson=$lesson&section=$section\">เธญเธฐเนเธฃ4</a>&gt; เธญเธฐเนเธฃ5</p>";
+}else{
  echo"
-    [<a href=\"main.php\">Main</a> &gt; <a href=\"mstudent.php\">manage student</a> &gt; <a href=\"check_al.php\"> Section ที่ตรวจแล้ว</a> &gt; <a href=\"check_al2.php?lesson=$lesson&section=$section\">บทที่ ตรวจแล้ว</a> &gt;<a href=\"check_al3.php?lesson=$lesson&amp;section=$section\">ผู้ทำส่งข้อสอบ</a>&gt;<a href=\"check_al4.php?id=$student_id&lesson=$lesson&section=$section\">โจทย์ที่ทำส่ง</a>&gt;ผลคะแนน</p>";
-    }
-	?>
+[<a href=\"main.php\">Main</a> &gt; <a href=\"mstudent.php\">manage student</a>๏ฟฝ&gt; <a href=\"check_al.php\"> Section เธญเธฐเนเธฃ6</a> &gt; <a href=\"check_al2.php?lesson=$lesson&section=$section\">เธญเธฐเนเธฃ7</a> &gt;<a href=\"check_al3.php?lesson=$lesson&amp;section=$section\">เธญเธฐเนเธฃ8</a>&gt;<a href=\"check_al4.php?id=$student_id&lesson=$lesson&section=$section\">เธญเธฐเนเธฃ9</a>&gt;เธญเธฐเนเธฃ10</p>";
+}
+?>
 <form id="form1" name="form1" method="post" action="question_check2.php">
-<br> <br>  
+<br> <br>
 <table width="98%" border="0">
-    <tr>
-      <td width="11%">ชื่อผู้ส่ง :  </td>
-      <td width="47%"><?=$name?>
-        <input name="ref_answer" type="hidden" id="ref_answer" value="<?=$ans_id?>" />
-        <input name="teacher_name" type="hidden" id="teacher_name" value="<?=$teacher_name?>" /></td>
-      <td width="42%">&nbsp;</td>
-    </tr>
-    <tr>
-      <td>รหัสนักศึกษา :</td>
-      <td><?=$code_st?></td>
-      <td>&nbsp;</td>
-    </tr>
-    <tr>
-      <td>section:</td>
-      <td><?=$section?></td>
-      <td>&nbsp;</td>
-    </tr>
-    <tr>
-      <td>วันที่ทำส่ง:</td>
-      <td><?=$time_start?></td>
-      <td>&nbsp;</td>
-    </tr>
-    <tr>
-      <td>โจทย์:</td>
-      <td><?=$question?></td>
-      <td>&nbsp;</td>
-    </tr>
-    <tr>
-      <td height="326">Code ที่ส่ง:</td>
-      <td><textarea name="textarea2" id="textarea2" cols="70" rows="20" readonly="readonly"><?=$code?>
-        </textarea></td>
-      <td><label></label></td>
-    </tr>
-    <tr>
-      <td>Comment:
-      <label> </label></td>
-      <td><?=$comment?></td>
-      <td>&nbsp;</td>
-    </tr>
-    <tr>
-      <td>คะแนน</td>
-      <td><?=$result?></td>
-      <td>&nbsp;</td>
-    </tr>
-    <tr>
-      <td>วันที่ตรวจ</td>
-      <td><?=displaydate($check_date)?></td>
-      <td><label></label></td>
-    </tr>
-  </table>
-  <p>&nbsp;</p>
+<tr>
+<td width="11%">เธญเธฐเนเธฃ 11 : </td>
+<td width="47%"><?=$name?>
+<input name="ref_answer" type="hidden" id="ref_answer" value="<?=$ans_id?>" />
+<input name="teacher_name" type="hidden" id="teacher_name" value="<?=$teacher_name?>" /></td>
+<td width="42%">&nbsp;</td>
+</tr>
+<tr>
+<td>เธญเธฐเนเธฃ 12 :</td>
+<td><?=$code_st?></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>section:</td>
+<td><?=$section?></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>เธญเธฐเนเธฃ 13</td>
+<td><?=$time_start?></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>เธญเธฐเนเธฃ 14</td>
+<td><?=$question?></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td height="326">Code เธญเธฐเนเธฃ15:</td>
+<td><textarea name="textarea2" id="textarea2" cols="70" rows="20" readonly="readonly"><?=$code?>
+</textarea></td>
+<td><label></label></td>
+</tr>
+<tr>
+<td>Comment:
+<label> </label></td>
+<td><?=$comment?></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>เธญเธฐเนเธฃ16</td>
+<td><?=$result?></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>เธญเธฐเนเธฃ17</td>
+<td><?=displaydate($check_date)?></td>
+<td><label></label></td>
+</tr>
+</table>
+<p>&nbsp;</p>
 </form>
 </div>
 </div>

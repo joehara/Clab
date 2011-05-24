@@ -11,11 +11,11 @@ if ($sess_table<>teacher) {
   $year=$_GET[year];
 ?>
 <HTML>
-<HEAD><title>ผู้ส่งข้อสอบ</title></HEAD>
+<HEAD><title>เธเธนเนเธชเนเธเธเนเธญเธชเธญเธ</title></HEAD>
 <meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
 <meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
 <link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
-<meta content="text/html; charset=TIS-620" http-equiv="content-type">
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
 <style type="text/css">
 <!--
 .style1 {font-size: 36px}
@@ -80,38 +80,38 @@ if ($sess_table<>teacher) {
         <!-- start of middle column -->
 <div id="templatemo_middle_column">
 <center>
-<h1>:: บทที่ส่งเข้ามา ::</h1></center><br><br>
-<p>[<a href="main.php">Main</a> &gt; <a href="mstudent.php">manage student</a> &gt; <a href="report.php"> Section ที่ส่งงานเข้ามา</a> &gt; <a href="report2.php?id=<?$student_id?>&lesson=<?=$lesson?>&section=<?=$section?>&year=<?=$year?>">นักศึกษาที่ส่งงานเข้ามา</a> &gt;บทที่ส่งเข้ามา</p><br><br>
+<h1>:: เธเธ—เธ—เธตเนเธชเนเธเน€เธเนเธฒเธกเธฒ ::</h1></center><br><br>
+<p>[<a href="main.php">Main</a> &gt; <a href="mstudent.php">manage student</a>
+&gt; <a href="report.php"> Section เธฃเธฒเธข1</a> &gt; <a href="report2.php?id=<?$student_id?>&lesson=<?=$lesson?>&section=<?=$section?>&year=<?=$year?>">เธฃเธฒเธข2</a> &gt; เธฃเธฒเธข3 </p><br><br>
 <table border="0">
-  <tr bgcolor="#D3D3D3"> 
-    
-    <td>NO.</td>
-    <td>บทที่ส่งเข้ามา</td>
-    <td>จำนวนข้อยาก</td>
-    <td>จำนวนข้อง่าย</td>
+<tr bgcolor="#D3D3D3">
+<td>NO.</td>
+<td>เธฃเธฒเธข4</td>
+<td>เธฃเธฒเธข5</td>
+<td>เธฃเธฒเธข6</td>
 
-  </tr>
-  <?
+</tr>
+<?
 
-	$count=1;
-	include "../connect.php";
-	$sql="select * from SendAnswer,Proposition,student,HeadLesson  where (SendAnswer.ref_question=Proposition.question_id and SendAnswer.ref_student=student.student_id and Proposition.ref_lesson=HeadLesson.lesson) and student.student_id='$student_id'  GROUP BY Proposition.ref_lesson  order by Proposition.ref_lesson";
-	$result=mysql_db_query($dbname,$sql);
-	while($record=mysql_fetch_array($result)) {
-	
-		echo "
-		<tr> 
-			<td>$count</td>
-			<td><a href=\"question_report2.php?id=$student_id&lesson=$record[ref_lesson]&section=$record[section]&year=$record[year]\">lesson $record[lesson] $record[detail]</a></td>
-			<td><center>$record[hard]</center></td>
-			<td><center>$record[easy]</center></td>
+$count=1;
+include "../connect.php";
+$sql="select * from sendanswer,proposition,student,headlesson where (sendanswer.ref_question=proposition.question_id and sendanswer.ref_student=student.student_id and proposition.ref_lesson=headlesson.lesson) and student.student_id='$student_id' GROUP BY proposition.ref_lesson order by proposition.ref_lesson";
+$result=mysql_db_query($dbname,$sql);
+while($record=mysql_fetch_array($result)) {
 
-		</tr>";
-		$count++;
+echo "
+<tr>
+<td>$count</td>
+<td><a href=\"question_report2.php?id=$student_id&lesson=$record[ref_lesson]&section=$record[section]&year=$record[year]\">lesson $record[lesson] $record[detail]</a></td>
+<td><center>$record[hard]</center></td>
+<td><center>$record[easy]</center></td>
 
-		}
-	
-	mysql_close();
+</tr>";
+$count++;
+
+}
+
+mysql_close();
 ?>
 </table>
 </div></div>

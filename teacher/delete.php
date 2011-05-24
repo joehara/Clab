@@ -1,4 +1,3 @@
-
 <?
 include "../chksession.php";
 
@@ -18,6 +17,5 @@ if ($result) {
 }
 mysql_close();
 ?>
-
 </body>
 </html>

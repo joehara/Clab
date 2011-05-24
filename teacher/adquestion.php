@@ -1,6 +1,5 @@
 <? 
 include "../chksession.php";
-
 if ($sess_table<>teacher) {
 	header( "Location: ../index.html"); 	exit();
 }
@@ -9,7 +8,7 @@ $lesson=$_GET[lesson];
 
 
 include "../connect.php";
-$sql="select  count(*) as no from Proposition where ref_lesson='$lesson'";
+$sql="select  count(*) as no from proposition where ref_lesson='$lesson'";
 $result=mysql_db_query($dbname,$sql);
 $record=mysql_fetch_array($result);
 
@@ -23,13 +22,28 @@ mysql_close();
 <meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
 <meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
 <link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
-<meta content="text/html; charset=TIS-620" http-equiv="content-type">
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
 <style type="text/css">
 <!--
 .style1 {font-size: 36px}
 -->
-
 </style>
+<script type="text/javascript" src="../ckeditor/ckeditor.js"></script>
+<script language="Javascript" type="text/javascript" src="../editarea/edit_area/edit_area_full.js">
+</script>
+<script language="Javascript" type="text/javascript">
+	editAreaLoader.init({
+		id: "student_code",
+		start_highlight: true,
+		allow_resize: "both",
+		allow_toggle : false,
+		word_wrap: true,
+		language: "en",
+		syntax: "c",
+		toolbar: "search, go_to_line, |, undo, redo"
+
+	});	
+</script>
 </head>
 
 <body>
@@ -88,11 +102,6 @@ mysql_close();
         <!-- start of middle column -->
 <div id="templatemo_middle_column">
 [ <a href="proposition.php?id=<?=$id?>&lesson=<?=$lesson?>">Back Question</a> ][ <a href="main.php">Back Main</a> ]
-<script type="text/javascript" src="../ckeditor/ckeditor.js"></script>
-  <title>Question </title>
-
-  
-</head><body>
 <br>
 
 <form method="post" action="adquestion2.php?id_edit=<?=$id?>&lesson=<?=$lesson?>"><br>
@@ -106,7 +115,7 @@ mysql_close();
       <td style="vertical-align: top; text-align: center;">:: Add
 Question <?=$code?><INPUT name="no" type="hidden" value="<?=$code?>">::<br>
         <br>
-⨷��Ӷ����������ФӺ�ó��·���ͧ�������ʴ����<br>
+โจทย์คำถามภาษาไทยและคำบรรณยายที่ต้องการให้แสดงโชว์<br>
         <br></td>
       <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <br>      </td>
@@ -118,10 +127,10 @@ Question <?=$code?><INPUT name="no" type="hidden" value="<?=$code?>">::<br>
       </tr>
 <tr>
       <td style="vertical-align: top;"><br>      </td>
-      <td style="vertical-align: top;">�ç���ҧ�ͧ��������ͧ�鹨з����ѡ�֡����¹���������¢��
-��Шз����ç�Ѻ flow chart ����ͧ��� <a href="example.php" target="_blank">&#3605;&#3633;&#3623;&#3629;&#3618;&#3656;&#3634;&#3591;</a><br>
+      <td style="vertical-align: top;">โครงสร้างของโปรแกรมเบื้องต้นจะทำให้นักศึกษาเขียนโปรแกรมได้ง่ายขึ้น
+และจะทำให้ตรงกับ flow chart ที่ต้องการ <a href="example.php" target="_blank">&#3605;&#3633;&#3623;&#3629;&#3618;&#3656;&#3634;&#3591;</a><br>
         <br>
-        <textarea cols="80" rows="20" name="help" >
+        <textarea id="student_code" cols="80" rows="20" name="help" >
 
 #include&lt;stdio.h&gt;
 int main(){
@@ -135,7 +144,7 @@ return 0;
     </tr>
     <tr>
       <td style="vertical-align: top;">&nbsp;</td>
-      <td style="vertical-align: top; text-align: center;"><div align="left" class="style2">��͹��Ѵ����㹡������� &nbsp;
+      <td style="vertical-align: top; text-align: center;"><div align="left" class="style2">ข้อนี้จัดอยู่ในกลุ่มที่ &nbsp;
         <label>
         <input type="radio" name="level" id="hard" value="1">
         </label>
@@ -157,4 +166,5 @@ return 0;
 
 </div>
 </div>
-</body></html>
+</body>
+</html>

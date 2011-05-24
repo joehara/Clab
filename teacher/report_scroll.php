@@ -9,7 +9,7 @@ if ($sess_table<>teacher) {
 <meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
 <meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
 <link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
-<meta content="text/html; charset=TIS-620" http-equiv="content-type">
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
 <style type="text/css">
 <!--
 .style1 {font-size: 36px}
@@ -79,7 +79,7 @@ if ($sess_table<>teacher) {
 <center>
 <table border="1">
 <tr bgcolor="#D3D3D3">
-<td>�ӴѺ</td><td><center>��ͧ</center></td><td>�ա���֡��</td><td>��§ҹ��</td>
+<td>ลำดับ</td><td><center>ห้อง</center></td><td>ปีการศึกษา</td><td>รายงานผล</td>
 </tr>
 
 <?
@@ -89,7 +89,7 @@ $sqlx="select * from teacher where username='$sess_username'";
 $resultx=mysql_db_query($dbname,$sqlx);
 $record=mysql_fetch_array($resultx);
 
-$sql="select * from Check_answer,SendAnswer,student where Check_answer.ref_answer=SendAnswer.answer_id and SendAnswer.ref_student=student.student_id and student.teach='$record[name]' group by student.year";
+$sql="select * from check_answer,sendanswer,student where check_answer.ref_answer=sendanswer.answer_id and sendanswer.ref_student=student.student_id and student.teach='$record[name]' group by student.year";
 
 
 $result=mysql_db_query($dbname,$sql);

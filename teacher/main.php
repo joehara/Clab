@@ -91,7 +91,7 @@ echo"<span style=\"color: rgb(255, 0, 0);\">password ของคุณยัง
 ?>
 <br><br><br><br>
 <center><h1><u>Main Menu</u></h1></center>
-<br><br>      
+<br><br>
 <center><table border="0">
 <tr>
 <td><center><a href="mstudent.php"><img src="../images/personal.png" alt="Management Student" /><br><b>Management Student</b></a></center></td>
@@ -101,36 +101,34 @@ echo"<span style=\"color: rgb(255, 0, 0);\">password ของคุณยัง
 </tr>
 </table>
 </center>
-   	  </div>
-    	<!-- end of middle column -->
-        
-        <!-- start of right column -->
+</div>
+<!-- end of middle column -->
+<!-- start of right column -->
 
-        <!-- end of right column -->
+<!-- end of right column -->
 
-    </div>
-	
+</div>
 
-	<!-- end of content -->
-	<div id="templatemo_footer">
-        <blockquote>
-          <blockquote>
-            <blockquote>
-              <blockquote>
-                <blockquote>
-                  <blockquote>
-                    <blockquote>
-                      <p align="center">Copyright © 2010-2011<br>
-                        <a href="http://www.kmutnb.ac.th">King Mongkut's University of Technology North Bangkok</p></a>
-                    </blockquote>
-                  </blockquote>
-                </blockquote>
-              </blockquote>
-            </blockquote>
-          </blockquote>
-        </blockquote>
-	</div>
-    <div id="templatemo_footer_bottom"></div>
+<!-- end of content -->
+<div id="templatemo_footer">
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p align="center">Copyright © 2010-2011<br>
+<a href="http://www.kmutnb.ac.th">King Mongkut's University of Technology North Bangkok</p></a>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</div>
+<div id="templatemo_footer_bottom"></div>
 </div>
 </div>
 </body>

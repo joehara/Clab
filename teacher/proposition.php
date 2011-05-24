@@ -12,7 +12,7 @@ $lesson=$_GET[lesson];
 <meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
 <meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
 <link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
-<meta content="text/html; charset=TIS-620" http-equiv="content-type">
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
 <style type="text/css">
 <!--
 .style1 {font-size: 36px}
@@ -128,15 +128,15 @@ $lesson=$_GET[lesson];
 
 <?
 include"../connect.php";
-$sql = "SELECT * FROM Proposition where ref_lesson='$lesson'";
+$sql = "SELECT * FROM proposition where ref_lesson='$lesson'";
 $result=mysql_db_query($dbname,$sql);
 ?>
 <table width="770" border="1">
   <tr bgcolor="#D3D3D3">
     <th width="56"> <div align="center">No</div></th>
     <th width="488"> <div align="center">Question</div></th>
-    <th width="120"> <div align="center">����͡⨷��</div></th>
-    <th width="55"> <div align="center">�дѺ</div></th>
+    <th width="120"> <div align="center">ผู้ออกโจทย์</div></th>
+    <th width="55"> <div align="center">ระดับ</div></th>
     <th width="38"> <div align="center">
       <input name="CheckAll" type="checkbox" id="CheckAll" value="Y" onClick="ClickCheckAll(this);">
     </div></th>
@@ -156,9 +156,9 @@ $result2=mysql_db_query($dbname,$sql2);
 $num=mysql_num_rows($result2);
 
 		if($objResult[level]==1){
-		$level='����ҡ';
+		$level='ข้อยาก';
 		}else{
-		$level='��ͧ���';
+		$level='ข้อง่าย';
 		}
 $i++;
 ?>
@@ -192,11 +192,11 @@ echo"";
 <br />
 <?
 
-	$sql3="select * from Proposition where ref_lesson='$lesson'";
+	$sql3="select * from proposition where ref_lesson='$lesson'";
 	$result3=mysql_db_query($dbname,$sql3);
 	$num=mysql_num_rows($result3);
 	if($num==0){
-	echo "<h3>�ѧ�����⨷��</h3>";
+	echo "<h3>ยังไม่มีโจทย์</h3>";
 	}
 mysql_close( );
 ?>
