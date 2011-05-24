@@ -135,7 +135,7 @@ $reg_date=$record[st_reg];
     </select></TD>
     </TR>
     <TR>
-      <TD><strong>�ա���֡�� :</strong></TD>
+      <TD><strong>ปีการศึกษา :</strong></TD>
       <TD><select name="year" id="year">
         <? 
      $sql2="select * from academic_year ";  
@@ -154,7 +154,7 @@ $reg_date=$record[st_reg];
       </select></TD>
     </TR>
     <TR>
-      <TD><strong>�Ҩ�������͹</strong></TD>
+      <TD><strong>อาจารย์ผู้สอน</strong></TD>
       <TD><select name="teach" id="teach">
         <? 
      $sql3="select * from teacher ";  
@@ -184,18 +184,18 @@ $reg_date=$record[st_reg];
       <TD><TEXTAREA NAME="address" COLS="35" ROWS="3"><?=$address?></TEXTAREA></TD>
     </TR>
     <TR>
-      <TD><strong>Register ��</strong></TD>
+      <TD><strong>Register โดย</strong></TD>
       <TD><? 
 	  if ($permission==1)
-	  echo"<span class=\"style3\">��Ѥü�ҹ˹�����</span>";
+	  echo"<span class=\"style3\">สมัครผ่านหน้าเว็บ</span>";
 	  else if($permission==2)
-	  echo"<span class=\"style2\">admin �ѹ�֡������</span>";
+	  echo"<span class=\"style2\">admin บันทึกข้อมูล</span>";
 	  ?>&nbsp;</TD>
     </TR>
     <TR>
       <TD><B>Register Date :</B></TD>
       <TD><? if($reg_date==0){
-	  echo"�ѹ�֡�����Ũҡ��� upload file";
+	  echo"บันทึกข้อมูลจากการ upload file";
 	  }else{ echo displaydate($reg_date) ; }?></TD>
     </TR>
     <TR> 

@@ -137,7 +137,7 @@ Question ::<br>
     </tr>
     <tr>
       <td style="vertical-align: top;">&nbsp;</td>
-      <td style="vertical-align: top; text-align: center;"><div align="left"><span class="style3">¢ÈÕπ’È®—¥Õ¬ŸË„π°≈ÿË¡∑’Ë &nbsp;
+      <td style="vertical-align: top; text-align: center;"><div align="left"><span class="style3">‡∏Ç‡πâ‡∏≠‡∏ô‡∏µ‡πâ‡∏à‡∏±‡∏î‡∏≠‡∏¢‡∏π‡πà‡πÉ‡∏ô‡∏Å‡∏•‡∏∏‡πà‡∏°‡∏ó‡∏µ‡πà &nbsp;
             <label>
             <input type="radio" name="level" id="hard" value="1" <? echo"$check1";?>>
             </label>

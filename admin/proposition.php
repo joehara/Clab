@@ -117,7 +117,7 @@ echo"$name_lesson";
 			<td>$count</td>
 			<td>$record[proposition]</td>
 			<td><a href=\"edquestion.php?id=$record[question_id]&lesson=$lesson\"><img src=\"../images/icon-edit.gif\"></a></td>
-			<td><a href=\"drop_proposition.php?id=$record[question_id]\" onclick=\"return confirm(' ��ͧ���ź $record[proposition] �͡�ҡ�к���ԧ������� ')\"><img src=\"../images/b_drop.png\"></a></td>
+			<td><a href=\"drop_proposition.php?id=$record[question_id]\" onclick=\"return confirm(' ต้องการลบ $record[proposition] ออกจากระบบจริงหรือไม่ ')\"><img src=\"../images/b_drop.png\"></a></td>
 		</tr>";
 	}
 	mysql_close();

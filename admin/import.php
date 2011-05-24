@@ -81,18 +81,18 @@ if ($sess_table<>admin) {
 <h1>:: Import student from file ::</h1><br></center>
 [ <a href="mstudent.php">Manage Student</a> ]<br><center>
 <br>
-<span class="style8">วิธีการนำข้อมูลนักเรียนเข้า database</span><br>
-  1.download file ต้นฉบับ นาสกุล CSV &nbsp;&nbsp;<a href="EXEM/Book1.csv">download here</a><br>
-2.เปิด file โดยใช้ โปรแกรม microsoft excel หรือ  OpenOffice Spreadsheet<br>
-  3.พิมพ์ข้อมูลโดยพิมพ์เรียงลงมาทีละแถวดังตัวอย่าง ของไฟล์ต้นฉบับ โดยข้อมูลต้องเรียงตามลงมา<br>
-  4. Save โดย Save ให้เป็น นาสกุล CSV ตามเดิม <br>
-  5.Browse ข้อมูลจากปุ่มด้านล่าง แล้วเลือกไฟล์ที่ทำการ Save ไว้<br>
+<span class="style8">เธงเธดเธเธตเธเธฒเธฃเธเธณเธเนเธญเธกเธนเธฅเธเธฑเธเน€เธฃเธตเธขเธเน€เธเนเธฒ database</span><br>
+  1.download file เธ•เนเธเธเธเธฑเธ เธเธฒเธชเธเธธเธฅ CSV &nbsp;&nbsp;<a href="EXEM/Book1.csv">download here</a><br>
+2.เน€เธเธดเธ” file เนเธ”เธขเนเธเน เนเธเธฃเนเธเธฃเธก microsoft excel เธซเธฃเธทเธญ  OpenOffice Spreadsheet<br>
+  3.เธเธดเธกเธเนเธเนเธญเธกเธนเธฅเนเธ”เธขเธเธดเธกเธเนเน€เธฃเธตเธขเธเธฅเธเธกเธฒเธ—เธตเธฅเธฐเนเธ–เธงเธ”เธฑเธเธ•เธฑเธงเธญเธขเนเธฒเธ เธเธญเธเนเธเธฅเนเธ•เนเธเธเธเธฑเธ เนเธ”เธขเธเนเธญเธกเธนเธฅเธ•เนเธญเธเน€เธฃเธตเธขเธเธ•เธฒเธกเธฅเธเธกเธฒ<br>
+  4. Save เนเธ”เธข Save เนเธซเนเน€เธเนเธ เธเธฒเธชเธเธธเธฅ CSV เธ•เธฒเธกเน€เธ”เธดเธก <br>
+  5.Browse เธเนเธญเธกเธนเธฅเธเธฒเธเธเธธเนเธกเธ”เนเธฒเธเธฅเนเธฒเธ เนเธฅเนเธงเน€เธฅเธทเธญเธเนเธเธฅเนเธ—เธตเนเธ—เธณเธเธฒเธฃ Save เนเธงเน<br>
 </p>
   <div id="left"><input name="fileCSV" type="file" id="fileCSV">
   <input name="btnSubmit" type="submit" id="btnSubmit" value="Submit">
 </div>
 <br>
-6. ทำการกด sumit จะขึ้นข้อความว่า import sucessful </center><br><br>
+6. เธ—เธณเธเธฒเธฃเธเธ” sumit เธเธฐเธเธถเนเธเธเนเธญเธเธงเธฒเธกเธงเนเธฒ import sucessful </center><br><br>
 
 </form>
 </div></div>

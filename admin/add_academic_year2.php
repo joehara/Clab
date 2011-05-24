@@ -18,7 +18,7 @@ if($num>0) {
 $sql="insert into academic_year values('','$add_year')";
 $result=mysql_db_query($dbname,$sql);
 if ($result) {
-	echo "<h3>Insert �ա���֡��  successful</h3>";
+	echo "<h3>Insert ปีการศึกษา  successful</h3>";
 echo"<meta http-equiv=\"Refresh\" content=\"5; URL=addstudent.php\">";
 } else {
 	echo "<h3>Error Can't insert to database</h3>";

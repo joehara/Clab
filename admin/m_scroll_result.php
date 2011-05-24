@@ -12,7 +12,7 @@ $student_id=$_GET[id];
 ?>
 
 <HTML>
-<HEAD><TITLE>º≈§–·ππ</TITLE></HEAD>
+<HEAD><TITLE>‡∏ú‡∏•‡∏Ñ‡∏∞‡πÅ‡∏ô‡∏ô</TITLE></HEAD>
 <meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
 <meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
 <link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
@@ -106,17 +106,17 @@ $teacher_check=$record[teacher_check];
 $check_date=$record[check_date];
 ?>
     &nbsp;<br />
-    [ <a href="main.php">Back Main</a> &gt; <a href="m_scroll.php">Manage Score</a>&nbsp;&gt;<a href="m_scroll_name.php?section=<?=$section?>">√“¬™◊ËÕ∑’Ë Ëßß“π‡¢È“¡“</a>&gt;<a href="m_scroll_lesson.php?section=<?=$section?>&amp;id=<?=$student_id?>">∫∑µË“ßÊ∑’Ë Ëß‡¢È“¡“</a>&gt;<a href="m_scroll_question.php?section=<?=$section?>&amp;id=<?=$student_id?>&amp;lesson=<?=$lesson?>">¢ÈÕµË“ßÊ∑’Ë Ëß‡¢È“¡“</a>&gt;º≈§–·ππ</p><br>
+    [ <a href="main.php">Back Main</a> &gt; <a href="m_scroll.php">Manage Score</a>&nbsp;&gt;<a href="m_scroll_name.php?section=<?=$section?>">‡∏£‡∏≤‡∏¢‡∏ä‡∏∑‡πà‡∏≠‡∏ó‡∏µ‡πà‡∏™‡πà‡∏á‡∏á‡∏≤‡∏ô‡πÄ‡∏Ç‡πâ‡∏≤‡∏°‡∏≤</a>&gt;<a href="m_scroll_lesson.php?section=<?=$section?>&amp;id=<?=$student_id?>">‡∏ö‡∏ó‡∏ï‡πà‡∏≤‡∏á‡πÜ‡∏ó‡∏µ‡πà‡∏™‡πà‡∏á‡πÄ‡∏Ç‡πâ‡∏≤‡∏°‡∏≤</a>&gt;<a href="m_scroll_question.php?section=<?=$section?>&amp;id=<?=$student_id?>&amp;lesson=<?=$lesson?>">‡∏Ç‡πâ‡∏≠‡∏ï‡πà‡∏≤‡∏á‡πÜ‡∏ó‡∏µ‡πà‡∏™‡πà‡∏á‡πÄ‡∏Ç‡πâ‡∏≤‡∏°‡∏≤</a>&gt;‡∏ú‡∏•‡∏Ñ‡∏∞‡πÅ‡∏ô‡∏ô</p><br>
 <form id="form1" name="form1" method="post" action="m_scroll_result2.php">
   <table width="100%" border="0">
     <tr>
-      <td width="10%">™◊ËÕºŸÈ Ëß :  </td>
+      <td width="10%">‡∏ä‡∏∑‡πà‡∏≠‡∏ú‡∏π‡πâ‡∏™‡πà‡∏á :  </td>
       <td width="90%"><?=$name?>
       <input name="check_id" type="hidden" id="check_id" value="<?=$check_id?>" />
       <input name="ans_id" type="hidden" id="ans_id" value="<?=$ans_id?>" /></td>
     </tr>
     <tr>
-      <td>√À— π—°»÷°…“ :</td>
+      <td>‡∏£‡∏´‡∏±‡∏™‡∏ô‡∏±‡∏Å‡∏®‡∏∂‡∏Å‡∏©‡∏≤ :</td>
       <td><?=$code_st?></td>
     </tr>
     <tr>
@@ -124,19 +124,19 @@ $check_date=$record[check_date];
       <td><?=$section?></td>
     </tr>
     <tr>
-      <td>«—π∑’Ë∑” Ëß:</td>
+      <td>‡∏ß‡∏±‡∏ô‡∏ó‡∏µ‡πà‡∏ó‡∏≥‡∏™‡πà‡∏á:</td>
       <td><?=$time_start?></td>
     </tr>
     <tr>
-      <td>‚®∑¬Ï:</td>
+      <td>‡πÇ‡∏à‡∏ó‡∏¢‡πå:</td>
       <td><?=$question?></td>
     </tr>
     <tr>
-      <td>Code ∑’Ë Ëß:</td>
+      <td>Code ‡∏ó‡∏µ‡πà‡∏™‡πà‡∏á:</td>
       <td><label>
         <textarea name="code" id="code" cols="70" rows="20" readonly="readonly"><?=$code?>
         </textarea><br>
-      <span class="style2">µ—« code ‰¡Ë “¡“√∂·°È‰¢‰¥È§√—∫        </span></label></td>
+      <span class="style2">‡∏ï‡∏±‡∏ß code ‡πÑ‡∏°‡πà‡∏™‡∏≤‡∏°‡∏≤‡∏£‡∏ñ‡πÅ‡∏Å‡πâ‡πÑ‡∏Ç‡πÑ‡∏î‡πâ‡∏Ñ‡∏£‡∏±‡∏ö        </span></label></td>
     </tr>
     <tr>
       <td>Comment:
@@ -145,26 +145,26 @@ $check_date=$record[check_date];
         <input name="comment1" type="hidden" id="comment1" value="<?=$comment?>" />
         <label>
         <input type="text" name="comment2" id="comment2" />
-      <span class="style2">„ Ë comment ∑ÿ°§√—Èß∑’Ë¡’°“√·°È‰¢§–·ππ        </span></label></td>
+      <span class="style2">‡πÉ‡∏™‡πà comment ‡∏ó‡∏∏‡∏Å‡∏Ñ‡∏£‡∏±‡πâ‡∏á‡∏ó‡∏µ‡πà‡∏°‡∏µ‡∏Å‡∏≤‡∏£‡πÅ‡∏Å‡πâ‡πÑ‡∏Ç‡∏Ñ‡∏∞‡πÅ‡∏ô‡∏ô        </span></label></td>
     </tr>
     <tr>
-      <td>§–·ππ</td>
+      <td>‡∏Ñ‡∏∞‡πÅ‡∏ô‡∏ô</td>
       <td><label>
         <input name="result" type="text" id="result" value="<?=$result?>" size="5" />
       </label></td>
     </tr>
     <tr>
-      <td>ºŸÈµ√«®</td>
+      <td>‡∏ú‡∏π‡πâ‡∏ï‡∏£‡∏ß‡∏à</td>
       <td><?=$teacher_check?></td>
     </tr>
     <tr>
-      <td>«—π∑’Ëµ√«®</td>
+      <td>‡∏ß‡∏±‡∏ô‡∏ó‡∏µ‡πà‡∏ï‡∏£‡∏ß‡∏à</td>
       <td><?=displaydate($check_date)?></td>
     </tr>
     <tr>
       <td>&nbsp;</td>
       <td><label>
-        <input type="submit" name="button" id="button" value="·°È‰¢" />
+        <input type="submit" name="button" id="button" value="‡πÅ‡∏Å‡πâ‡πÑ‡∏Ç" />
       </label></td>
     </tr>
   </table>

@@ -7,7 +7,7 @@
 
 <body>
 <form id="form1" name="form1" method="post" action="add_academic_year2.php">
-  <label>ADD �ա���֡��
+  <label>ADD ปีการศึกษา
   <input type="text" name="add_year" />
   </label>
   <label>

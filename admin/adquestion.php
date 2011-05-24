@@ -131,7 +131,7 @@ Question of <?=$code?><INPUT name="no" type="hidden" value="<?=$code?>">::</b><b
     </tr>
     <tr>
       <td style="vertical-align: top;">&nbsp;</td>
-      <td style="vertical-align: top; text-align: center;"><div align="left" class="style3">ข้อนี้จัดอยู่ในกลุ่มที่ &nbsp;
+      <td style="vertical-align: top; text-align: center;"><div align="left" class="style3">เธเนเธญเธเธตเนเธเธฑเธ”เธญเธขเธนเนเนเธเธเธฅเธธเนเธกเธ—เธตเน &nbsp;
         <label>
         <input type="radio" name="level" id="hard" value="1">
         </label>

@@ -101,11 +101,11 @@ $code++;
         <td><input name="h_lesson"></td>
       </tr>
       <tr>
-        <td class="style3"><strong>„ÀÈπ—°»÷°…“∑”®“°°“√ ÿË¡</strong></td>
+        <td class="style3"><strong>‡πÉ‡∏´‡πâ‡∏ô‡∏±‡∏Å‡∏®‡∏∂‡∏Å‡∏©‡∏≤‡∏ó‡∏≥‡∏à‡∏≤‡∏Å‡∏Å‡∏≤‡∏£‡∏™‡∏∏‡πà‡∏°</strong></td>
         <td class="style3">&nbsp;</td>
       </tr>
       <tr>
-        <td class="style3"> ÿË¡¢ÈÕ¬“°</td>
+        <td class="style3">‡∏™‡∏∏‡πà‡∏°‡∏Ç‡πâ‡∏≠‡∏¢‡∏≤‡∏Å</td>
         <td><select name="hard" id="hard">
           <option value="0">0</option>
           <option value="1">1</option>
@@ -129,10 +129,10 @@ $code++;
           <option value="19">19</option>
           <option value="20">20</option>
                 </select> 
-          &nbsp;&nbsp;<span class="style3">¢ÈÕ </span></td>
+          &nbsp;&nbsp;<span class="style3">‡∏Ç‡πâ‡∏≠ </span></td>
       </tr>
       <tr>
-        <td class="style3"> ÿË¡¢ÈÕßË“¬</td>
+        <td class="style3">‡∏™‡∏∏‡πà‡∏°‡∏Ç‡πâ‡∏≠‡∏á‡πà‡∏≤‡∏¢</td>
         <td><select name="easy2" id="easy2">
             <option value="0">0</option>
             <option value="1">1</option>
@@ -156,10 +156,10 @@ $code++;
             <option value="19">19</option>
             <option value="20">20</option>
           </select>
-          &nbsp;<span class="style3">&nbsp;¢ÈÕ</span></td>
+          &nbsp;<span class="style3">&nbsp;‡∏Ç‡πâ‡∏≠</span></td>
       </tr>
       <tr>
-        <td class="style3">‡«≈“„π°“√∑”</td>
+        <td class="style3">‡πÄ‡∏ß‡∏•‡∏≤‡πÉ‡∏ô‡∏Å‡∏≤‡∏£‡∏ó‡∏≥</td>
         <td><label>
           <select name="HH" id="HH">
             <option value="0">00</option>

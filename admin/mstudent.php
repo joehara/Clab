@@ -83,7 +83,7 @@ if ($sess_table<>admin) {
 <tr>
 <td><center><a href="addstudent.php"><img src="../images/userblue_add.png" alt="Add Student" /><br> Add Student </a></center></td>
 <td><center><a href="import.php"><img src="../images/import_document.png" alt="Import file" /><br> Import file </a></center></td>
-<td><center><a href="register_st.php"><img src="../images/user_expert.png" alt="�ѡ�֡�ҷ��ŧ����¹��ҹ���" /><br> �ѡ�֡�ҷ��ŧ����¹��ҹ��� </a></center></td>
+<td><center><a href="register_st.php"><img src="../images/user_expert.png" alt="นักศึกษาที่ลงทะเบียนผ่านเว็บ" /><br> นักศึกษาที่ลงทะเบียนผ่านเว็บ </a></center></td>
 </tr>
 </table>
 
@@ -95,7 +95,7 @@ if ($sess_table<>admin) {
         Keyword
       <input name="Keyword" type="text" id="txtKeyword" value="<?=$_GET["Keyword"];?>">
       <input type="submit" value="Search">
-      <span class="style5">search �ҡ ��������Ң�</span></th>
+      <span class="style5">search จาก ชื่อและสาขา</span></th>
     </tr><br>
   </table>
 </form><br>
@@ -165,7 +165,7 @@ if($_GET["Keyword"] != "")
 		<td><?=$objResult["name"];?></td>
 		<td><div align="center"><?=$objResult["section"];?></div></td>
         <td><a href="editstudent.php?id_edit=<?=$objResult["student_id"]?>">edit</a></td>
-			<td><a href="drop_student.php?id=<?=$objResult["student_id"]?>" onclick=\"return confirm(' ��ͧ���ź $record[name] �͡�ҡ�к���ԧ������� ')\">ź</a>
+			<td><a href="drop_student.php?id=<?=$objResult["student_id"]?>" onclick=\"return confirm(' ต้องการลบ $record[name] ออกจากระบบจริงหรือไม่ ')\">ลบ</a>
 	  </tr>
 	<?
 	$count++;
@@ -243,7 +243,7 @@ while($record3=mysql_fetch_array($result3)) {
 			<td>$record3[name]</td>
 			<td>$record3[section]</td>
 			<td><a href=\"editstudent.php?id_edit=$record3[student_id]\"><img src=\"../images/icon-edit.gif\"></a></td>
-			<td><a href=\"drop_student.php?id=$record3[student_id]\" onclick=\"return confirm(' ��ͧ���ź $record[name] �͡�ҡ�к���ԧ������� ')\"><img src=\"../images/b_drop.png\"></a>
+			<td><a href=\"drop_student.php?id=$record3[student_id]\" onclick=\"return confirm(' ต้องการลบ $record[name] ออกจากระบบจริงหรือไม่ ')\"><img src=\"../images/b_drop.png\"></a>
 		</tr>";
 	}
 ?>

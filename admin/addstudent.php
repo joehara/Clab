@@ -105,7 +105,7 @@ if ($sess_table<>admin) {
                             </select>&nbsp;<a href="add_section.php" target="_blank">add</a></TD>
     </TR>
     <TR>
-      <TD><strong>ª’°“√»÷°…“ :</strong></TD>
+      <TD><strong>‡∏õ‡∏µ‡∏Å‡∏≤‡∏£‡∏®‡∏∂‡∏Å‡∏©‡∏≤ :</strong></TD>
       <TD><label>
         <select name="year" id="province"> 
  <? 
@@ -120,7 +120,7 @@ if ($sess_table<>admin) {
       </label></TD>
     </TR>
     <TR>
-      <TD><strong>Õ“®“√¬ÏºŸÈ Õπ</strong></TD>
+      <TD><strong>‡∏≠‡∏≤‡∏à‡∏≤‡∏£‡∏¢‡πå‡∏ú‡∏π‡πâ‡∏™‡∏≠‡∏ô</strong></TD>
       <TD><label>
        <select name="teach" id="province"> 
  <? 

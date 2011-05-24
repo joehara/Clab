@@ -65,9 +65,9 @@ $record2=mysql_fetch_array($result2);
 		$sql3="delete from check_answer where check_id='$record2[check_id]'";
 		$result3=mysql_db_query($dbname,$sql3);
 		if($result3){
-		echo"<h3>Delete From DB ��ṹ successful</h3>";
+		echo"<h3>Delete From DB คะแนน successful</h3>";
 		}else{
-		echo"<h3>Error From DB ��ṹ</h3>";
+		echo"<h3>Error From DB คะแนน</h3>";
 		}
 		}
 		
@@ -79,9 +79,9 @@ if($num3>0){
 		$sql3="delete from answer where ref_student='$id'";
 		$result3=mysql_db_query($dbname,$sql3);
 		if($result3){
-		echo"<h3>Delete From DB ��ṹ successful</h3>";
+		echo"<h3>Delete From DB คะแนน successful</h3>";
 		}else{
-		echo"<h3>Error From DB ��ṹ</h3>";
+		echo"<h3>Error From DB คะแนน</h3>";
 		}
 		}
 mysql_close();

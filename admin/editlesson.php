@@ -96,7 +96,7 @@ $time=$record[time];
   <table border="0" cellpadding="2" cellspacing="2">
     <tbody>
       <tr>
-        <td><span class="Apple-style-span" style="border-collapse: separate; color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; font-size: medium;"><span class="Apple-style-span" style="">∫∑‡√’¬π∫∑∑’Ë</span></span> </td>
+        <td><span class="Apple-style-span" style="border-collapse: separate; color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; font-size: medium;"><span class="Apple-style-span" style="">‡∏ö‡∏ó‡πÄ‡∏£‡∏µ‡∏¢‡∏ô‡∏ö‡∏ó‡∏ó‡∏µ‡πà</span></span> </td>
         <td><?=$lesson?>
           <INPUT NAME="lesson" TYPE=HIDDEN id="lesson" value="<?=$lesson?>"></td>
       </tr>
@@ -104,7 +104,7 @@ $time=$record[time];
         <td><table border="0" cellpadding="2" cellspacing="2">
           <tbody>
             <tr>
-              <td><span class="Apple-style-span" style="border-collapse: separate; color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; font-size: medium;">À—«¢ÈÕ¢Õß∫∑‡√’¬π<br>
+              <td><span class="Apple-style-span" style="border-collapse: separate; color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; font-size: medium;">‡∏´‡∏±‡∏ß‡∏Ç‡πâ‡∏≠‡∏Ç‡∏≠‡∏á‡∏ö‡∏ó‡πÄ‡∏£‡∏µ‡∏¢‡∏ô<br>
               </span></td>
             </tr>
           </tbody>
@@ -114,11 +114,11 @@ $time=$record[time];
         <td><input name="h_lesson" id="h_lesson" value="<?=$detail?>"></td>
       </tr>
       <tr>
-        <td class="style3"><strong>„ÀÈπ—°»÷°…“∑”®“°°“√ ÿË¡</strong></td>
+        <td class="style3"><strong>‡πÉ‡∏´‡πâ‡∏ô‡∏±‡∏Å‡∏®‡∏∂‡∏Å‡∏©‡∏≤‡∏ó‡∏≥‡∏à‡∏≤‡∏Å‡∏Å‡∏≤‡∏£‡∏™‡∏∏‡πà‡∏°</strong></td>
         <td class="style3">&nbsp;</td>
       </tr>
       <tr>
-        <td class="style3"> ÿË¡¢ÈÕ¬“°</td>
+        <td class="style3">‡∏™‡∏∏‡πà‡∏°‡∏Ç‡πâ‡∏≠‡∏¢‡∏≤‡∏Å</td>
         <td><select name="hard" id="hard">
         <option value="<?php echo $hard;?>"><?php echo $hard;?></option>
             <option value="0">0</option>
@@ -143,10 +143,10 @@ $time=$record[time];
             <option value="19">19</option>
             <option value="20">20</option>
           </select>
-          &nbsp;&nbsp;<span class="style3">¢ÈÕ </span></td>
+          &nbsp;&nbsp;<span class="style3">‡∏Ç‡πâ‡∏≠ </span></td>
       </tr>
       <tr>
-        <td class="style3"> ÿË¡¢ÈÕßË“¬</td>
+        <td class="style3">‡∏™‡∏∏‡πà‡∏°‡∏Ç‡πâ‡∏≠‡∏á‡πà‡∏≤‡∏¢</td>
         <td><select name="easy" id="easy">
         <option value="<?php echo $easy;?>"><?php echo $easy;?></option>
             <option value="0">0</option>
@@ -171,10 +171,10 @@ $time=$record[time];
             <option value="19">19</option>
             <option value="20">20</option>
           </select>
-          &nbsp;<span class="style3">&nbsp;¢ÈÕ</span></td>
+          &nbsp;<span class="style3">&nbsp;‡∏Ç‡πâ‡∏≠</span></td>
       </tr>
       <tr>
-        <td class="style3">‡«≈“„π°“√∑” <?=$time?> À√◊Õ®–·°È‰¢</td>
+        <td class="style3">‡πÄ‡∏ß‡∏•‡∏≤‡πÉ‡∏ô‡∏Å‡∏≤‡∏£‡∏ó‡∏≥ <?=$time?> ‡∏´‡∏£‡∏∑‡∏≠‡∏à‡∏∞‡πÅ‡∏Å‡πâ‡πÑ‡∏Ç</td>
         <td>
           <select name="HH" id="HH">
             <option value="0">00</option>

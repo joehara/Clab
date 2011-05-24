@@ -78,7 +78,7 @@ if ($sess_table<>admin) {
         <!-- start of middle column -->
         
     	<div id="templatemo_middle_column"><center>
-<p><h1>:: �ѡ�֡�ҷ��ŧ����¹����� ::</h1></center><br><br>
+<p><h1>:: นักศึกษาที่ลงทะเบียนเข้ามา ::</h1></center><br><br>
 [ <a href="mstudent.php">Manage Student</a> ]<br>
 <br>
 <form name="form1" method="post" action="">
@@ -106,7 +106,7 @@ if ($sess_table<>admin) {
 			<td>$record[name]</td>
 			<td>$record[section]</td>
 			<td><a href=\"register_st2.php?id=$record[student_id]&permission=1\"><img src=\"../images/b_usrcheck.png\"></a></td>
-			<td><a href=\"register_st2.php?id2=$record[student_id]\" onclick=\"return confirm(' ��ͧ���ź $record[name] �͡�ҡ�к���ԧ������� ')\"><img src=\"../images/b_usrdrop.png\"></a></td>
+			<td><a href=\"register_st2.php?id2=$record[student_id]\" onclick=\"return confirm(' ต้องการลบ $record[name] ออกจากระบบจริงหรือไม่ ')\"><img src=\"../images/b_usrdrop.png\"></a></td>
 		</tr>";
 	}
 	mysql_close();

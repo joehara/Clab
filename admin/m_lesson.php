@@ -92,8 +92,8 @@ if ($sess_table<>admin) {
 	<th width="91"> <div align="center">Lesson </div></th>
 	<th width="250"> <div align="center">Detail Lesson </div></th>
     <th width="91"> <div align="center">Edit </div></th>
-    <th width="91"> <div align="center">�ӹǹ��ͧ��� </div></th>
-	<th width="91"> <div align="center">�ӹǹ����ҡ </div></th>
+    <th width="91"> <div align="center">จำนวนข้อง่าย </div></th>
+	<th width="91"> <div align="center">จำนวนข้อยาก </div></th>
     </tr>
     <?
 	$count=0;

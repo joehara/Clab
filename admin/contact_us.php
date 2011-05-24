@@ -78,8 +78,7 @@ if ($sess_table<>admin) {
         <!-- end of left column -->
         
         <!-- start of middle column -->
-        
-    	<div id="templatemo_middle_column"><center>
+       <div id="templatemo_middle_column"><center>
 <img src="../images/contus.jpg"/><br><Font size=5 color=DodgerBlue><b>ติดต่อเรา</b></Font><br><br>
 หากคุณมีคำถาม คำแนะนำติชม หรือมีความคิดเห็นเกี่ยวกับเรา ให้คุณส่งข้อความ ข้อมูลหาเราได้ที่<br><br>
 <Font color=DodgerBlue><b>E-mail: joe_nampathet@hotmail.com  &nbsp;&nbsp;&nbsp;&nbsp;ศุภวิชญ์ นามประเทศ</Font></b><br>

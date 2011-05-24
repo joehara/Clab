@@ -85,7 +85,7 @@ if ($sess_table<>admin) {
 <table border="1">
   <tr bgcolor="#D3D3D3">
     <td><b><center>NO.</center></b></td>
-    <td><b><center>SECTION ∑’Ë Ëßß“π‡¢È“¡“</center></b></td>
+    <td><b><center>SECTION ‡∏ó‡∏µ‡πà‡∏™‡πà‡∏á‡∏á‡∏≤‡∏ô‡πÄ‡∏Ç‡πâ‡∏≤‡∏°‡∏≤</center></b></td>
   </tr>
   <?
 	$count=1;

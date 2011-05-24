@@ -15,7 +15,7 @@ if ($sess_table<>admin) {
   
 ?>
 <HTML>
-<HEAD><TITLE>º≈§–·ππ</TITLE></HEAD>
+<HEAD><TITLE>‡∏ú‡∏•‡∏Ñ‡∏∞‡πÅ‡∏ô‡∏ô</TITLE></HEAD>
 <meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
 <meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
 <link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
@@ -89,7 +89,7 @@ if ($sess_table<>admin) {
     	<div id="templatemo_middle_column">
 <?
 if($comment2==""){
-echo"°√ÿ≥“„ Ë comment ∑ÿ°§√—Èß"; exit();
+echo"‡∏Å‡∏£‡∏∏‡∏ì‡∏≤‡πÉ‡∏™‡πà comment ‡∏ó‡∏∏‡∏Å‡∏Ñ‡∏£‡∏±‡πâ‡∏á"; exit();
 }
 
 include "../connect.php";
@@ -105,10 +105,10 @@ $student_id=$record[student_id];
 $ref_lesson=$record[ref_lesson];
 if ($result ) {
 	echo "<h3>Edit Scroll Successful </h3>";
-	echo "[ <a href=m_scroll_question.php?section=$section&id=$student_id&lesson=$ref_lesson>Back ¢ÈÕµË“ßÊ∑’Ë Ëß‡¢È“¡“</a> ] ";
+	echo "[ <a href=m_scroll_question.php?section=$section&id=$student_id&lesson=$ref_lesson>Back ‡∏Ç‡πâ‡∏≠‡∏ï‡πà‡∏≤‡∏á‡πÜ‡∏ó‡∏µ‡πà‡∏™‡πà‡∏á‡πÄ‡∏Ç‡πâ‡∏≤‡∏°‡∏≤</a> ] ";
 } else {
 	echo "<h3>Edit Unsuccessful</h3>";
-	echo "[ <a href=m_scroll_question.php?section=$section&id=$student_id&lesson=$ref_lesson>Back ¢ÈÕµË“ßÊ∑’Ë Ëß‡¢È“¡“</a> ] ";
+	echo "[ <a href=m_scroll_question.php?section=$section&id=$student_id&lesson=$ref_lesson>Back ‡∏Ç‡πâ‡∏≠‡∏ï‡πà‡∏≤‡∏á‡πÜ‡∏ó‡∏µ‡πà‡∏™‡πà‡∏á‡πÄ‡∏Ç‡πâ‡∏≤‡∏°‡∏≤</a> ] ";
 }
 mysql_close();
 ?>

@@ -55,14 +55,14 @@ if ($sess_table<>admin) {
         <!-- start of middle column -->
         
     	<div id="templatemo_middle_column">
-<p><h1>:: �����觢���ͺ::</h1><br><br>
-<p>[<a href="main.php">Main</a> &gt;<a href="m_scroll.php">Management Scroll</a>�&gt;<a href="report2.php?lesson=<?=$lesson?>&section=<?=$section?>">������觧ҹ�����</a> &gt;�����觢���ͺ</p>
+<p><h1>:: ŒÙé·ÓÊè§¢éÍÊÍº::</h1><br><br>
+<p>[<a href="main.php">Main</a> &gt;<a href="m_scroll.php">Management Scroll</a> &gt;<a href="report2.php?lesson=<?=$lesson?>&section=<?=$section?>">º··ÕèÊè§§Ò¹à¢éÒÁÒ</a> &gt;ŒÙé·ÓÊè§¢éÍÊÍº</p>
 <table border="0">
   <tr bgcolor="#D3D3D3"> 
     
     <td>NO.</td>
-    <td>⨷��</td>
-    <td>���Ӣ���ͺ</td>
+    <td>âš·Âì</td>
+    <td>ŒÙé·Ó¢éÍÊÍº</td>
   </tr>
   <?
 
@@ -82,7 +82,7 @@ if ($sess_table<>admin) {
 			<td>$count</td>
 			<td>$record[proposition]</td>
 			<td>$record[name]</a></td>
-			<td><a href=\"question_check.php?ans_id=$record[ans_id]\">��Ǩ</a></td>
+			<td><a href=\"question_check.php?ans_id=$record[ans_id]\">µÃÇš</a></td>
 		</tr>";
 		$count++;
 

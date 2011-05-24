@@ -10,7 +10,7 @@ if ($sess_table<>admin) {
  
 ?>
 <HTML>
-<HEAD><TITLE>ข้อต่างๆที่ส่งเข้ามา</TITLE></HEAD>
+<HEAD><TITLE>เธเนเธญเธ•เนเธฒเธเนเธ—เธตเนเธชเนเธเน€เธเนเธฒเธกเธฒ</TITLE></HEAD>
 <meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
 <meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
 <link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
@@ -83,15 +83,15 @@ if ($sess_table<>admin) {
         
     	<div id="templatemo_middle_column">
 <center>
-<h1>:: ข้อต่างๆที่ส่งเข้ามา ::</h1></center><br><br>
+<h1>:: เธเนเธญเธ•เนเธฒเธเนเธ—เธตเนเธชเนเธเน€เธเนเธฒเธกเธฒ ::</h1></center><br><br>
 <p>[ <a href="main.php">Back Main</a> &gt; <a href="m_scroll.php">Manage Score</a>&nbsp;&gt;
-<a href="m_scroll_name.php?section=<?=$section?>">รายชื่อที่ส่งงานเข้ามา</a>&gt;
-<a href="m_scroll_lesson.php?section=<?=$section?>&amp;id=<?=$student_id?>">บทต่างๆที่ส่งเข้ามา</a>&gt;ข้อต่างๆที่ส่งเข้ามา</p></br>
+<a href="m_scroll_name.php?section=<?=$section?>">เธฃเธฒเธขเธเธทเนเธญเธ—เธตเนเธชเนเธเธเธฒเธเน€เธเนเธฒเธกเธฒ</a>&gt;
+<a href="m_scroll_lesson.php?section=<?=$section?>&amp;id=<?=$student_id?>">เธเธ—เธ•เนเธฒเธเนเธ—เธตเนเธชเนเธเน€เธเนเธฒเธกเธฒ</a>&gt;เธเนเธญเธ•เนเธฒเธเนเธ—เธตเนเธชเนเธเน€เธเนเธฒเธกเธฒ</p></br>
 </br>
 <table border="0">
   <tr bgcolor="#D3D3D3">
     <td><b><center>NO.</center></b></td>
-    <td><b><center>โจทย์</center></b></td>
+    <td><b><center>เนเธเธ—เธขเน</center></b></td>
   </tr>
   <?
  

@@ -8,7 +8,7 @@ if ($sess_table<>admin) {
 }
 ?>
 <HTML>
-<HEAD><TITLE>��ª��ͷ���觧ҹ�����</TITLE></HEAD>
+<HEAD><TITLE>รายชื่อที่ส่งงานเข้ามา</TITLE></HEAD>
 <meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
 <meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
 <link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
@@ -81,8 +81,8 @@ if ($sess_table<>admin) {
         
     	<div id="templatemo_middle_column">
 <center>
-<h1>:: ��ª��ͷ���觧ҹ����� ::</h1></center><br><br>
-<p>[ <a href="main.php">Back Main</a> &gt; <a href="m_scroll.php">Manage Score</a>&nbsp;&gt;��ª��ͷ���觧ҹ�����</p><br>
+<h1>:: รายชื่อที่ส่งงานเข้ามา ::</h1></center><br><br>
+<p>[ <a href="main.php">Back Main</a> &gt; <a href="m_scroll.php">Manage Score</a>&nbsp;&gt;รายชื่อที่ส่งงานเข้ามา</p><br>
 
 <table border="0">
   <tr bgcolor="#D3D3D3"> 
