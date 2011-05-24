@@ -11,11 +11,9 @@ $codepw =1234;
 </HEAD>
 <body>
 <FORM METHOD="POST" ACTION="register2.php"> 
-
 <center>
 <img src="/Clab/images/templatemo_heading_background.jpg" width="690" height="146"></center><br><br><br>
 <center><h1>Registration Student</h1></center><br>
-
 
   <center><TABLE CELLSPACING="2" style="background-color:#FFE4C4;">
     <TR> 

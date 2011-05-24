@@ -5,7 +5,6 @@ $result=mysql_db_query($dbname,$sql);
 $record=mysql_fetch_array($result); 
 $time=$record[time];
 ?>
-
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8 />
@@ -26,7 +25,6 @@ return
 if (parselimit==1)
 // เหตุการณ์ที่ต้องการให้เกิดขึ้น
  //ถ้าต้องการให้กระโดดไปยัง Page อื่น
-
 frmTest.submit();
 else{
 parselimit-=1
@@ -50,8 +48,7 @@ setTimeout("begintimer()",1000)
 //-->
 </script>
 <div id=dplay ></div>
-<form name="frmTest" action="JavaScript:window.close();">
- 
+<form name="frmTest" action="JavaScript:window.close();"> 
 </form>
 </body>
 </html>

@@ -1,10 +1,7 @@
-
 <?
-
 include "../chksession.php";
 if ($sess_table<>student) {
 	header( "Location: /Clab/index.html"); 	exit();}
-
 
 include "../function.php";
 include "../connect.php";
@@ -79,12 +76,10 @@ mysql_close();
                         <div class="form_row">
                         <label><a href="main.php" style="color:#FE9A2E"><b>[ Main ]</b></a></label><br><br>
  			<label><a href="lesson.php" style="color:#FE9A2E"><b>[ Lesson ]</b></a></label><br><br>
-			
 			<label><a href="showprofile.php" style="color:#FE9A2E"><b>[ Show Profile ]</b></a></label><br><br>
 		<a href="/Clab/logout.php"><img src="/Clab/images/logout.gif" alt="Logout" /></a>
                 </div>            
-            	</div>
-            
+            	</div>            
 		</div>
         </div>
         <!-- end of left column -->
@@ -114,8 +109,7 @@ mysql_close();
     </tr>
     <tr>
       <td><b>Register Date :</b></td><td><?=displaydate($reg_date)?></td>
-    </tr>
-	
+    </tr>	
 	
     <tr> 
       <td>&nbsp;</td>

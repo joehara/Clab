@@ -3,7 +3,6 @@
 if ($sess_table<>student) {
 	header( "Location: /Clab/index.html"); 	exit();
 }
-
 ?>
 <HTML>
 <head>
@@ -62,12 +61,10 @@ if ($sess_table<>student) {
                         <div class="form_row">
                         <label><a href="main.php" style="color:#FE9A2E"><b>[ Main ]</b></a></label><br><br>
  			<label><a href="lesson.php" style="color:#FE9A2E"><b>[ Lesson ]</b></a></label><br><br>
-			
 			<label><a href="showprofile.php" style="color:#FE9A2E"><b>[ Show Profile ]</b></a></label><br><br>
 		<a href="../logout.php"><img src="../images/logout.gif" alt="Logout" /></a>
                 </div>            
-            	</div>
-            
+            	</div>            
 		</div>
         </div>
         <!-- end of left column -->

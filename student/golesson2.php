@@ -8,7 +8,6 @@ $ref_student=$_POST[ref_student];
 
 $help=$_POST[help]; 
 
-
 $code = randomToken(5);
 $handle = fopen("$code.c", 'w');
 if($handle){
@@ -17,13 +16,9 @@ if($handle){
 shell_exec("gcc  $code.c -o $code");
 $output = shell_exec("./$code");
 
-
 }
 unlink("$code.c");
 unlink($code);
-
-
-
 
 $help2 = htmlspecialchars($help, ENT_QUOTES);
 
@@ -85,19 +80,17 @@ $help2 = htmlspecialchars($help, ENT_QUOTES);
                         <div class="form_row">
                         <label><a href="main.php" style="color:#FE9A2E"><b>[ Main ]</b></a></label><br><br>
  			<label><a href="lesson.php" style="color:#FE9A2E"><b>[ Lesson ]</b></a></label><br><br>
-			
 			<label><a href="showprofile.php" style="color:#FE9A2E"><b>[ Show Profile ]</b></a></label><br><br>
 		<a href="/Clab/logout.php"><img src="/Clab/images/logout.gif" alt="Logout" /></a>
                 </div>            
-            	</div>
-            
+            	</div>            
 		</div>
         </div>
         <!-- end of left column -->
         
         <!-- start of middle column -->
 <div id="templatemo_middle_column">
-<h1>:: Result Compile::</h1> <br><br><br>
+<h1>:: Result Compile ::</h1> <br><br><br>
 [ <a href="golesson.php?id_question=<?=$id_question?>&amp;ref_student=<?=$ref_student?>">Edit Answer</a> ][ <a href="main_lesson.php?lesson=<?=$ref_lesson?>">Back Question</a>]<br />
 <form method="post" action="golesson3.php">
   <table width="100%" border="0">
@@ -138,5 +131,5 @@ echo "$output";
 mysql_close();
 ?>
 </div>
-<br>
+</div>
 </body></html>

@@ -65,12 +65,10 @@ $time=date("Y-m-d G:i:s");
                         <div class="form_row">
                         <label><a href="main.php" style="color:#FE9A2E"><b>[ Main ]</b></a></label><br><br>
  			<label><a href="lesson.php" style="color:#FE9A2E"><b>[ Lesson ]</b></a></label><br><br>
-		
 			<label><a href="showprofile.php" style="color:#FE9A2E"><b>[ Show Profile ]</b></a></label><br><br>
 		<a href="/Clab/logout.php"><img src="/Clab/images/logout.gif" alt="Logout" /></a>
                 </div>            
-            	</div>
-            
+            	</div>            
 		</div>
         </div>
         <!-- end of left column -->
@@ -88,7 +86,6 @@ $sql="select * from proposition where question_id='$id_question'";
 $result=mysql_db_query($dbname,$sql);
 $record=mysql_fetch_array($result);
 $ref_lesson=$record[ref_lesson];
-
 
 $sql="select * from sendanswer where ref_question='$id_question' and ref_student='$ref_student'";
 $result=mysql_db_query($dbname,$sql);

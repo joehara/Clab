@@ -18,7 +18,6 @@ $st_reg=date("Y-m-d");
 <meta http-equiv="Refresh" content="2; URL=/Clab/student/register.php">
 </HEAD>
 <body>
-
 <center>
 <img src="/Clab/images/templatemo_heading_background.jpg" width="690" height="146"></center><br><br><br><br><br><br>
 <center>
@@ -58,7 +57,6 @@ if ($result2) {
 } else {
 	echo "<h3>Error Can't insert to database</h3>";
 }
-
 ?>
 </center>
 <center><div id="templatemo_footer"><br>

@@ -12,7 +12,6 @@ function displaydate($x) {
 	$displaydate="$d $m $y";
 	return $displaydate;
 } // end function displaydate
-
 function checkemail($checkemail) { 
 	if(ereg( "^[^@ ]+@([a-zA-Z0-9\-]+\.)+([a-zA-Z0-9\-]{2}|net|com|gov|mil|org|edu|int)$",$checkemail) )  {
 		return true; 

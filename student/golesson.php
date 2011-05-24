@@ -1,4 +1,3 @@
-
 <? 
 include "../chksession.php";
 header("Content-Type content=text/html; charset=UTF-8");
@@ -10,7 +9,6 @@ $id_question=$_GET[id_question];
 $ref_student=$_GET[ref_student];
 include "../connect.php";
 
-
 $sql="select * from proposition where question_id='$id_question'";
 
 $result=mysql_db_query($dbname,$sql);
@@ -19,7 +17,6 @@ $record=mysql_fetch_array($result);
 $question=$record[proposition];
 $help=$record[help];
 $ref_lesson=$record[ref_lesson];
-
 
 $sql="select * from sendanswer where ref_question='$id_question' and ref_student='$ref_student'";
 
@@ -89,12 +86,10 @@ $help=$code;
                         <div class="form_row">
                         <label><a href="main.php" style="color:#FE9A2E"><b>[ Main ]</b></a></label><br><br>
  			<label><a href="lesson.php" style="color:#FE9A2E"><b>[ Lesson ]</b></a></label><br><br>
-			
 			<label><a href="showprofile.php" style="color:#FE9A2E"><b>[ Show Profile ]</b></a></label><br><br>
 		<a href="/Clab/logout.php"><img src="/Clab/images/logout.gif" alt="Logout" /></a>
                 </div>            
-            	</div>
-            
+            	</div>            
 		</div>
         </div>
         <!-- end of left column -->
@@ -133,7 +128,6 @@ $result3=mysql_db_query($dbname,$sql3);
 }else{
 echo"$time_random<br>";
 
-
 }
 ?></td>
   </tr>
@@ -168,6 +162,5 @@ echo"$time_random<br>";
 mysql_close();
 ?>
 </div>
-
 </div>
 </body></html>

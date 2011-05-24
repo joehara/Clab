@@ -4,14 +4,13 @@ if ($sess_table<>student) {
 	header( "Location: /Clab/index.html"); 	exit();
 }
 ?>
-
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Welcome</title>
 <meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
 <meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
-<link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
+<link href="/Clab/templatemo_style.css" rel="stylesheet" type="text/css" />
 <style type="text/css">
 <!--
 .style1 {font-size: 36px}
@@ -61,12 +60,10 @@ if ($sess_table<>student) {
                         <div class="form_row">
                         <label><a href="main.php" style="color:#FE9A2E"><b>[ Main ]</b></a></label><br><br>
  			<label><a href="lesson.php" style="color:#FE9A2E"><b>[ Lesson ]</b></a></label><br><br>
-			
 			<label><a href="showprofile.php" style="color:#FE9A2E"><b>[ Show Profile ]</b></a></label><br><br>
 		<a href="/Clab/logout.php"><img src="/Clab/images/logout.gif" alt="Logout" /></a>
                 </div>            
-            	</div>
-            
+            	</div>            
 		</div>
         </div>
         <!-- end of left column -->
@@ -92,8 +89,7 @@ if ($sess_table<>student) {
 <td><center><a href="../logout.php"><img src="/Clab/images/application_exit.png" alt="Logout" /><br><b>Logout</b></a></center></td>
 </tr>
 </table>
-</center>       
-      	
+</center>            	
         	
         	
    	  </div></div>
@@ -123,7 +119,7 @@ if ($sess_table<>student) {
         </blockquote>
 	</div>
     <div id="templatemo_footer_bottom"></div>
-
+</div>
 </div>
 </body>
 </html>

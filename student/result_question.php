@@ -64,12 +64,10 @@ $lesson=$_GET[lesson];
                         <div class="form_row">
                         <label><a href="main.php" style="color:#FE9A2E"><b>[ Main ]</b></a></label><br><br>
  			<label><a href="lesson.php" style="color:#FE9A2E"><b>[ Lesson ]</b></a></label><br><br>
-			
 			<label><a href="showprofile.php" style="color:#FE9A2E"><b>[ Show Profile ]</b></a></label><br><br>
-		<a href="../logout.php"><img src="../images/logout.gif" alt="Logout" /></a>
+		<a href="/Clab/logout.php"><img src="/Clab/images/logout.gif" alt="Logout" /></a>
                 </div>            
-            	</div>
-            
+            	</div>            
 		</div>
         </div>
         <!-- end of left column -->
@@ -78,8 +76,6 @@ $lesson=$_GET[lesson];
 <div id="templatemo_middle_column"><center>
 <h1>:: QUESTION DETAIL ::</h1> </center><br><br>
 [ <a href="lesson.php">Back Lesson</a> ]<br><br>
-
-
 <center>
 <table border="1">
   <tr bgcolor="#D3D3D3"> 
@@ -118,7 +114,8 @@ $recordx=mysql_fetch_array($resultx);
 	}
 	mysql_close();
 ?>
-</center></div>
+</center>
+</div>
 </div>
 </body>
 </HTML>

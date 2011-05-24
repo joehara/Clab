@@ -66,11 +66,8 @@ if ($sess_table<>student) {
                 </div> 
             </div>            	            
         </div>
-        </div>
-            
-		
-        <!-- end of left column -->
-        
+        </div>           		
+        <!-- end of left column -->        
         <!-- start of middle column -->
         
     	<div id="templatemo_middle_column"><center>
@@ -87,8 +84,7 @@ if ($sess_table<>student) {
 
         <!-- end of right column -->
 
-    </div>
-	
+    </div>	
 
 	<!-- end of content -->
 	<div id="templatemo_footer">

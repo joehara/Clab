@@ -60,16 +60,13 @@ if ($sess_table<>student) {
                         <div class="form_row">
                         <label><a href="main.php" style="color:#FE9A2E"><b>[ Main ]</b></a></label><br><br>
  			<label><a href="lesson.php" style="color:#FE9A2E"><b>[ Lesson ]</b></a></label><br><br>
-			
 			<label><a href="showprofile.php" style="color:#FE9A2E"><b>[ Show Profile ]</b></a></label><br><br>
 		<a href="/Clab/logout.php"><img src="/Clab/images/logout.gif" alt="Logout" /></a>
                 </div>            
-            	</div>
-            
+            	</div>            
 		</div>
         </div>
-        <!-- end of left column -->
-        
+        <!-- end of left column -->        
         <!-- start of middle column -->
 <div id="templatemo_middle_column"><center>
 <p><h1>:: Change Password ::</h1></b><br><br>
