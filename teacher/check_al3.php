@@ -13,7 +13,7 @@ if ($sess_table<>teacher) {
 <meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
 <meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
 <link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
-<meta content="text/html; charset=TIS-620" http-equiv="content-type">
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
 <style type="text/css">
 <!--
 .style1 {font-size: 36px}
@@ -78,35 +78,32 @@ if ($sess_table<>teacher) {
         <!-- start of middle column -->
 <div id="templatemo_middle_column">
 <center>
-<h1>:: ผู้ส่งข้อสอบ::</h1></center><br><br>
-<p>[<a href="main.php">Main</a> &gt; <a href="mstudent.php">manage student</a> &gt; <a href="check_al.php"> Section ที่ตรวจแล้ว</a> &gt; <a href="check_al2.php?lesson=<?=$lesson?>&section=<?=$section?>">บทที่ ตรวจแล้ว</a> &gt;ผู้ทำส่งข้อสอบ</p><br>
+<h1>:: เธเธนเนเธชเนเธเธเนเธญเธชเธญเธ::</h1></center><br><br>
+&gt; <a href="check_al.php"> Section /a> &gt; <a href="check_al2.php?lesson=<?=$lesson?>&section=<?=$section?>">เธญเธฐเนเธฃเธซเธงเนเธฒ</a> &gt; เธญเธฐเนเธฃเธซเธงเนเธฒ2</p><br>
 <table border="0">
-  <tr bgcolor="#D3D3D3"> 
-    
-    <td>NO.</td>
-    <td>ผู้ส่งข้อสอบ</td>
+<tr bgcolor="#D3D3D3">
+<td>NO.</td>
+<td>เธญเธฐเนเธฃเธซเธงเนเธฒ3</td>
 
-  </tr>
-  <?
+</tr>
+<?
 
-	$count=1;
-	include "../connect.php";
-	$sql="select student.name,student.student_id from SendAnswer,Proposition,student,Check_answer  where (Check_answer.ref_answer=SendAnswer.answer_id and SendAnswer.ref_question=Proposition.question_id and SendAnswer.ref_student=student.student_id)  and Proposition.ref_lesson='$lesson' and  student.section='$section' GROUP BY student.name" ;
-	$result=mysql_db_query($dbname,$sql);
-	while($record=mysql_fetch_array($result)) {
-		
-		echo "
-		
-		<tr> 
-			<td>$count</td>
-			<td><a href=\"check_al4.php?id=$record[student_id]&lesson=$lesson&section=$section\">$record[name]</a></td>
-			
-		</tr>";
-		$count++;
+$count=1;
+include "../connect.php";
+$sql="select student.name,student.student_id from sendanswer,proposition,student,check_answer where (check_answer.ref_answer=sendanswer.answer_id and sendanswer.ref_question=proposition.question_id and sendanswer.ref_student=student.student_id) and proposition.ref_lesson='$lesson' and student.section='$section' GROUP BY student.name" ;
+$result=mysql_db_query($dbname,$sql);
+while($record=mysql_fetch_array($result)) {
 
-		
-	}
-	mysql_close();
+echo "
+<tr>
+<td>$count</td>
+<td><a href=\"check_al4.php?id=$record[student_id]&lesson=$lesson&section=$section\">$record[name]</a></td>
+</tr>";
+$count++;
+
+
+}
+mysql_close();
 ?>
 </table>
 <p>&nbsp;</p>

@@ -10,7 +10,7 @@ if ($sess_table<>teacher) {
 <meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
 <meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
 <link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
-<meta content="text/html; charset=TIS-620" http-equiv="content-type">
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
 <style type="text/css">
 <!--
 .style1 {font-size: 36px}
@@ -74,8 +74,8 @@ if ($sess_table<>teacher) {
         
         <!-- start of middle column -->
 <div id="templatemo_middle_column"><center>
-<h1>:: Question ที่ตรวจแล้ว ::</h1></center><br><br>
-[ <a href="main.php"> Main</a> &gt; <a href="mstudent.php"> manage student</a>&nbsp;&gt; <a href="check_al.php">Section ที่ตรวจแล้ว</a> &gt; Question ที่ตรวจแล้ว<br><br><br>
+<h1>:: Question เธ—เธตเนเธ•เธฃเธงเธเนเธฅเนเธง ::</h1></center><br><br>
+[ <a href="main.php"> Main</a> &gt; <a href="mstudent.php"> manage student</a>&nbsp;&gt; <a href="check_al.php">Section เธ—เธตเนเธ•เธฃเธงเธเนเธฅเนเธง</a> &gt; Question เธ—เธตเนเธ•เธฃเธงเธเนเธฅเนเธง<br><br><br>
 <table border="0">
   <tr bgcolor="#D3D3D3"> 
     
@@ -90,7 +90,7 @@ $sqlx="select * from teacher where username='$sess_username'";
 $resultx=mysql_db_query($dbname,$sqlx);
 $record=mysql_fetch_array($resultx);
 
-	$sql="select HeadLesson.detail ,HeadLesson.lesson,student.section from SendAnswer,Proposition,student,HeadLesson  where SendAnswer.ref_question=Proposition.question_id and SendAnswer.ref_student=student.student_id and Proposition.ref_lesson=HeadLesson.lesson and student.teach='$record[name]' and student.section='$section'";
+	$sql="select headlesson.detail ,headlesson.lesson,student.section from sendanswer,proposition,student,headlesson  where sendanswer.ref_question=proposition.question_id and sendanswer.ref_student=student.student_id and proposition.ref_lesson=headlesson.lesson and student.teach='$record[name]' and student.section='$section'";
 	$result=mysql_db_query($dbname,$sql);
 	while($record=mysql_fetch_array($result)) {
 		

@@ -4,19 +4,19 @@ if ($sess_table<>teacher) {
 }
 ?>
 <html>
-<meta content="text/html; charset=TIS-620" http-equiv="content-type">
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
 <body>
 <style type="text/css">
-/* class ����Ѻ����ǹ��Ǣͧ���ҧ */
+/* class สำหรับแถวส่วนหัวของตาราง */
 .tr_head{ 
 	background-color:#333333;
 	color:#FFFFFF;
 }
-/* class ����Ѻ���á�ͧ��������´ */
+/* class สำหรับแถวแรกของรายละเอียด */
 .tr_odd{
 	background-color:#F8F8F8;
 }
-/* class ����Ѻ���ͧ�ͧ��������´ */
+/* class สำหรับแถวสองของรายละเอียด */
 .tr_even{
 	background-color:#F2F2F2;
 }
@@ -24,15 +24,15 @@ if ($sess_table<>teacher) {
 
 <script language="javascript">
   window.onload = function () {    
-	 	var a=document.getElementById('mytable'); // ��ҧ�ԧ���ҧ���µ���� a
-		for(i=0;i<a.rows.length;i++){ // ǹ Loop �Ѻ�ӹǹ��㹵��ҧ
-			if(i>0){  // ��Ǩ�ͺ������������Ǣ��
-				if(i%2==1){   // ��Ǩ�ͺ������������������´
-					a.rows[i].className="tr_odd";	  // ��˹� class ���á
+	 	var a=document.getElementById('mytable'); // อ้างอิงตารางด้วยตัวแปร a
+		for(i=0;i<a.rows.length;i++){ // วน Loop นับจำนวนแถวในตาราง
+			if(i>0){  // ตรวจสอบถ้าไม่ใช่แถวหัวข้อ
+				if(i%2==1){   // ตรวจสอบถ้าไม่ใช่แถวรายละเอียด
+					a.rows[i].className="tr_odd";	  // กำหนด class แถวแรก
 				}else{
-					a.rows[i].className="tr_even";	// ��˹� class �Ƿ���ͧ
+					a.rows[i].className="tr_even";	// กำหนด class แถวที่สอง
 				}	
-			}else{ // ���������Ǣ�͡�˹� class 
+			}else{ // ถ้าเป็นแถวหัวข้อกำหนด class 
 				a.rows[i].className="tr_head";	
 			}	
 		}
@@ -41,12 +41,12 @@ if ($sess_table<>teacher) {
  </body>
  <body>
  <br>
-<h3>��§ҹ�š�����¹�ͧ�ѡ�֡�� <?=$_GET[section];?> �ա���֡�ҷ�� <?=$_GET[year];?></h3>
+<h3>รายงานผลการเรียนของนักศึกษา <?=$_GET[section];?> ปีการศึกษาที่ <?=$_GET[year];?></h3>
 
 <table id="mytable" border="0" cellspacing="0" cellpadding="0">
 
 <tr >
-<td>&nbsp; No.&nbsp; </td><td>&nbsp; ��ª��͹ѡ�֡��&nbsp; </td>
+<td>&nbsp; No.&nbsp; </td><td>&nbsp; รายชื่อนักศึกษา&nbsp; </td>
 
 <?
 $section=$_GET[section];
@@ -58,13 +58,13 @@ $num=mysql_num_rows($result);
 
 
 for ($i = 1; $i <= $num; $i++){
-echo"<td>&nbsp; ����� $i&nbsp; </td>";
+echo"<td>&nbsp; บทที่ $i&nbsp; </td>";
 }
 echo"<td>&nbsp; Total &nbsp; </td>";
 
 
 $count=1;
-$sql2="select student.name,student.student_id from Check_answer,SendAnswer,student,Proposition where Check_answer.ref_answer=SendAnswer.answer_id and SendAnswer.ref_student=student.student_id and SendAnswer.ref_question=Proposition.question_id and student.section='$section' and student.year='$year' group by student.name";
+$sql2="select student.name,student.student_id from check_answer,sendanswer,student,proposition where check_answer.ref_answer=sendanswer.answer_id and sendanswer.ref_student=student.student_id and sendanswer.ref_question=proposition.question_id and student.section='$section' and student.year='$year' group by student.name";
 $result2=mysql_db_query($dbname,$sql2);
 $numx=mysql_num_rows($result2);
 
@@ -77,7 +77,7 @@ echo"<td><center>$count</center></td><td><center>$record[name]</center></td>";
 
 for ($i = 1; $i <= $num; $i++){
 
-$sql3="select  sum(Check_answer.result) as sum_result from Check_answer,SendAnswer,student,Proposition where Check_answer.ref_answer=SendAnswer.answer_id and SendAnswer.ref_student=student.student_id and SendAnswer.ref_question=Proposition.question_id and student.section='$section' and student.year='$year' and Proposition.ref_lesson='$i' and student.student_id='$record[student_id]'";
+$sql3="select  sum(check_answer.result) as sum_result from check_answer,sendanswer,student,proposition where check_answer.ref_answer=sendanswer.answer_id and sendanswer.ref_student=student.student_id and sendanswer.ref_question=proposition.question_id and student.section='$section' and student.year='$year' and proposition.ref_lesson='$i' and student.student_id='$record[student_id]'";
 $result3=mysql_db_query($dbname,$sql3);
 $record3=mysql_fetch_array($result3);
 

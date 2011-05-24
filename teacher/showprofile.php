@@ -1,4 +1,3 @@
-
 <?
 
 include "../chksession.php";
@@ -23,7 +22,7 @@ mysql_close();
 ?>
 <HTML>
 <head>
-<meta content="text/html; charset=TIS-620" http-equiv="content-type">
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
 <meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
 <meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
 <title>Show Profile</title>
@@ -96,7 +95,7 @@ mysql_close();
       <td><b>Username : </b></td><td><?=$username?></td>
     </tr>
     <tr> 
-      <td><b>ชื่อ-สกุล : </b></td><td><?=$name?></td>
+      <td><b>เธเธทเนเธญ-เธชเธเธธเธฅ : </b></td><td><?=$name?></td>
     </tr>
     <tr>
       <td><b>Email : </b></td><td><?=$email?></td>
@@ -108,7 +107,7 @@ mysql_close();
       <td valign="top"><b>Address :</b></td><td><?=$address?></td>
     </tr>
     <tr>
-      <td><b>Register Date :</b></td><td><?=displaydate($reg_date)?></td>
+      <td><b>Register Date :</b></td><td><?= displaydate($reg_date) ?></td>
     </tr>
 	
 	

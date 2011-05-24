@@ -20,7 +20,7 @@ $time=$record[time];
 <meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
 <meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
 <link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
-<meta content="text/html; charset=TIS-620" http-equiv="content-type">
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
 <style type="text/css">
 <!--
 .style1 {font-size: 36px}
@@ -92,7 +92,7 @@ $time=$record[time];
   <table border="0" cellpadding="2" cellspacing="2">
     <tbody>
       <tr>
-        <td><span class="Apple-style-span" style="border-collapse: separate; color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; font-size: medium;"><span class="Apple-style-span" style="">บทเรียนบทที่</span></span> </td>
+        <td><span class="Apple-style-span" style="border-collapse: separate; color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; font-size: medium;"><span class="Apple-style-span" style="">เธเธ—เน€เธฃเธตเธขเธเธเธ—เธ—เธตเน</span></span> </td>
         <td><?=$lesson?>
           <INPUT NAME="lesson" TYPE=HIDDEN id="lesson" value="<?=$lesson?>"></td>
       </tr>
@@ -100,7 +100,7 @@ $time=$record[time];
         <td><table border="0" cellpadding="2" cellspacing="2">
           <tbody>
             <tr>
-              <td><span class="Apple-style-span" style="border-collapse: separate; color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; font-size: medium;">หัวข้อของบทเรียน<br>
+              <td><span class="Apple-style-span" style="border-collapse: separate; color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; font-size: medium;">เธซเธฑเธงเธเนเธญเธเธญเธเธเธ—เน€เธฃเธตเธขเธ<br>
               </span></td>
             </tr>
           </tbody>
@@ -110,11 +110,11 @@ $time=$record[time];
         <td><input name="h_lesson" id="h_lesson" value="<?=$detail?>"></td>
       </tr>
       <tr>
-        <td class="style3"><strong>ให้นักศึกษาทำจากการสุ่ม</strong></td>
+        <td class="style3"><strong>เนเธซเนเธเธฑเธเธจเธถเธเธฉเธฒเธ—เธณเธเธฒเธเธเธฒเธฃเธชเธธเนเธก</strong></td>
         <td class="style3">&nbsp;</td>
       </tr>
       <tr>
-        <td class="style3">สุ่มข้อยาก จำนวน</td>
+        <td class="style3">เธชเธธเนเธกเธเนเธญเธขเธฒเธ เธเธณเธเธงเธ</td>
         <td><select name="hard" id="hard">
         <?
 for($x=1;$x<=20;$x++) {
@@ -124,10 +124,10 @@ for($x=1;$x<=20;$x++) {
 </select>
 
         
-        &nbsp;&nbsp;<span class="style3">ข้อ </span></td>
+        &nbsp;&nbsp;<span class="style3">เธเนเธญ </span></td>
       </tr>
       <tr>
-        <td class="style3">สุ่มข้อง่าย จำนวน</td>
+        <td class="style3">เธชเธธเนเธกเธเนเธญเธเนเธฒเธข เธเธณเธเธงเธ</td>
         <td><select name="easy" id="easy">
        <?
 for($x=1;$x<=20;$x++) {
@@ -135,10 +135,10 @@ for($x=1;$x<=20;$x++) {
 <option value=<?=$x;?> <? if($x==$easy){echo "selected";} ?>><?=$x?></option>
 <? } ?>
 </select>
-          &nbsp;<span class="style3">&nbsp;ข้อ</span></td>
+          &nbsp;<span class="style3">&nbsp;เธเนเธญ</span></td>
       </tr>
       <tr>
-        <td class="style3">เวลาในการทำ <? list($HH, $MM,$SS) = explode(':', $time);
+        <td class="style3">เน€เธงเธฅเธฒเนเธเธเธฒเธฃเธ—เธณ <? list($HH, $MM,$SS) = explode(':', $time);
 		
 		?> </td>
         <td>
@@ -157,7 +157,7 @@ for($x=0;$x<=59;$x++) {
 <option value=<? echo"$x";?> <? if($x==$MM){echo "selected";} ?>><?  if($x<10){echo"0$x";}else{echo"$x";}?></option>
 <? } ?>
 </select> 
-          <span class="style3">&nbsp;ชั่วโมง </span></td>
+          <span class="style3">&nbsp;เธเธฑเนเธงเนเธกเธ </span></td>
       </tr>
       <tr>
         <td><br>

@@ -3,16 +3,16 @@ include "../connect.php";
 ?>
 <html>
 <body>
-<meta http-equiv="Content-Type" content="text/html; charset=TIS-620" /> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
 <link rel="stylesheet" type="text/css" href="../css/smoothness/jquery-ui-1.7.2.custom.css">  
     <script type="text/javascript" src="../js/jquery-1.3.2.min.js"></script>  
     <script type="text/javascript" src="../js/jquery-ui-1.7.2.custom.min.js"></script>  
     <script type="text/javascript">  
   
 $(function(){  
-    // �á�� jquery  
+    // แทรกโค้ต jquery  
     $("#dateInput").datepicker({ dateFormat: 'yy-mm-dd' });  
-    // �ٻẺ�ѹ���������� 2009-08-16  
+    // รูปแบบวันที่ที่ได้จะเป็น 2009-08-16  
 });
 	
     </script>  
@@ -25,16 +25,16 @@ $(function(){
 }  
 </style> 
 <style type="text/css">
-/* class ����Ѻ����ǹ��Ǣͧ���ҧ */
+/* class สำหรับแถวส่วนหัวของตาราง */
 .tr_head{ 
 	background-color:#333333;
 	color:#FFFFFF;
 }
-/* class ����Ѻ���á�ͧ��������´ */
+/* class สำหรับแถวแรกของรายละเอียด */
 .tr_odd{
 	background-color:#99FFCC;
 }
-/* class ����Ѻ���ͧ�ͧ��������´ */
+/* class สำหรับแถวสองของรายละเอียด */
 .tr_even{
 	background-color:#F2F2F2;
 }
@@ -42,26 +42,26 @@ $(function(){
 
 <script language="javascript">
   window.onload = function () {    
-	 	var a=document.getElementById('mytable'); // ��ҧ�ԧ���ҧ���µ���� a
-		for(i=0;i<a.rows.length;i++){ // ǹ Loop �Ѻ�ӹǹ��㹵��ҧ
-			if(i>0){  // ��Ǩ�ͺ������������Ǣ��
-				if(i%2==1){   // ��Ǩ�ͺ������������������´
-					a.rows[i].className="tr_odd";	  // ��˹� class ���á
+	 	var a=document.getElementById('mytable'); // อ้างอิงตารางด้วยตัวแปร a
+		for(i=0;i<a.rows.length;i++){ // วน Loop นับจำนวนแถวในตาราง
+			if(i>0){  // ตรวจสอบถ้าไม่ใช่แถวหัวข้อ
+				if(i%2==1){   // ตรวจสอบถ้าไม่ใช่แถวรายละเอียด
+					a.rows[i].className="tr_odd";	  // กำหนด class แถวแรก
 				}else{
-					a.rows[i].className="tr_even";	// ��˹� class �Ƿ���ͧ
+					a.rows[i].className="tr_even";	// กำหนด class แถวที่สอง
 				}	
-			}else{ // ���������Ǣ�͡�˹� class 
+			}else{ // ถ้าเป็นแถวหัวข้อกำหนด class 
 				a.rows[i].className="tr_head";	
 			}	
 		}
  }
  </script>
-<h1>��˹���������㹡���觧ҹ<br></h1>
+<h1>กำหนดระยะเวลาในการส่งงาน<br></h1>
 <a href="main.php">main</a>
 <form name="form1" method="post" action="fix_send2.php">
   <table width="45%" border="0.5">
     <tr>
-      <td width="38%">�����¹</td>
+      <td width="38%">บทเรียน</td>
       <td width="62%"><select name="HeadLesson" id="HeadLesson">
         <? 
      $sql="select * from HeadLesson order by lesson asc";  
@@ -69,7 +69,7 @@ $(function(){
 $count=1;
      while($rs=mysql_fetch_array($result)){  
  ?>
-        <option value="<?=$rs[lesson]?>" selected><? echo "������ $count $rs[detail]";?></option>
+        <option value="<?=$rs[lesson]?>" selected><? echo "บทที่่ $count $rs[detail]";?></option>
         <?php 
 $count++;} ?>
       </select></td>
@@ -89,7 +89,7 @@ $count++;} ?>
       </select></td>
     </tr>
     <tr>
-      <td>&nbsp;&nbsp;�ա���֡��</td>
+      <td>&nbsp;&nbsp;ปีการศึกษา</td>
       <td><select name="year" id="province">
         <? 
      $sql="select * from Academic_year ";  
@@ -103,7 +103,7 @@ $count++;} ?>
       </select></td>
     </tr>
     <tr>
-      <td>��˹��ѹ�觧ҹ</td>
+      <td>กำหนดวันส่งงาน</td>
       <td>
       <input   id="dateInput"  type="input" name="time" value=""> &nbsp;
       <select name="HH" id="HH">
@@ -137,8 +137,8 @@ for($x=0;$x<=59;$x++) {
   <tr>
     <td width="12%"><div align="center">Section</div></td>
     <td width="14%"><div align="center">Year</div></td>
-    <td width="46%"><div align="center">�����¹</div></td>
-    <td width="28%"><div align="center">��˹����ҷ���ͧ��</div></td>
+    <td width="46%"><div align="center">บทเรียน</div></td>
+    <td width="28%"><div align="center">กำหนดเวลาที่ต้องส่ง</div></td>
   </tr>
 
 
@@ -149,18 +149,18 @@ $sql="select * from time_fix ";
 $result=mysql_db_query($dbname,$sql);
 $num=mysql_num_rows($result);
 if($num<=0){
-echo "<tr><td>�ѧ������˹������觧ҹ�ͧ�ء Section</td></tr> ";
+echo "<tr><td>ยังไม่ได้กำหนดเวลาส่งงานของทุก Section</td></tr> ";
 exit();
 }
 while($record=mysql_fetch_array($result)){
-$sql2="select * from Proposition,HeadLesson where Proposition.ref_lesson=HeadLesson.lesson and ref_lesson='$record[ref_lesson]' ";
+$sql2="select * from proposition,headlesson where proposition.ref_lesson=headlesson.lesson and ref_lesson='$record[ref_lesson]' ";
 $result2=mysql_db_query($dbname,$sql2);
 $record2=mysql_fetch_array($result2);
 
 echo"
 
 <tr>
-<td>$record[fix_sec]</td><td>$record[fix_year]</td><td>����� $record[ref_lesson] $record2[detail]</td><td>$record[time_finish]</td>
+<td>$record[fix_sec]</td><td>$record[fix_year]</td><td>บทที่ $record[ref_lesson] $record2[detail]</td><td>$record[time_finish]</td>
 </tr>";
 }
 ?>

@@ -7,7 +7,7 @@ $lesson=$_POST[lesson];
 <meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
 <meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
 <link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
-<meta content="text/html; charset=TIS-620" http-equiv="content-type">
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
 <style type="text/css">
 <!--
 .style1 {font-size: 36px}
@@ -59,7 +59,7 @@ $count=1;
 
 
 
-$sql2="select teacher_random.teacher_id,teacher_random.question_id from  teacher_random,Proposition where teacher_random.question_id=Proposition.question_id and teacher_random.teacher_id='$teacher_id' and Proposition.ref_lesson='$lesson' ";
+$sql2="select teacher_random.teacher_id,teacher_random.question_id from  teacher_random,proposition where teacher_random.question_id=proposition.question_id and teacher_random.teacher_id='$teacher_id' and proposition.ref_lesson='$lesson' ";
 $result2=mysql_db_query($dbname,$sql2);
 $num=mysql_num_rows($result2);
 
@@ -87,11 +87,11 @@ echo"<table border='1'>";
 	{
 	
 
-	 $sql="select * from Proposition where question_id='".$_POST[chkDel][$i]."' ";
+	 $sql="select * from proposition where question_id='".$_POST[chkDel][$i]."' ";
 	$result=mysql_db_query($dbname,$sql);
 	$record=mysql_fetch_array($result);
 	if($record[level]!=0){
-	$level='ข้อยาก';}else{$level='ข้อง่าย';}
+	$level='เธเนเธญเธขเธฒเธ';}else{$level='เธเนเธญเธเนเธฒเธข';}
 	echo"
 	<tr>
 	<td>$count</td><td>$record[proposition]</td><td>$record[create_by]</td><td>$level</td>
