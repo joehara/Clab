@@ -18,7 +18,7 @@ $MM=$_POST[MM];
 <meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
 <meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
 <link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
-<meta content="text/html; charset=TIS-620" http-equiv="content-type">
+<meta content="text/html; charset=utf-8" http-equiv="content-type">
 <meta http-equiv="Refresh" content="3; URL=addlesson.php">
 <style type="text/css">
 <!--
@@ -93,13 +93,13 @@ if ($lesson=="" or $h_lesson=="") {
 	echo "<h3>ERROR : Don't have Key anything<h3>"; exit();
 }
 include "../connect.php";
-$sql="select * from HeadLesson where lesson='$lesson' ";
+$sql="select * from headlesson where lesson='$lesson' ";
 $result=mysql_db_query($dbname,$sql);
 $num=mysql_num_rows($result);
 if($num>0) {
 	echo "<h3>ERROR : บทนี้มีอยู่ในระบบแล้ว</h3>";	 exit();
 }
-$sql="insert into HeadLesson values('','$lesson','$h_lesson','$hard','$easy','$HH:$MM')";
+$sql="insert into headlesson values('','$lesson','$h_lesson','$hard','$easy','$HH:$MM')";
 $result=mysql_db_query($dbname,$sql);
 if ($result) {
 	echo "<h3>Insert Lesson successful</h3>";

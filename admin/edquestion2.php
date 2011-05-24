@@ -3,7 +3,7 @@
 <meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
 <meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
 <link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
-<meta content="text/html; charset=TIS-620" http-equiv="content-type">
+<meta content="text/html; charset=utf-8" http-equiv="content-type">
 <style type="text/css">
 <!--
 .style1 {font-size: 36px}
@@ -87,7 +87,7 @@ $new = htmlspecialchars($help, ENT_QUOTES);
 $answer2 = htmlspecialchars($answer, ENT_QUOTES);
 
 include "../connect.php";
-$sql="update Proposition set  proposition='$question',help='$new',answer='$answer2',level='$level' where question_id='$id' ";
+$sql="update proposition set  proposition='$question',help='$new',answer='$answer2',level='$level' where question_id='$id' ";
 $result=mysql_db_query($dbname,$sql);
 if ($result) {
 	echo "<h3>Edit Question Successful</h3>";

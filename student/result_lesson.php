@@ -1,11 +1,11 @@
 <?
-include "../chksession.php";
+include "/Clab/chksession.php";
 if ($sess_table<>student) {
-	header( "Location: ../index.html"); 	exit();}
+	header( "Location: /Clab/index.html"); 	exit();}
 ?>
 <HTML>
 <head>
-<meta content="text/html; charset=TIS-620" http-equiv="content-type">
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
 <meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
 <meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
 <title>Result Lesson</title>
@@ -33,7 +33,7 @@ if ($sess_table<>student) {
     
 	<div id="templatemo_menu">
     	<div id="search">
-	Welcome, <a href="showprofile.php" style="color:#000000"><b><?=$sess_username?></b></a>&nbsp;&nbsp;<a href="../logout.php"><img src="../images/logout.gif" alt="Logout" /></a>
+	Welcome, <a href="showprofile.php" style="color:#000000"><b><?=$sess_username?></b></a>&nbsp;&nbsp;<a href="../logout.php"><img src="/Clab/images/logout.gif" alt="Logout" /></a>
     	</div>
         <div id="menu">
             <ul>
@@ -82,7 +82,7 @@ if ($sess_table<>student) {
     <td>คะแนนทั้งหมด</td>
   </tr>
   <?
-  	include "../connect.php";
+  	include "/Clab/connect.php";
   $sql="select * from student where username='$sess_username' ";
 $result=mysql_db_query($dbname,$sql);
 $record=mysql_fetch_array($result);
@@ -90,7 +90,7 @@ $student_id=$record[student_id];
 
 	$count=0;
 
-	$sql="select * from HeadLesson  ORDER BY lesson asc";
+	$sql="select * from headLesson  ORDER BY lesson asc";
 	$result=mysql_db_query($dbname,$sql);
 	while($record=mysql_fetch_array($result)) {
 		
@@ -109,4 +109,3 @@ $student_id=$record[student_id];
 </div></div>
 </BODY>
 </HTML>
-

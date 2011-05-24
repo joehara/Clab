@@ -1,14 +1,14 @@
 <?
 include "../connect.php";
-$sql="select * from HeadLesson  ";
+$sql="select * from headlesson  ";
 $result=mysql_db_query($dbname,$sql);
 $record=mysql_fetch_array($result); 
 $time=$record[time];
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=windows-874" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8 />
 <title>Untitled Document</title>
 </head>
  
@@ -24,8 +24,8 @@ function begintimer(){
 if (!document.images)
 return
 if (parselimit==1)
-// ‡Àµÿ°“√≥Ï∑’ËµÈÕß°“√„ÀÈ‡°‘¥¢÷Èπ
- //∂È“µÈÕß°“√„ÀÈ°√–‚¥¥‰ª¬—ß Page Õ◊Ëπ
+// ‡πÄ‡∏´‡∏ï‡∏∏‡∏Å‡∏≤‡∏£‡∏ì‡πå‡∏ó‡∏µ‡πà‡∏ï‡πâ‡∏≠‡∏á‡∏Å‡∏≤‡∏£‡πÉ‡∏´‡πâ‡πÄ‡∏Å‡∏¥‡∏î‡∏Ç‡∏∂‡πâ‡∏ô
+ //‡∏ñ‡πâ‡∏≤‡∏ï‡πâ‡∏≠‡∏á‡∏Å‡∏≤‡∏£‡πÉ‡∏´‡πâ‡∏Å‡∏£‡∏∞‡πÇ‡∏î‡∏î‡πÑ‡∏õ‡∏¢‡∏±‡∏á Page ‡∏≠‡∏∑‡πà‡∏ô
 
 frmTest.submit();
 else{
@@ -33,15 +33,15 @@ parselimit-=1
 curmin=Math.floor(parselimit/60)
 cursec=parselimit%60
 if (curmin!=0)
-curtime="‡«≈“∑’Ë‡À≈◊Õ <font color=red> "+curmin+" </font>π“∑’ °—∫ <font color=red>"+cursec+" </font>«‘π“∑’ "
+curtime="‡πÄ‡∏ß‡∏•‡∏≤‡∏ó‡∏µ‡πà‡πÄ‡∏´‡∏•‡∏∑‡∏≠ <font color=red> "+curmin+" </font>‡∏ô‡∏≤‡∏ó‡∏µ ‡∏Å‡∏±‡∏ö <font color=red>"+cursec+" </font>‡∏ß‡∏¥‡∏ô‡∏≤‡∏ó‡∏µ "
 else if(cursec==1)
 {
-alert("À¡¥‡«≈“·≈È«®È“");
-window.location="../logout.php";
+alert("‡∏´‡∏°‡∏î‡πÄ‡∏ß‡∏•‡∏≤‡πÅ‡∏•‡πâ‡∏ß‡∏à‡πâ‡∏≤");
+window.location="/Clab/logout.php";
 }
 else
 {
-curtime="‡«≈“∑’Ë‡À≈◊Õ <font color=red>"+cursec+" </font>«‘π“∑’ "
+curtime="‡πÄ‡∏ß‡∏•‡∏≤‡∏ó‡∏µ‡πà‡πÄ‡∏´‡∏•‡∏∑‡∏≠ <font color=red>"+cursec+" </font>‡∏ß‡∏¥‡∏ô‡∏≤‡∏ó‡∏µ "
 }
 document.getElementById('dplay').innerHTML = curtime;
 setTimeout("begintimer()",1000)

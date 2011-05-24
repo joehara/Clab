@@ -1,5 +1,5 @@
 <?php
-header("Content-Type content=text/html; charset=TIS-620");
+header("Content-Type content=text/html; charset=UTF-8");
 include"../function.php";
 include "../connect.php";
 include "../chksession.php";
@@ -30,11 +30,11 @@ $help2 = htmlspecialchars($help, ENT_QUOTES);
 ?>
 <HTML>
 <head>
-<meta content="text/html; charset=TIS-620" http-equiv="content-type">
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
 <meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
 <meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
 <title>Lesson</title>
-<link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
+<link href="/Clab/templatemo_style.css" rel="stylesheet" type="text/css" />
 <style type="text/css">
 <!--
 .style1 {font-size: 36px}
@@ -58,14 +58,13 @@ $help2 = htmlspecialchars($help, ENT_QUOTES);
     
 	<div id="templatemo_menu">
     	<div id="search">
-	<? $today=date("r");
-echo "$today"; ?>
+	Welcome, <a href="showprofile.php" style="color:#000000"><b><?=$sess_username?></b></a>&nbsp;&nbsp;
     	</div>
         <div id="menu">
             <ul>
-                <li><a href="../index.html" class="current">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact Us</a></li>
+                
+                <li><a href="about_us.php">About Us</a></li>
+                <li><a href="contact_us.php">Contact Us</a></li>
             </ul>
         </div>
 	</div>
@@ -80,34 +79,19 @@ echo "$today"; ?>
 
             <div id="leftcolumn_box01">
                 <div class="leftcolumn_box01_top">
-                    <h2>Logined In System </h2>
+                    <h2>Menu</h2>
                 </div>
                 <div class="leftcolumn_box01_bottom">
                         <div class="form_row">
-                        <label>Welcome</label><a href="showprofile.php" style="color:#FFFFFF"><b><?=$sess_username?></b></a></p>
-                        <p>Log in the systems</p>
-                        <a href="../logout.php"><p style="color:#FE9A2E"><b>[ logout ]</b></p></a> 
-		
+                        <label><a href="main.php" style="color:#FE9A2E"><b>[ Main ]</b></a></label><br><br>
+ 			<label><a href="lesson.php" style="color:#FE9A2E"><b>[ Lesson ]</b></a></label><br><br>
+			
+			<label><a href="showprofile.php" style="color:#FE9A2E"><b>[ Show Profile ]</b></a></label><br><br>
+		<a href="/Clab/logout.php"><img src="/Clab/images/logout.gif" alt="Logout" /></a>
                 </div>            
             	</div>
             
-		<div id="leftcolumn_box02">
-            	<h2>Menu</h2>
-                <ul>
-<p> <a href="main.php">[ Main ]</a> </p>
-<p> <a href="lesson.php">[ lesson ]</a> </p>
-<p><a href="result_lesson.php">[ Result Lesson ]</a></p>
-<p><a href="showprofile.php">[ Show Profile ]</a></p>
-</div>
-                <div id="leftcolumn_box02">
-<h2>Link</h2>
-                <a href="http://lms.kmutnb.ac.th/"><img src="../images/banner_LMS.gif" alt="Elearning" /></a>                
-		<a href="http://wasana.kmutnb.ac.th//"><img src="../images/wireless.gif" alt="wireless" /></a>
-                <a href="http://k-radio.kmutnb.ac.th/"><img src="../images/banner-K_radio.gif" alt="K_radio" /></a>
-
-		</ul>
-            </div>            	            
-        </div>
+		</div>
         </div>
         <!-- end of left column -->
         

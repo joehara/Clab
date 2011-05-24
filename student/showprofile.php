@@ -3,7 +3,7 @@
 
 include "../chksession.php";
 if ($sess_table<>student) {
-	header( "Location: ../index.html"); 	exit();}
+	header( "Location: /Clab/index.html"); 	exit();}
 
 
 include "../function.php";
@@ -24,11 +24,11 @@ mysql_close();
 ?>
 <HTML>
 <head>
-<meta content="text/html; charset=TIS-620" http-equiv="content-type">
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
 <meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
 <meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
 <title>Show Profile</title>
-<link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
+<link href="/Clab/templatemo_style.css" rel="stylesheet" type="text/css" />
 <style type="text/css">
 <!--
 .style1 {font-size: 36px}
@@ -52,7 +52,7 @@ mysql_close();
     
 	<div id="templatemo_menu">
     	<div id="search">
-	Welcome, <a href="showprofile.php" style="color:#000000"><b><?=$sess_username?></b></a>&nbsp;&nbsp;<a href="../logout.php"><img src="../images/logout.gif" alt="Logout" /></a>
+	Welcome, <a href="showprofile.php" style="color:#000000"><b><?=$sess_username?></b></a>&nbsp;&nbsp;
     	</div>
         <div id="menu">
             <ul>
@@ -79,9 +79,9 @@ mysql_close();
                         <div class="form_row">
                         <label><a href="main.php" style="color:#FE9A2E"><b>[ Main ]</b></a></label><br><br>
  			<label><a href="lesson.php" style="color:#FE9A2E"><b>[ Lesson ]</b></a></label><br><br>
-			<label><a href="result_lesson.php" style="color:#FE9A2E"><b>[ Result Lesson ]</b></a></label><br><br>
+			
 			<label><a href="showprofile.php" style="color:#FE9A2E"><b>[ Show Profile ]</b></a></label><br><br>
-		
+		<a href="/Clab/logout.php"><img src="/Clab/images/logout.gif" alt="Logout" /></a>
                 </div>            
             	</div>
             
@@ -95,10 +95,10 @@ mysql_close();
 [ <a href="main.php">Back Main</a> ]<center><br>
   <table cellspacing="2">
     <tbody><tr> 
-      <td><b>รหัสนักศึกษา : </b></td><td><?=$code?></td>
+      <td><b>Student ID : </b></td><td><?=$code?></td>
     </tr>
     <tr> 
-      <td><b>ชื่อ-สกุล : </b></td><td><?=$name?></td>
+      <td><b>Name : </b></td><td><?=$name?></td>
     </tr>
     <tr> 
       <td><b>Section : </b></td><td><?=$section?></td>
@@ -122,7 +122,7 @@ mysql_close();
     </tr>
   </tbody></table>
 </form>
-<a href="changepw.php"><img src="../images/changePass.jpeg" alt="Change Password" /></a><br>
+<a href="changepw.php"><img src="/Clab/images/changePass.jpeg" alt="Change Password" /></a><br>
 <a href="changepw.php">Change Password</a></center>
 </div></div>
 </body></html>

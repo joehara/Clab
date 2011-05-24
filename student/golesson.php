@@ -1,9 +1,9 @@
 
 <? 
 include "../chksession.php";
-header("Content-Type content=text/html; charset=TIS-620");
+header("Content-Type content=text/html; charset=UTF-8");
 if ($sess_table<>student) {
-	header( "Location: ../index.html"); 	exit();
+	header( "Location: /Clab/index.html"); 	exit();
 }
 
 $id_question=$_GET[id_question];
@@ -11,7 +11,7 @@ $ref_student=$_GET[ref_student];
 include "../connect.php";
 
 
-$sql="select * from Proposition where question_id='$id_question'";
+$sql="select * from proposition where question_id='$id_question'";
 
 $result=mysql_db_query($dbname,$sql);
 $record=mysql_fetch_array($result);
@@ -21,7 +21,7 @@ $help=$record[help];
 $ref_lesson=$record[ref_lesson];
 
 
-$sql="select * from SendAnswer where ref_question='$id_question' and ref_student='$ref_student'";
+$sql="select * from sendanswer where ref_question='$id_question' and ref_student='$ref_student'";
 
 $result=mysql_db_query($dbname,$sql);
 $record=mysql_fetch_array($result);
@@ -34,11 +34,11 @@ $help=$code;
 ?>
 <HTML>
 <head>
-<meta content="text/html; charset=TIS-620" http-equiv="content-type">
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
 <meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
 <meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
 <title>Lesson</title>
-<link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
+<link href="/Clab/templatemo_style.css" rel="stylesheet" type="text/css" />
 <style type="text/css">
 <!--
 .style1 {font-size: 36px}
@@ -62,7 +62,7 @@ $help=$code;
     
 	<div id="templatemo_menu">
     	<div id="search">
-	Welcome, <a href="showprofile.php" style="color:#000000"><b><?=$sess_username?></b></a>&nbsp;&nbsp;<a href="../logout.php"><img src="../images/logout.gif" alt="Logout" /></a>
+	Welcome, <a href="showprofile.php" style="color:#000000"><b><?=$sess_username?></b></a>&nbsp;&nbsp;
     	</div>
         <div id="menu">
             <ul>
@@ -89,9 +89,9 @@ $help=$code;
                         <div class="form_row">
                         <label><a href="main.php" style="color:#FE9A2E"><b>[ Main ]</b></a></label><br><br>
  			<label><a href="lesson.php" style="color:#FE9A2E"><b>[ Lesson ]</b></a></label><br><br>
-			<label><a href="result_lesson.php" style="color:#FE9A2E"><b>[ Result Lesson ]</b></a></label><br><br>
+			
 			<label><a href="showprofile.php" style="color:#FE9A2E"><b>[ Show Profile ]</b></a></label><br><br>
-		
+		<a href="/Clab/logout.php"><img src="/Clab/images/logout.gif" alt="Logout" /></a>
                 </div>            
             	</div>
             
@@ -115,19 +115,19 @@ $help=$code;
   </tr>
   <tr>
     <td height="40">&nbsp;</td>
-    <td> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;โจทย์::
+    <td> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;รขลกยทรรฌ::
      
       <?=$question?><input type="hidden" name="id_question" value="<?=$id_question?>">
       <input name="ref_student" type="hidden" id="ref_student" value="<?=$ref_student?>"></td>
-    <td>เวลาที่เริ่มทำ 
+    <td>ร รร…ร’ยทร•รจร รร”รจรยทร“ 
 	<? 
-$sql2="select * from Random where ref_question='$id_question' and ref_student='$ref_student'";
+$sql2="select * from random where ref_question='$id_question' and ref_student='$ref_student'";
 $result2=mysql_db_query($dbname,$sql2);
 $record=mysql_fetch_array($result2);
 $time_random=$record[time_random];
 if($time_random==0){
 $time_random=date("y-m-d h:i:s");
-$sql3="update  Random set time_random='$time_random' where ref_question='$id_question' and ref_student='$ref_student'";
+$sql3="update  random set time_random='$time_random' where ref_question='$id_question' and ref_student='$ref_student'";
 $result3=mysql_db_query($dbname,$sql3);
 
 }else{

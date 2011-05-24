@@ -16,7 +16,7 @@ $student_id=$_GET[id];
 <meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
 <meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
 <link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
-<meta content="text/html; charset=TIS-620" http-equiv="content-type">
+<meta content="text/html; charset=utf-8" http-equiv="content-type">
 <style type="text/css">
 <!--
 .style1 {font-size: 36px}
@@ -67,11 +67,11 @@ $student_id=$_GET[id];
                 </div>
                 <div class="leftcolumn_box01_bottom">
                         <div class="form_row">
-                        <label><a href="main.php" style="color:#FE9A2E"><b>[ Main ]</b></a></label><br><br>
- 			<label><a href="mstudent.php" style="color:#FE9A2E"><b>[ Management Student ]</b></a></label><br><br>
-			<label><a href="mteacher.php" style="color:#FE9A2E"><b>[ Management Teacher ]</b></a></label><br><br>
-			<label><a href="m_lesson.php" style="color:#FE9A2E"><b>[ Management Lesson ]</b></a></label><br><br>
-			<label><a href="m_scroll.php" style="color:#FE9A2E"><b>[ Management Score ]</b></a></label><br><br>
+              <label><a href="main.php" style="color:#FE9A2E"><b>[ Main ]</b></a></label><br><br>
+ 			<label><a href="mstudent.php" style="color:#FE9A2E"><b>[  Student Management ]</b></a></label><br><br>
+			<label><a href="mteacher.php" style="color:#FE9A2E"><b>[  Teacher Management ]</b></a></label><br><br>
+			<label><a href="m_lesson.php" style="color:#FE9A2E"><b>[  Lesson Management ]</b></a></label><br><br>
+			<label><a href="m_scroll.php" style="color:#FE9A2E"><b>[  Score Management ]</b></a></label><br><br>
 			<label><a href="changepw.php" style="color:#FE9A2E"><b>[ Change Password ]</b></a></label><br><br>
 
 		
@@ -86,7 +86,7 @@ $student_id=$_GET[id];
     	<div id="templatemo_middle_column">
  <?
 	include "../connect.php";
-	$sql="select student.name,student.code_st,student.section,SendAnswer.answer_id,Proposition.proposition,SendAnswer.code,Check_answer.check_id,Check_answer.code_comment,Check_answer.result,Check_answer.teacher_check,Check_answer.check_date,student.student_id,Proposition.ref_lesson,Time_use.time_start from Check_answer,SendAnswer,Proposition,student,Time_use  where (Check_answer.ref_answer=SendAnswer.answer_id and SendAnswer.ref_question=Proposition.question_id and SendAnswer.ref_student=student.student_id) and Time_use.ref_student=student.student_id and SendAnswer.ref_student='$student_id' and Proposition.question_id='$question_id' ";
+	$sql="select student.name,student.code_st,student.section,sendanswer.answer_id,proposition.proposition,sendanswer.code,check_answer.check_id,check_answer.code_comment,check_answer.result,check_answer.teacher_check,check_answer.check_date,student.student_id,proposition.ref_lesson,time_use.time_start from check_answer,sendanswer,proposition,student,time_use  where (check_answer.ref_answer=sendanswer.answer_id and sendanswer.ref_question=proposition.question_id and sendanswer.ref_student=student.student_id) and time_use.ref_student=student.student_id and sendanswer.ref_student='$student_id' and proposition.question_id='$question_id' ";
 $result=mysql_db_query($dbname,$sql);
 $record=mysql_fetch_array($result);
 
@@ -106,7 +106,7 @@ $teacher_check=$record[teacher_check];
 $check_date=$record[check_date];
 ?>
     &nbsp;<br />
-    [ <a href="main.php">Back Main</a> &gt; <a href="m_scroll.php">Management Scroll</a>&nbsp;&gt;<a href="m_scroll_name.php?section=<?=$section?>">รายชื่อที่ส่งงานเข้ามา</a>&gt;<a href="m_scroll_lesson.php?section=<?=$section?>&amp;id=<?=$student_id?>">บทต่างๆที่ส่งเข้ามา</a>&gt;<a href="m_scroll_question.php?section=<?=$section?>&amp;id=<?=$student_id?>&amp;lesson=<?=$lesson?>">ข้อต่างๆที่ส่งเข้ามา</a>&gt;ผลคะแนน</p><br>
+    [ <a href="main.php">Back Main</a> &gt; <a href="m_scroll.php">Manage Score</a>&nbsp;&gt;<a href="m_scroll_name.php?section=<?=$section?>">รายชื่อที่ส่งงานเข้ามา</a>&gt;<a href="m_scroll_lesson.php?section=<?=$section?>&amp;id=<?=$student_id?>">บทต่างๆที่ส่งเข้ามา</a>&gt;<a href="m_scroll_question.php?section=<?=$section?>&amp;id=<?=$student_id?>&amp;lesson=<?=$lesson?>">ข้อต่างๆที่ส่งเข้ามา</a>&gt;ผลคะแนน</p><br>
 <form id="form1" name="form1" method="post" action="m_scroll_result2.php">
   <table width="100%" border="0">
     <tr>

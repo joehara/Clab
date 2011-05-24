@@ -10,7 +10,7 @@ if ($sess_table<>admin) {
 <meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
 <meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
 <link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
-<meta content="text/html; charset=TIS-620" http-equiv="content-type">
+<meta content="text/html; charset=utf-8" http-equiv="content-type">
 <style type="text/css">
 <!--
 .style1 {font-size: 36px}
@@ -61,11 +61,11 @@ if ($sess_table<>admin) {
                 </div>
                 <div class="leftcolumn_box01_bottom">
                         <div class="form_row">
-                        <label><a href="main.php" style="color:#FE9A2E"><b>[ Main ]</b></a></label><br><br>
- 			<label><a href="mstudent.php" style="color:#FE9A2E"><b>[ Management Student ]</b></a></label><br><br>
-			<label><a href="mteacher.php" style="color:#FE9A2E"><b>[ Management Teacher ]</b></a></label><br><br>
-			<label><a href="m_lesson.php" style="color:#FE9A2E"><b>[ Management Lesson ]</b></a></label><br><br>
-			<label><a href="m_scroll.php" style="color:#FE9A2E"><b>[ Management Score ]</b></a></label><br><br>
+              <label><a href="main.php" style="color:#FE9A2E"><b>[ Main ]</b></a></label><br><br>
+ 			<label><a href="mstudent.php" style="color:#FE9A2E"><b>[  Student Management ]</b></a></label><br><br>
+			<label><a href="mteacher.php" style="color:#FE9A2E"><b>[  Teacher Management ]</b></a></label><br><br>
+			<label><a href="m_lesson.php" style="color:#FE9A2E"><b>[  Lesson Management ]</b></a></label><br><br>
+			<label><a href="m_scroll.php" style="color:#FE9A2E"><b>[  Score Management ]</b></a></label><br><br>
 			<label><a href="changepw.php" style="color:#FE9A2E"><b>[ Change Password ]</b></a></label><br><br>
 
 		
@@ -83,31 +83,31 @@ if ($sess_table<>admin) {
 
 <table border="0">
 <tr>
-<td><center><a href="addlesson.php"><img src="../images/comment_add2.png" alt="Add Lesson" /><br> add lesson </a></center></td>
+<td><center><a href="addlesson.php"><img src="../images/comment_add2.png" alt="Add Lesson" /><br> Add Lesson </a></center></td>
 </tr>
 </table>
   
   <table border="1">
     <tr bgcolor="#D3D3D3">
-      <td>Lesson</td>
-      <td><center>Detail Lesson</center></td>
-      <td>แก้ไข</td>
-      <td>จำนวนข้อง่าย</td>
-      <td>จำนวนข้อยาก</td>
+	<th width="91"> <div align="center">Lesson </div></th>
+	<th width="250"> <div align="center">Detail Lesson </div></th>
+    <th width="91"> <div align="center">Edit </div></th>
+    <th width="91"> <div align="center">จำนวนข้อง่าย </div></th>
+	<th width="91"> <div align="center">จำนวนข้อยาก </div></th>
     </tr>
     <?
 	$count=0;
 	include "../connect.php";
-	$sql="select * from HeadLesson  ORDER BY lesson ";
+	$sql="select * from headlesson  ORDER BY lesson ";
 	$result=mysql_db_query($dbname,$sql);  
 	while($record=mysql_fetch_array($result)) {
 		
-		$sql2="select count(level) as level from Proposition where ref_lesson=$record[lesson] and level=0" ;
+		$sql2="select count(level) as level from proposition where ref_lesson=$record[lesson] and level=0" ;
 		$result2=mysql_db_query($dbname,$sql2);
 		$record2=mysql_fetch_array($result2);
 		$easy=$record2[level];
 		
-		$sql3="select count(level) as level from Proposition where ref_lesson=$record[lesson] and level=1" ;
+		$sql3="select count(level) as level from proposition where ref_lesson=$record[lesson] and level=1" ;
 		$result3=mysql_db_query($dbname,$sql3);
 		$record3=mysql_fetch_array($result3);
 		$hard=$record3[level];

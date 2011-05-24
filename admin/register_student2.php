@@ -1,5 +1,5 @@
 <HTML>
-<meta content="text/html; charset=TIS-620" http-equiv="content-type">
+<meta content="text/html; charset=utf-8" http-equiv="content-type">
 <link rel="stylesheet" type="text/css" href="../Oranges/style.css" />
 <HEAD><TITLE>Show Student</TITLE></HEAD>
 <BODY>

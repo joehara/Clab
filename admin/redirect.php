@@ -3,7 +3,7 @@
 
 
 <title>Welcome to SiamDev.com</title>
-<meta http-equiv="Content-Type" content="text/html; charset=TIS-620">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <? //<meta http-equiv="Refresh" content="5; URL=../index.html"> ?>
 
 </head>

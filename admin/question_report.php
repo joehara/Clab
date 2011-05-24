@@ -13,7 +13,7 @@ if ($sess_table<>admin) {
 <meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
 <meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
 <link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
-<meta content="text/html; charset=TIS-620" http-equiv="content-type">
+<meta content="text/html; charset=utf-8" http-equiv="content-type">
 <meta http-equiv="Refresh" content="3; URL=addlesson.php">
 <style type="text/css">
 <!--
@@ -68,11 +68,11 @@ if ($sess_table<>admin) {
 
 	$count=1;
 	include "../connect.php";
-	$sql="select Proposition.proposition,student.name,Answer.ans_id from Answer,Proposition,student  where Answer.ref_question=Proposition.question_id and Answer.ref_student=student.student_id  and Proposition.ref_lesson='$lesson' and  student.section='$section' and Answer.answer_code!='$space'";
+	$sql="select proposition.proposition,student.name,answer.ans_id from answer,proposition,student  where answer.ref_question=proposition.question_id and answer.ref_student=student.student_id  and proposition.ref_lesson='$lesson' and  student.section='$section' and answer.answer_code!='$space'";
 	$result=mysql_db_query($dbname,$sql);
 	while($record=mysql_fetch_array($result)) {
 		
-		$sql2="select * from Check_answer where ref_answer='$record[ans_id]'";
+		$sql2="select * from check_answer where ref_answer='$record[ans_id]'";
 		$result2=mysql_db_query($dbname,$sql2);
 		$num2=mysql_num_rows($result2);
 		if($num2==0) {

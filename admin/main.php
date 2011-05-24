@@ -12,7 +12,7 @@ if ($sess_table<>admin) {
 <meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
 <meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
 <link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
-<meta content="text/html; charset=TIS-620" http-equiv="content-type">
+<meta content="text/html; charset=utf-8" http-equiv="content-type">
 <style type="text/css">
 <!--
 .style1 {font-size: 36px}
@@ -62,10 +62,10 @@ if ($sess_table<>admin) {
                 <div class="leftcolumn_box01_bottom">
                         <div class="form_row">
                         <label><a href="main.php" style="color:#FE9A2E"><b>[ Main ]</b></a></label><br><br>
- 			<label><a href="mstudent.php" style="color:#FE9A2E"><b>[ Management Student ]</b></a></label><br><br>
-			<label><a href="mteacher.php" style="color:#FE9A2E"><b>[ Management Teacher ]</b></a></label><br><br>
-			<label><a href="m_lesson.php" style="color:#FE9A2E"><b>[ Management Lesson ]</b></a></label><br><br>
-			<label><a href="m_scroll.php" style="color:#FE9A2E"><b>[ Management Score ]</b></a></label><br><br>
+ 			<label><a href="mstudent.php" style="color:#FE9A2E"><b>[  Student Management ]</b></a></label><br><br>
+			<label><a href="mteacher.php" style="color:#FE9A2E"><b>[  Teacher Management ]</b></a></label><br><br>
+			<label><a href="m_lesson.php" style="color:#FE9A2E"><b>[  Lesson Management ]</b></a></label><br><br>
+			<label><a href="m_scroll.php" style="color:#FE9A2E"><b>[  Score Management ]</b></a></label><br><br>
 			<label><a href="changepw.php" style="color:#FE9A2E"><b>[ Change Password ]</b></a></label><br><br>
 
 		
@@ -85,12 +85,12 @@ if ($sess_table<>admin) {
 <br><br>      
 <center><table border="0">
 <tr>
-<td><center><a href="mstudent.php"><img src="../images/personal.png" alt="Management Student" /><br>Management Student</a></center></td>
-<td><center><a href="mteacher.php"><img src="../images/user.png" alt="Management Teacher" /><br>Management Teacher</a></center></td>
-<td><center><a href="m_lesson.php"><img src="../images/file_manager.png" alt="Management Lesson" /><br>Management Lesson</a></center></td>
+<td><center><a href="mstudent.php"><img src="../images/personal.png" alt="Management Student" /><br> Student Management</a></center></td>
+<td><center><a href="mteacher.php"><img src="../images/user.png" alt="Management Teacher" /><br> Teacher Management</a></center></td>
+<td><center><a href="m_lesson.php"><img src="../images/file_manager.png" alt="Management Lesson" /><br> Lesson Management</a></center></td>
 </tr>
 <tr>
-<td><center><a href="m_scroll.php"><img src="../images/old_openofficeorg_calc.png" alt="Management Scroll" /><br>Management Scroll</a></center></td>
+<td><center><a href="m_scroll.php"><img src="../images/old_openofficeorg_calc.png" alt="Management Score" /><br> Score Management</a></center></td>
 <td><center><a href="changepw.php"><img src="../images/password.png" alt="change password" /><br>Change Password</a></center></td>
 <td><center><a href="../logout.php"><img src="../images/application_exit.png" alt="Logout" /><br>Logout</a></center></td>
 </tr>

@@ -14,7 +14,7 @@ if ($sess_table<>admin) {
 <meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
 <meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
 <link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
-<meta content="text/html; charset=TIS-620" http-equiv="content-type">
+<meta content="text/html; charset=utf-8" http-equiv="content-type">
 <style type="text/css">
 <!--
 .style1 {font-size: 36px}
@@ -65,11 +65,11 @@ if ($sess_table<>admin) {
                 </div>
                 <div class="leftcolumn_box01_bottom">
                         <div class="form_row">
-                        <label><a href="main.php" style="color:#FE9A2E"><b>[ Main ]</b></a></label><br><br>
- 			<label><a href="mstudent.php" style="color:#FE9A2E"><b>[ Management Student ]</b></a></label><br><br>
-			<label><a href="mteacher.php" style="color:#FE9A2E"><b>[ Management Teacher ]</b></a></label><br><br>
-			<label><a href="m_lesson.php" style="color:#FE9A2E"><b>[ Management Lesson ]</b></a></label><br><br>
-			<label><a href="m_scroll.php" style="color:#FE9A2E"><b>[ Management Score ]</b></a></label><br><br>
+             <label><a href="main.php" style="color:#FE9A2E"><b>[ Main ]</b></a></label><br><br>
+ 			<label><a href="mstudent.php" style="color:#FE9A2E"><b>[  Student Management ]</b></a></label><br><br>
+			<label><a href="mteacher.php" style="color:#FE9A2E"><b>[  Teacher Management ]</b></a></label><br><br>
+			<label><a href="m_lesson.php" style="color:#FE9A2E"><b>[  Lesson Management ]</b></a></label><br><br>
+			<label><a href="m_scroll.php" style="color:#FE9A2E"><b>[  Score Management ]</b></a></label><br><br>
 			<label><a href="changepw.php" style="color:#FE9A2E"><b>[ Change Password ]</b></a></label><br><br>
 
 		
@@ -84,18 +84,20 @@ if ($sess_table<>admin) {
     	<div id="templatemo_middle_column">
 <center>
 <h1>:: ข้อต่างๆที่ส่งเข้ามา ::</h1></center><br><br>
-<p>[ <a href="main.php">Back Main</a> &gt; <a href="m_scroll.php">Management Scroll</a>&nbsp;&gt;<a href="m_scroll_name.php?section=<?=$section?>">รายชื่อที่ส่งงานเข้ามา</a>&gt;<a href="m_scroll_lesson.php?section=<?=$section?>&amp;id=<?=$student_id?>">บทต่างๆที่ส่งเข้ามา</a>&gt;ข้อต่างๆที่ส่งเข้ามา</p><br />
-<br />
+<p>[ <a href="main.php">Back Main</a> &gt; <a href="m_scroll.php">Manage Score</a>&nbsp;&gt;
+<a href="m_scroll_name.php?section=<?=$section?>">รายชื่อที่ส่งงานเข้ามา</a>&gt;
+<a href="m_scroll_lesson.php?section=<?=$section?>&amp;id=<?=$student_id?>">บทต่างๆที่ส่งเข้ามา</a>&gt;ข้อต่างๆที่ส่งเข้ามา</p></br>
+</br>
 <table border="0">
   <tr bgcolor="#D3D3D3">
-    <td>NO.</td>
-    <td>โจทย์</td>
+    <td><b><center>NO.</center></b></td>
+    <td><b><center>โจทย์</center></b></td>
   </tr>
   <?
  
 	include "../connect.php";
 	$count=1;
-	$sql="select Proposition.proposition,Proposition.question_id from Check_answer,SendAnswer,Proposition,student where (Check_answer.ref_answer=SendAnswer.answer_id and SendAnswer.ref_student=student.student_id and   									    SendAnswer.ref_question=Proposition.question_id ) and SendAnswer.ref_student='$student_id'  and Proposition.ref_lesson='$lesson' GROUP BY Proposition.proposition ORDER BY Proposition.question_id";
+	$sql="select proposition.proposition,proposition.question_id from check_answer,sendanswer,proposition,student where (check_answer.ref_answer=sendanswer.answer_id and sendanswer.ref_student=student.student_id and   									    sendanswer.ref_question=proposition.question_id ) and sendanswer.ref_student='$student_id'  and proposition.ref_lesson='$lesson' GROUP BY proposition.proposition ORDER BY proposition.question_id";
  		$result=mysql_db_query($dbname,$sql);
 	while($record=mysql_fetch_array($result)) {
 	

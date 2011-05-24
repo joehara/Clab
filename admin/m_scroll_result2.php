@@ -19,7 +19,7 @@ if ($sess_table<>admin) {
 <meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
 <meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
 <link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
-<meta content="text/html; charset=TIS-620" http-equiv="content-type">
+<meta content="text/html; charset=utf-8" http-equiv="content-type">
 <style type="text/css">
 <!--
 .style1 {font-size: 36px}
@@ -93,10 +93,10 @@ echo"กรุณาใส่ comment ทุกครั้ง"; exit();
 }
 
 include "../connect.php";
-$sql="update Check_answer set  comment='$comment1/$comment2' ,result='$result' where check_id='$check_id' ";
+$sql="update check_answer set  comment='$comment1/$comment2' ,result='$result' where check_id='$check_id' ";
 $result=mysql_db_query($dbname,$sql);
 
-$sql2="select  student.section,student.student_id,Proposition.ref_lesson from Check_answer,SendAnswer,Proposition,student  where (Check_answer.ref_answer=SendAnswer.answer_id and SendAnswer.ref_question=Proposition.question_id and SendAnswer.ref_student=student.student_id) and Check_answer.check_id='$check_id' ";
+$sql2="select  student.section,student.student_id,proposition.ref_lesson from check_answer,sendanswer,proposition,student  where (check_answer.ref_answer=sendanswer.answer_id and sendanswer.ref_question=proposition.question_id and sendanswer.ref_student=student.student_id) and check_answer.check_id='$check_id' ";
 $result2=mysql_db_query($dbname,$sql2);
 $record=mysql_fetch_array($result2);
 

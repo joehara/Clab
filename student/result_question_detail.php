@@ -1,17 +1,17 @@
 <?
  include "../chksession.php";
 if ($sess_table<>student) {
-	header( "Location: ../index.html"); 	exit();
+	header( "Location: /Clab/index.html"); 	exit();
 }
 
 ?>
 <HTML>
 <head>
-<meta content="text/html; charset=TIS-620" http-equiv="content-type">
+<meta content="text/html; charset=utf-8" http-equiv="content-type">
 <meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
 <meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
 <title>Lesson</title>
-<link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
+<link href="/Clab/templatemo_style.css" rel="stylesheet" type="text/css" />
 <style type="text/css">
 <!--
 .style1 {font-size: 36px}
@@ -35,7 +35,7 @@ if ($sess_table<>student) {
     
 	<div id="templatemo_menu">
     	<div id="search">
-	Welcome, <a href="showprofile.php" style="color:#000000"><b><?=$sess_username?></b></a>&nbsp;&nbsp;<a href="../logout.php"><img src="../images/logout.gif" alt="Logout" /></a>
+	Welcome, <a href="showprofile.php" style="color:#000000"><b><?=$sess_username?></b></a>&nbsp;&nbsp;
     	</div>
         <div id="menu">
             <ul>
@@ -62,9 +62,9 @@ if ($sess_table<>student) {
                         <div class="form_row">
                         <label><a href="main.php" style="color:#FE9A2E"><b>[ Main ]</b></a></label><br><br>
  			<label><a href="lesson.php" style="color:#FE9A2E"><b>[ Lesson ]</b></a></label><br><br>
-			<label><a href="result_lesson.php" style="color:#FE9A2E"><b>[ Result Lesson ]</b></a></label><br><br>
+			
 			<label><a href="showprofile.php" style="color:#FE9A2E"><b>[ Show Profile ]</b></a></label><br><br>
-		
+		<a href="../logout.php"><img src="../images/logout.gif" alt="Logout" /></a>
                 </div>            
             	</div>
             
@@ -80,7 +80,7 @@ if ($sess_table<>student) {
 
 
 	include "../connect.php";
-	$sql="select * from Check_answer,SendAnswer,Proposition,student,Time_use  where Check_answer.ref_answer=SendAnswer.answer_id and SendAnswer.ref_question=Proposition.question_id and SendAnswer.ref_student=student.student_id and Time_use.ref_student=student.student_id and Check_answer.check_id='$check_id'";
+	$sql="select * from check_answer,sendanswer,proposition,student,time_use  where check_answer.ref_answer=sendanswer.answer_id and sendanswer.ref_question=proposition.question_id and sendanswer.ref_student=student.student_id and time_use.ref_student=student.student_id and check_answer.check_id='$check_id'";
 $result=mysql_db_query($dbname,$sql);
 $record=mysql_fetch_array($result);
 
@@ -96,33 +96,33 @@ $student_id=$record[student_id];
 $lesson=$record[ref_lesson];
 ?>
     &nbsp;<br />
-[ <a href="result_question.php?student_id=<?=$student_id?>&lesson=<?=$lesson?>">Back ผลคะแนนทั้งหมด</a> ]</p>
+[ <a href="result_question.php?student_id=<?=$student_id?>&lesson=<?=$lesson?>">Back Question Detail</a> ]</p>
 <form id="form1" name="form1" method="post" action="question_check2.php">
   <table width="100%" border="0">
     <tr>
-      <td width="10%">ชื่อผู้ส่ง :  </td>
+      <td width="10%">Name :  </td>
       <td width="90%"><?=$name?>
       <input name="ref_answer" type="hidden" id="ref_answer" value="<?=$ans_id?>" />
       <input name="teacher_name" type="hidden" id="teacher_name" value="<?=$teacher_name?>" /></td>
     </tr>
     <tr>
-      <td>รหัสนักศึกษา :</td>
+      <td>Student ID :</td>
       <td><?=$code_st?></td>
     </tr>
     <tr>
-      <td>section:</td>
+      <td>Section:</td>
       <td><?=$section?></td>
     </tr>
-    <tr>
-      <td>วันที่ทำส่ง:</td>
+     <tr>
+      <td>เน€เธงเธฅเธฒเธ—เธตเนเธชเนเธ :</td>
       <td><?=$time_start?></td>
     </tr>
     <tr>
-      <td>โจทย์:</td>
+      <td>เธเธณเธ–เธฒเธก :</td>
       <td><?=$question?></td>
     </tr>
     <tr>
-      <td>Code ที่ส่ง:</td>
+      <td>Code เธ—เธตเนเธชเนเธ :</td>
       <td><label>
         <textarea name="textarea2" id="textarea2" cols="45" rows="5"><?=$code?>
         </textarea>
@@ -134,7 +134,7 @@ $lesson=$record[ref_lesson];
       <td><?=$comment?></td>
     </tr>
     <tr>
-      <td>คะแนน</td>
+      <td>Score :</td>
       <td><label>
         <?=$result?></label></td>
     </tr>

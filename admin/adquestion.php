@@ -9,7 +9,7 @@ $lesson=$_GET[lesson];
 
 
 include "../connect.php";
-$sql="select  count(*) as no from Proposition where ref_lesson='$lesson'";
+$sql="select  count(*) as no from proposition where ref_lesson='$lesson'";
 $result=mysql_db_query($dbname,$sql);
 $record=mysql_fetch_array($result);
 
@@ -23,7 +23,7 @@ mysql_close();
 <meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
 <meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
 <link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
-<meta content="text/html; charset=TIS-620" http-equiv="content-type">
+<meta content="text/html; charset=utf-8" http-equiv="content-type">
 <style type="text/css">
 <!--
 .style1 {font-size: 36px}
@@ -74,11 +74,11 @@ mysql_close();
                 </div>
                 <div class="leftcolumn_box01_bottom">
                         <div class="form_row">
-                        <label><a href="main.php" style="color:#FE9A2E"><b>[ Main ]</b></a></label><br><br>
- 			<label><a href="mstudent.php" style="color:#FE9A2E"><b>[ Management Student ]</b></a></label><br><br>
-			<label><a href="mteacher.php" style="color:#FE9A2E"><b>[ Management Teacher ]</b></a></label><br><br>
-			<label><a href="m_lesson.php" style="color:#FE9A2E"><b>[ Management Lesson ]</b></a></label><br><br>
-			<label><a href="m_scroll.php" style="color:#FE9A2E"><b>[ Management Score ]</b></a></label><br><br>
+             <label><a href="main.php" style="color:#FE9A2E"><b>[ Main ]</b></a></label><br><br>
+ 			<label><a href="mstudent.php" style="color:#FE9A2E"><b>[  Student Management ]</b></a></label><br><br>
+			<label><a href="mteacher.php" style="color:#FE9A2E"><b>[  Teacher Management ]</b></a></label><br><br>
+			<label><a href="m_lesson.php" style="color:#FE9A2E"><b>[  Lesson Management ]</b></a></label><br><br>
+			<label><a href="m_scroll.php" style="color:#FE9A2E"><b>[  Score Management ]</b></a></label><br><br>
 			<label><a href="changepw.php" style="color:#FE9A2E"><b>[ Change Password ]</b></a></label><br><br>
 
 		
@@ -91,7 +91,8 @@ mysql_close();
         <!-- start of middle column -->
         
     	<div id="templatemo_middle_column">
-[ <a href="proposition.php?id=<?=$id?>&lesson=<?=$lesson?>">Back Question</a> ][ <a href="main.php">Back Main</a> ]
+[ <a href="proposition.php?id=<?=$id?>&lesson=<?=$lesson?>">Back Question</a> ]
+
 <script type="text/javascript" src="../ckeditor/ckeditor.js"></script>
   <title>Question </title>
 
@@ -107,8 +108,8 @@ mysql_close();
     <tr>
       <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br>      </td>
-      <td style="vertical-align: top; text-align: center;">:: Add
-Question <?=$code?><INPUT name="no" type="hidden" value="<?=$code?>">::<br>
+      <td style="vertical-align: top; text-align: center;"><b>:: Add
+Question of <?=$code?><INPUT name="no" type="hidden" value="<?=$code?>">::</b><br>
         <br>
 &#3650;&#3592;&#3607;&#3618;&#3660;&#3588;&#3635;&#3606;&#3634;&#3617;&#3616;&#3634;&#3625;&#3634;&#3652;&#3607;&#3618;&#3649;&#3621;&#3632;&#3588;&#3635;&#3610;&#3619;&#3619;&#3603;&#3618;&#3634;&#3618;&#3607;&#3637;&#3656;&#3605;&#3657;&#3629;&#3591;&#3585;&#3634;&#3619;&#3651;&#3627;&#3657;&#3649;&#3626;&#3604;&#3591;&#3650;&#3594;&#3623;&#3660;<br>
         <br></td>

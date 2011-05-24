@@ -6,11 +6,11 @@ if ($sess_table<>admin) {
 }
 ?>
 <HTML>
-<HEAD><TITLE>show Student</TITLE></HEAD>
+<HEAD><TITLE>Manage Student</TITLE></HEAD>
 <meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
 <meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
 <link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
-<meta content="text/html; charset=TIS-620" http-equiv="content-type">
+<meta content="text/html; charset=utf-8" http-equiv="content-type">
 <style type="text/css">
 <!--
 .style1 {font-size: 36px}
@@ -61,11 +61,11 @@ if ($sess_table<>admin) {
                 </div>
                 <div class="leftcolumn_box01_bottom">
                         <div class="form_row">
-                        <label><a href="main.php" style="color:#FE9A2E"><b>[ Main ]</b></a></label><br><br>
- 			<label><a href="mstudent.php" style="color:#FE9A2E"><b>[ Management Student ]</b></a></label><br><br>
-			<label><a href="mteacher.php" style="color:#FE9A2E"><b>[ Management Teacher ]</b></a></label><br><br>
-			<label><a href="m_lesson.php" style="color:#FE9A2E"><b>[ Management Lesson ]</b></a></label><br><br>
-			<label><a href="m_scroll.php" style="color:#FE9A2E"><b>[ Management Score ]</b></a></label><br><br>
+            <label><a href="main.php" style="color:#FE9A2E"><b>[ Main ]</b></a></label><br><br>
+ 			<label><a href="mstudent.php" style="color:#FE9A2E"><b>[  Student Management ]</b></a></label><br><br>
+			<label><a href="mteacher.php" style="color:#FE9A2E"><b>[  Teacher Management ]</b></a></label><br><br>
+			<label><a href="m_lesson.php" style="color:#FE9A2E"><b>[  Lesson Management ]</b></a></label><br><br>
+			<label><a href="m_scroll.php" style="color:#FE9A2E"><b>[  Score Management ]</b></a></label><br><br>
 			<label><a href="changepw.php" style="color:#FE9A2E"><b>[ Change Password ]</b></a></label><br><br>
 
 		
@@ -78,7 +78,7 @@ if ($sess_table<>admin) {
         <!-- start of middle column -->
         
     	<div id="templatemo_middle_column"><center>
- <H1>:: Show Student ::</H1></center><br><br>
+ <H1>:: Manage Student ::</H1></center><br><br>
 <table border="0">
 <tr>
 <td><center><a href="addstudent.php"><img src="../images/userblue_add.png" alt="Add Student" /><br> Add Student </a></center></td>
@@ -96,18 +96,20 @@ if ($sess_table<>admin) {
       <input name="Keyword" type="text" id="txtKeyword" value="<?=$_GET["Keyword"];?>">
       <input type="submit" value="Search">
       <span class="style5">search จาก ชื่อและสาขา</span></th>
-    </tr>
+    </tr><br>
   </table>
-</form>
+</form><br>
 <table width="512" border="1" >
   
 <tr bgcolor="#D3D3D3">
 		<th width="91"> <div align="center">No. </div></th>
-		<th width="98"> <div align="center">student code </div></th>
-		<th width="198"> <div align="center">name</div></th>
-		<th width="97"> <div align="center">section </div></th>
-        <th></div></th>
-        <th></div></th>
+		<th width="198"> <div align="center">Student ID </div></th>
+		<th width="250"> <div align="center">Name</div></th>
+		<th width="97"> <div align="center">Section </div></th>
+		<th width="97"> <div align="center">Edit </div></th>
+		<th width="97"> <div align="center">Delete </div></th>
+        </div>
+        </div>
 	  </tr>
 <?
 	include"../connect.php";

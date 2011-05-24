@@ -6,14 +6,14 @@ $codepw =1234;
 ?>
 <HTML>
 <HEAD><TITLE>Registration</TITLE>
-<link href="../templatemo_style2.css" rel="stylesheet" type="text/css" />
-<meta content="text/html; charset=TIS-620" http-equiv="content-type">
+<link href="/Clab/templatemo_style2.css" rel="stylesheet" type="text/css" />
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
 </HEAD>
 <body>
 <FORM METHOD="POST" ACTION="register2.php"> 
 
 <center>
-<img src="../images/templatemo_heading_background.jpg" width="690" height="146"></center><br><br><br>
+<img src="/Clab/images/templatemo_heading_background.jpg" width="690" height="146"></center><br><br><br>
 <center><h1>Registration Student</h1></center><br>
 
 
@@ -37,9 +37,9 @@ $codepw =1234;
        <option value="<?=$rs[section_name]?>" selected><?=$rs[section_name]?></option>  
  <?php } ?>      
                             </select></TD>
-    </TR>
+     </TR>
     <TR>
-      <TD>ปีการศึกษา :</TD>
+      <TD>เธเธตเธเธฒเธฃเธจเธถเธเธฉเธฒ :</TD>
       <TD><select name="year" id="year">
         <? 
      $sql2="select * from Academic_year ";  
@@ -52,7 +52,7 @@ $codepw =1234;
       </label></TD>
     </TR>
     <TR>
-      <TD>อาจารย์ผู้สอน : </TD>
+      <TD>เธญเธฒเธเธฒเธฃเธขเนเธเธนเนเธชเธญเธ : </TD>
       <TD><select name="teach" id="teach">
         <? 
      $sql3="select * from teacher ";  
@@ -93,7 +93,7 @@ $codepw =1234;
 </FORM>
 <center>
 <br>
-<a href="main.php"><img src="../images/exit2.png"/><br>Quit</a>
+<a href="main.php"><img src="/Clab/images/exit2.png"/><br>Quit</a>
 </center>
 <br><br>
 <center><div id="templatemo_footer"><br>

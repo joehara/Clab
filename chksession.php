@@ -6,6 +6,6 @@ $sess_userid=$_SESSION[sess_userid];
 $sess_username=$_SESSION[sess_username];
 $sess_table=$_SESSION[table];
 if ($sess_userid<>session_id() or $sess_username=="") {
-	header( "Location: /index.html"); 	exit();
+	header( "Location: /Clab/index.html"); 	exit();
 } 
 ?>

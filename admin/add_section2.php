@@ -3,7 +3,7 @@
 <meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
 <meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
 <link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
-<meta content="text/html; charset=TIS-620" http-equiv="content-type">
+<meta content="text/html; charset=utf-8" http-equiv="content-type">
 <meta http-equiv="Refresh" content="3; URL=addlesson.php">
 <style type="text/css">
 <!--
@@ -54,7 +54,7 @@ $num=mysql_num_rows($result);
 if($num>0) {
 	echo "<h3>ERROR : Section name was duplicate in Database</h3>";	 exit();
 }
-$sql="insert into Section values('','$add_section')";
+$sql="insert into section values('','$add_section')";
 $result=mysql_db_query($dbname,$sql);
 if ($result) {
 	echo "<h3>Insert section name successful</h3>";

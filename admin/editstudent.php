@@ -31,7 +31,7 @@ $reg_date=$record[st_reg];
 <meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
 <meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
 <link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
-<meta content="text/html; charset=TIS-620" http-equiv="content-type">
+<meta content="text/html; charset=utf-8" http-equiv="content-type">
 <style type="text/css">
 <!--
 .style1 {font-size: 36px}
@@ -116,7 +116,7 @@ $reg_date=$record[st_reg];
       <TD><B>section : </B></TD>
 	<TD><select name="section" id="province">
       <? 
-     $sql="select * from Section ";  
+     $sql="select * from section ";  
      $result=mysql_db_query($dbname,$sql);
      while($rs=mysql_fetch_array($result)){  
 	 
@@ -138,7 +138,7 @@ $reg_date=$record[st_reg];
       <TD><strong>ปีการศึกษา :</strong></TD>
       <TD><select name="year" id="year">
         <? 
-     $sql2="select * from Academic_year ";  
+     $sql2="select * from academic_year ";  
      $result2=mysql_db_query($dbname,$sql2);
      while($rs2=mysql_fetch_array($result2)){  
  if($year==$rs2[Academic_detail]){

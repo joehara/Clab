@@ -6,7 +6,7 @@ if ($sess_table<>admin) {
 }
 $id_edit=$_GET[id_edit];
 include "../connect.php";
-$sql="select * from HeadLesson where id='$id_edit' ";
+$sql="select * from headlesson where id='$id_edit' ";
 $result=mysql_db_query($dbname,$sql);
 $record=mysql_fetch_array($result);
 $lesson=$record[lesson];
@@ -20,7 +20,7 @@ $time=$record[time];
 <meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
 <meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
 <link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
-<meta content="text/html; charset=TIS-620" http-equiv="content-type">
+<meta content="text/html; charset=utf-8" http-equiv="content-type">
 <style type="text/css">
 <!--
 .style1 {font-size: 36px}

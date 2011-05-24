@@ -1,15 +1,15 @@
 <?
 include "../chksession.php";
 if ($sess_table<>student) {
-	header( "Location: ../index.html"); 	exit();}
+	header( "Location: /Clab/index.html"); 	exit();}
 ?>
 <HTML>
 <head>
-<meta content="text/html; charset=TIS-620" http-equiv="content-type">
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
 <meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
 <meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
 <title>Lesson</title>
-<link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
+<link href="/Clab/templatemo_style.css" rel="stylesheet" type="text/css" />
 <style type="text/css">
 <!--
 .style1 {font-size: 36px}
@@ -33,7 +33,7 @@ if ($sess_table<>student) {
     
 	<div id="templatemo_menu">
     	<div id="search">
-	Welcome, <a href="showprofile.php" style="color:#000000"><b><?=$sess_username?></b></a>&nbsp;&nbsp;<a href="../logout.php"><img src="../images/logout.gif" alt="Logout" /></a>
+	Welcome, <a href="showprofile.php" style="color:#000000"><b><?=$sess_username?></b></a>&nbsp;&nbsp;
     	</div>
         <div id="menu">
             <ul>
@@ -60,9 +60,10 @@ if ($sess_table<>student) {
                         <div class="form_row">
                         <label><a href="main.php" style="color:#FE9A2E"><b>[ Main ]</b></a></label><br><br>
  			<label><a href="lesson.php" style="color:#FE9A2E"><b>[ Lesson ]</b></a></label><br><br>
-			<label><a href="result_lesson.php" style="color:#FE9A2E"><b>[ Result Lesson ]</b></a></label><br><br>
+			
 			<label><a href="showprofile.php" style="color:#FE9A2E"><b>[ Show Profile ]</b></a></label><br><br>
-		
+
+		<a href="/Clab/logout.php"><img src="/Clab/images/logout.gif" alt="Logout" /></a>
                 </div>            
             	</div>
             
@@ -77,10 +78,10 @@ if ($sess_table<>student) {
 <table border="1">
   <tr bgcolor="#D3D3D3"> 
     
-    <td>Lesson</td>
-    <td><center>Detail Lesson</center></td>
-    <td>Time Limit</td>
-    <td>score</td>
+    <td><b><center>Lesson</center></b></td>
+    <td><b><center>Lesson Detail</center></b></td>
+    <td><b><center>Time Limit</center></b></td>
+    <td><b><center>score</center></b></td>
   </tr>
   <?
 	$count=0;
@@ -91,11 +92,11 @@ $result_name=mysql_db_query($dbname,$sql_name);
 $record_name=mysql_fetch_array($result_name);
 $student_id=$record_name[student_id];
 	
-	$sql="select * from HeadLesson  ORDER BY lesson asc";
+	$sql="select * from headlesson  ORDER BY lesson asc";
 	$result=mysql_db_query($dbname,$sql);
 	while($record=mysql_fetch_array($result)) {
 	
-		$sql_result="select  sum(Check_answer.result) as sum_result from Check_answer,SendAnswer,Proposition,student where Check_answer.ref_answer=SendAnswer.answer_id and SendAnswer.ref_question=Proposition.question_id and SendAnswer.ref_student=student.student_id and Proposition.ref_lesson='$record[lesson]' and student.code_st='$sess_username' " ;
+		$sql_result="select  sum(check_answer.result) as sum_result from check_answer,sendanswer,proposition,student where check_answer.ref_answer=sendanswer.answer_id and sendanswer.ref_question=proposition.question_id and sendanswer.ref_student=student.student_id and proposition.ref_lesson='$record[lesson]' and student.code_st='$sess_username' " ;
 		$result_re=mysql_db_query($dbname,$sql_result);
 		$record_re=mysql_fetch_array($result_re);
 		$sum_result=$record_re[sum_result];

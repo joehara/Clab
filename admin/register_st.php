@@ -6,11 +6,11 @@ if ($sess_table<>admin) {
 }
 ?>
 <HTML>
-<HEAD><TITLE>register</TITLE></HEAD>
+<HEAD><TITLE>Register</TITLE></HEAD>
 <meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
 <meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
 <link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
-<meta content="text/html; charset=TIS-620" http-equiv="content-type">
+<meta content="text/html; charset=utf-8" http-equiv="content-type">
 <style type="text/css">
 <!--
 .style1 {font-size: 36px}
@@ -61,11 +61,11 @@ if ($sess_table<>admin) {
                 </div>
                 <div class="leftcolumn_box01_bottom">
                         <div class="form_row">
-                        <label><a href="main.php" style="color:#FE9A2E"><b>[ Main ]</b></a></label><br><br>
- 			<label><a href="mstudent.php" style="color:#FE9A2E"><b>[ Management Student ]</b></a></label><br><br>
-			<label><a href="mteacher.php" style="color:#FE9A2E"><b>[ Management Teacher ]</b></a></label><br><br>
-			<label><a href="m_lesson.php" style="color:#FE9A2E"><b>[ Management Lesson ]</b></a></label><br><br>
-			<label><a href="m_scroll.php" style="color:#FE9A2E"><b>[ Management Score ]</b></a></label><br><br>
+              <label><a href="main.php" style="color:#FE9A2E"><b>[ Main ]</b></a></label><br><br>
+ 			<label><a href="mstudent.php" style="color:#FE9A2E"><b>[  Student Management ]</b></a></label><br><br>
+			<label><a href="mteacher.php" style="color:#FE9A2E"><b>[  Teacher Management ]</b></a></label><br><br>
+			<label><a href="m_lesson.php" style="color:#FE9A2E"><b>[  Lesson Management ]</b></a></label><br><br>
+			<label><a href="m_scroll.php" style="color:#FE9A2E"><b>[  Score Management ]</b></a></label><br><br>
 			<label><a href="changepw.php" style="color:#FE9A2E"><b>[ Change Password ]</b></a></label><br><br>
 
 		
@@ -79,16 +79,18 @@ if ($sess_table<>admin) {
         
     	<div id="templatemo_middle_column"><center>
 <p><h1>:: นักศึกษาที่ลงทะเบียนเข้ามา ::</h1></center><br><br>
-[ <a href="mstudent.php">show student</a> ]<br>
+[ <a href="mstudent.php">Manage Student</a> ]<br>
 <br>
 <form name="form1" method="post" action="">
   <table border="1">
     <tr bgcolor="#D3D3D3">
-      <td>No.</td>
-      <td>Student ID</td>
-      <td>Name</td>
-      <td>Section</td>
-      <td><td></td>
+      <td><center><b>No.</b></center></td>
+      <td><center><b>Student ID</b></center></td>
+      <td><center><b>Name</b></center></td>
+      <td><center><b>Section</b></center></td>
+	  <td><center><b>Accept</b></center></td>
+	  <td><center><b>Dismiss</b></center></td>
+      
     </tr>
     <?
 	$count=0;

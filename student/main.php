@@ -1,7 +1,7 @@
 <?
 include "../chksession.php";
 if ($sess_table<>student) {
-	header( "Location: ../index.html"); 	exit();
+	header( "Location: /Clab/index.html"); 	exit();
 }
 ?>
 
@@ -12,7 +12,6 @@ if ($sess_table<>student) {
 <meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
 <meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
 <link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
-<meta content="text/html; charset=TIS-620" http-equiv="content-type">
 <style type="text/css">
 <!--
 .style1 {font-size: 36px}
@@ -36,7 +35,7 @@ if ($sess_table<>student) {
     
 	<div id="templatemo_menu">
     	<div id="search">
-	Welcome, <a href="showprofile.php" style="color:#000000"><b><?=$sess_username?></b></a>&nbsp;&nbsp;<a href="../logout.php"><img src="../images/logout.gif" alt="Logout" /></a>
+	Welcome, <a href="showprofile.php" style="color:#000000"><b><?=$sess_username?></b></a>&nbsp;&nbsp;
     	</div>
         <div id="menu">
             <ul>
@@ -64,7 +63,7 @@ if ($sess_table<>student) {
  			<label><a href="lesson.php" style="color:#FE9A2E"><b>[ Lesson ]</b></a></label><br><br>
 			
 			<label><a href="showprofile.php" style="color:#FE9A2E"><b>[ Show Profile ]</b></a></label><br><br>
-		
+		<a href="/Clab/logout.php"><img src="/Clab/images/logout.gif" alt="Logout" /></a>
                 </div>            
             	</div>
             
@@ -88,9 +87,9 @@ if ($sess_table<>student) {
 <br><br>      
 <center><table border="0">
 <tr>
-<td><center><a href="lesson.php"><img src="../images/report_check.png" alt="Lesson" /><br><b>Lesson</b></a></center></td>
-<td><center><a href="showprofile.php"><img src="../images/summer_user.png" alt="Show Profile" /><br><b>Show Profile</b></a></center></td>
-<td><center><a href="../logout.php"><img src="../images/application_exit.png" alt="Logout" /><br><b>Logout</b></a></center></td>
+<td><center><a href="lesson.php"><img src="/Clab/images/report_check.png" alt="Lesson" /><br><b>Lesson</b></a></center></td>
+<td><center><a href="showprofile.php"><img src="/Clab/images/summer_user.png" alt="Show Profile" /><br><b>Show Profile</b></a></center></td>
+<td><center><a href="../logout.php"><img src="/Clab/images/application_exit.png" alt="Logout" /><br><b>Logout</b></a></center></td>
 </tr>
 </table>
 </center>       

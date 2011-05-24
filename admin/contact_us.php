@@ -12,7 +12,7 @@ if ($sess_table<>admin) {
 <meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
 <meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
 <link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
-<meta content="text/html; charset=TIS-620" http-equiv="content-type">
+<meta content="text/html; charset=utf-8" http-equiv="content-type">
 <style type="text/css">
 <!--
 .style1 {font-size: 36px}
@@ -83,7 +83,7 @@ if ($sess_table<>admin) {
 <img src="../images/contus.jpg"/><br><Font size=5 color=DodgerBlue><b>ติดต่อเรา</b></Font><br><br>
 หากคุณมีคำถาม คำแนะนำติชม หรือมีความคิดเห็นเกี่ยวกับเรา ให้คุณส่งข้อความ ข้อมูลหาเราได้ที่<br><br>
 <Font color=DodgerBlue><b>E-mail: joe_nampathet@hotmail.com  &nbsp;&nbsp;&nbsp;&nbsp;ศุภวิชญ์ นามประเทศ</Font></b><br>
-<Font color=DodgerBlue><b>E-mail: akkadet_n@hotmail.com  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;อรรคเดข น้อยรอด</Font></b>     
+<Font color=DodgerBlue><b>E-mail: akkadet_n@hotmail.com  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;อรรฆเดช น้อยรอด</Font></b>     
 </center>
 
    	  </div>

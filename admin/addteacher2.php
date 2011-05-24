@@ -19,7 +19,7 @@ $date_reg=date("Y-m-d");
 <meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
 <meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
 <link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
-<meta content="text/html; charset=TIS-620" http-equiv="content-type">
+<meta content="text/html; charset=utf-8" http-equiv="content-type">
 <meta http-equiv="Refresh" content="3; URL=addteacher.php">
 <style type="text/css">
 <!--

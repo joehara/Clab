@@ -6,11 +6,11 @@ if ($sess_table<>admin) {
 }
 ?>
 <HTML>
-<HEAD><TITLE>Import Student from file</TITLE></HEAD>
+<HEAD><TITLE>Import Student From File</TITLE></HEAD>
 <meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
 <meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
 <link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
-<meta content="text/html; charset=TIS-620" http-equiv="content-type">
+<meta content="text/html; charset=utf-8" http-equiv="content-type">
 <style type="text/css">
 <!--
 .style1 {font-size: 36px}
@@ -61,11 +61,11 @@ if ($sess_table<>admin) {
                 </div>
                 <div class="leftcolumn_box01_bottom">
                         <div class="form_row">
-                        <label><a href="main.php" style="color:#FE9A2E"><b>[ Main ]</b></a></label><br><br>
- 			<label><a href="mstudent.php" style="color:#FE9A2E"><b>[ Management Student ]</b></a></label><br><br>
-			<label><a href="mteacher.php" style="color:#FE9A2E"><b>[ Management Teacher ]</b></a></label><br><br>
-			<label><a href="m_lesson.php" style="color:#FE9A2E"><b>[ Management Lesson ]</b></a></label><br><br>
-			<label><a href="m_scroll.php" style="color:#FE9A2E"><b>[ Management Score ]</b></a></label><br><br>
+              <label><a href="main.php" style="color:#FE9A2E"><b>[ Main ]</b></a></label><br><br>
+ 			<label><a href="mstudent.php" style="color:#FE9A2E"><b>[  Student Management ]</b></a></label><br><br>
+			<label><a href="mteacher.php" style="color:#FE9A2E"><b>[  Teacher Management ]</b></a></label><br><br>
+			<label><a href="m_lesson.php" style="color:#FE9A2E"><b>[  Lesson Management ]</b></a></label><br><br>
+			<label><a href="m_scroll.php" style="color:#FE9A2E"><b>[  Score Management ]</b></a></label><br><br>
 			<label><a href="changepw.php" style="color:#FE9A2E"><b>[ Change Password ]</b></a></label><br><br>
 
 		
@@ -78,7 +78,9 @@ if ($sess_table<>admin) {
         <!-- start of middle column -->
         
     	<div id="templatemo_middle_column"><center>
-<h1>:: Import student from file ::</h1><br><br>
+<h1>:: Import student from file ::</h1><br></center>
+[ <a href="mstudent.php">Manage Student</a> ]<br><center>
+<br>
 <span class="style8">วิธีการนำข้อมูลนักเรียนเข้า database</span><br>
   1.download file ต้นฉบับ นาสกุล CSV &nbsp;&nbsp;<a href="EXEM/Book1.csv">download here</a><br>
 2.เปิด file โดยใช้ โปรแกรม microsoft excel หรือ  OpenOffice Spreadsheet<br>

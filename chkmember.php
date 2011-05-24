@@ -7,13 +7,13 @@ ob_start();
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Login To C programming Exam</title></head>
-<meta http-equiv="Refresh" content="2; URL=../index.html">
+<meta http-equiv="Refresh" content="2; URL=/Clab/index.html">
 <body bgcolor="#ADD8E6">
 <br><br><br><br><br><br>
 <center>
 <table width="482" border="0" align="center">
   <tr>
-    <td width="480" height="250" colspan="2"  background="../images/form_er1.jpg"><div align="center" class="style1"></div></td>
+    <td width="480" height="250" colspan="2"  background="/Clab/images/form_er1.jpg"><div align="center" class="style1"></div></td>
   <td> </td>
 </tr>
   

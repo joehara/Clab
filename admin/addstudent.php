@@ -12,7 +12,7 @@ if ($sess_table<>admin) {
 <meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
 <meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
 <link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
-<meta content="text/html; charset=TIS-620" http-equiv="content-type">
+<meta content="text/html; charset=utf-8" http-equiv="content-type">
 <style type="text/css">
 <!--
 .style1 {font-size: 36px}
@@ -63,11 +63,11 @@ if ($sess_table<>admin) {
                 </div>
                 <div class="leftcolumn_box01_bottom">
                         <div class="form_row">
-                        <label><a href="main.php" style="color:#FE9A2E"><b>[ Main ]</b></a></label><br><br>
- 			<label><a href="mstudent.php" style="color:#FE9A2E"><b>[ Management Student ]</b></a></label><br><br>
-			<label><a href="mteacher.php" style="color:#FE9A2E"><b>[ Management Teacher ]</b></a></label><br><br>
-			<label><a href="m_lesson.php" style="color:#FE9A2E"><b>[ Management Lesson ]</b></a></label><br><br>
-			<label><a href="m_scroll.php" style="color:#FE9A2E"><b>[ Management Score ]</b></a></label><br><br>
+              <label><a href="main.php" style="color:#FE9A2E"><b>[ Main ]</b></a></label><br><br>
+ 			<label><a href="mstudent.php" style="color:#FE9A2E"><b>[  Student Management ]</b></a></label><br><br>
+			<label><a href="mteacher.php" style="color:#FE9A2E"><b>[  Teacher Management ]</b></a></label><br><br>
+			<label><a href="m_lesson.php" style="color:#FE9A2E"><b>[  Lesson Management ]</b></a></label><br><br>
+			<label><a href="m_scroll.php" style="color:#FE9A2E"><b>[  Score Management ]</b></a></label><br><br>
 			<label><a href="changepw.php" style="color:#FE9A2E"><b>[ Change Password ]</b></a></label><br><br>
 
 		
@@ -81,22 +81,22 @@ if ($sess_table<>admin) {
         
     	<div id="templatemo_middle_column"><center>
 <p><h1>:: Add Student ::</h1></center><br>
-<p><a href="main.php">Back Main</a>&gt;<a href="mstudent.php">Show Student</a>&gt;Add Student</p><br>
+<p><a href="main.php">Back Main</a>&gt;<a href="mstudent.php">Manage Student</a>&gt;Add Student</p><br>
 
 <FORM METHOD="POST" ACTION="addstudent2.php">
   <TABLE CELLSPACING="2">
     <TR> 
-<TD><B>code student : </B></TD><TD><input name="codest" type="text"></TD>
+<TD><B>Student ID : </B></TD><TD><input name="codest" type="text"></TD>
 	</TR>
 <TR>
       <TD><B>Name : </B></TD>
 	<TD><INPUT NAME="namest" TYPE="text"  SIZE="26"></TD>
     </TR>
     <TR> 
-      <TD><B>section : </B></TD>
+      <TD><B>Section : </B></TD>
 	<TD><select name="section" id="province"> 
  <? 
-     $sql="select * from Section ";  
+     $sql="select * from section ";  
      $result=mysql_db_query($dbname,$sql);
      while($rs=mysql_fetch_array($result)){  
  ?>  
@@ -109,7 +109,7 @@ if ($sess_table<>admin) {
       <TD><label>
         <select name="year" id="province"> 
  <? 
-     $sql2="select * from Academic_year ";  
+     $sql2="select * from academic_year ";  
      $result2=mysql_db_query($dbname,$sql2);
      while($rs2=mysql_fetch_array($result2)){  
  ?>  

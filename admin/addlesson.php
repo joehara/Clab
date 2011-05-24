@@ -4,7 +4,7 @@ if ($sess_table<>admin) {
 	header( "Location: ../index.html"); 	exit();
 }
 include "../connect.php";
-$sql="select  max(lesson) as lesson from HeadLesson";
+$sql="select  max(lesson) as lesson from headlesson";
 $result=mysql_db_query($dbname,$sql);
 $record=mysql_fetch_array($result);
 
@@ -18,7 +18,7 @@ $code++;
 <meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
 <meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
 <link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
-<meta content="text/html; charset=TIS-620" http-equiv="content-type">
+<meta content="text/html; charset=utf-8" http-equiv="content-type">
 <style type="text/css">
 <!--
 .style1 {font-size: 36px}
@@ -69,11 +69,11 @@ $code++;
                 </div>
                 <div class="leftcolumn_box01_bottom">
                         <div class="form_row">
-                        <label><a href="main.php" style="color:#FE9A2E"><b>[ Main ]</b></a></label><br><br>
- 			<label><a href="mstudent.php" style="color:#FE9A2E"><b>[ Management Student ]</b></a></label><br><br>
-			<label><a href="mteacher.php" style="color:#FE9A2E"><b>[ Management Teacher ]</b></a></label><br><br>
-			<label><a href="m_lesson.php" style="color:#FE9A2E"><b>[ Management Lesson ]</b></a></label><br><br>
-			<label><a href="m_scroll.php" style="color:#FE9A2E"><b>[ Management Score ]</b></a></label><br><br>
+             <label><a href="main.php" style="color:#FE9A2E"><b>[ Main ]</b></a></label><br><br>
+ 			<label><a href="mstudent.php" style="color:#FE9A2E"><b>[  Student Management ]</b></a></label><br><br>
+			<label><a href="mteacher.php" style="color:#FE9A2E"><b>[  Teacher Management ]</b></a></label><br><br>
+			<label><a href="m_lesson.php" style="color:#FE9A2E"><b>[  Lesson Management ]</b></a></label><br><br>
+			<label><a href="m_scroll.php" style="color:#FE9A2E"><b>[  Score Management ]</b></a></label><br><br>
 			<label><a href="changepw.php" style="color:#FE9A2E"><b>[ Change Password ]</b></a></label><br><br>
 
 		
@@ -87,7 +87,7 @@ $code++;
         
     	<div id="templatemo_middle_column"><center>
 <h1>:: Add Lesson ::</h1></center><br><br>
- [ <a href="main.php">Back Main</a> &gt;<a href="m_lesson.php">Show Lesson</a>&gt;Add Lesson<br>
+ [ <a href="main.php">Back Main</a> &gt;<a href="m_lesson.php">Manage Lesson</a>&gt;Add Lesson<br>
     <br><form method="post" action="addlesson2.php">
   <table border="0" cellpadding="2" cellspacing="2">
     <tbody>
