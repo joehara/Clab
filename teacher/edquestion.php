@@ -8,7 +8,7 @@ $id=$_GET[id];
 $lesson=$_GET[lesson];
 
 include "../connect.php";
-$sql="select * from Proposition where question_id='$id' ";
+$sql="select * from proposition where question_id='$id' ";
 $result=mysql_db_query($dbname,$sql);
 $record=mysql_fetch_array($result);
 $question=$record[proposition];
@@ -30,7 +30,7 @@ mysql_close();
 <meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
 <meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
 <link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
-<meta content="text/html; charset=TIS-620" http-equiv="content-type">
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
 <style type="text/css">
 <!--
 .style1 {font-size: 36px}
@@ -134,7 +134,7 @@ Question ::<br>
     </tr>
     <tr>
       <td style="vertical-align: top;">&nbsp;</td>
-      <td style="vertical-align: top; text-align: center;"><div align="left"><span class="style3">ข้อนี้จัดอยู่ในกลุ่มที่ &nbsp;
+      <td style="vertical-align: top; text-align: center;"><div align="left"><span class="style3">เธเนเธญเธเธตเนเธเธฑเธ”เธญเธขเธนเนเนเธเธเธฅเธธเนเธกเธ—เธตเน &nbsp;
             <label>
             <input type="radio" name="level" id="hard" value="1" <? echo"$check1";?>>
             </label>

@@ -1,5 +1,5 @@
 <HTML>
-<meta content="text/html; charset=TIS-620" http-equiv="content-type">
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
 <?
 include "../chksession.php";
 
@@ -16,7 +16,7 @@ $new = htmlspecialchars($help, ENT_QUOTES);
 $answer2 = htmlspecialchars($answer, ENT_QUOTES);
 
 include "../connect.php";
-$sql="update Proposition set  proposition='$question',help='$new',answer='$answer2',level='$level' where question_id='$id' ";
+$sql="update proposition set  proposition='$question',help='$new',answer='$answer2',level='$level' where question_id='$id' ";
 $result=mysql_db_query($dbname,$sql);
 if ($result) {
 	echo "<h3>Edit Question Successful</h3>";

@@ -13,7 +13,7 @@ if ($sess_table<>teacher) {
 <meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
 <meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
 <link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
-<meta content="text/html; charset=TIS-620" http-equiv="content-type">
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
 <style type="text/css">
 <!--
 .style1 {font-size: 36px}
@@ -78,33 +78,32 @@ if ($sess_table<>teacher) {
         <!-- start of middle column -->
 <div id="templatemo_middle_column">
  <center>
-<h1>:: โจทย์ที่ส่ง::</h1></center><br><br>
-<p>[<a href="main.php">Main</a> &gt; <a href="mstudent.php">manage student</a> &gt; <a href="check_al.php"> Section ที่ตรวจแล้ว</a> &gt; <a href="check_al2.php?lesson=<?=$lesson?>&amp;section=<?=$section?>">บทที่ ตรวจแล้ว</a> &gt;ผู้ทำส่งข้อสอบ</p><br>
+<h1>:: เนเธเธ—เธขเนเธ—เธตเนเธชเนเธ::</h1></center><br><br>
+<p>[<a href="main.php">Main</a> &gt; <a href="mstudent.php">manage student</a>&gt; <a href="check_al.php"> Section เธญเธฐเนเธฃเธซเธงเนเธฒ1</a> &gt; <a href="check_al2.php?lesson=<?=$lesson?>&amp;section=<?=$section?>">เธญเธฐเนเธฃเธซเธงเนเธฒ2</a> &gt; เธญเธฐเนเธฃเธซเธงเนเธฒ3</p><br>
 <table border="0">
-  <tr bgcolor="#D3D3D3">
-    <td>NO.</td>
-    <td>โจทย์ที่ส่ง</td>
-  </tr>
-  <?
+<tr bgcolor="#D3D3D3">
+<td>NO.</td>
+<td>เธญเธฐเนเธฃเธซเธงเนเธฒ4</td>
+</tr>
+<?
 
-	$count=1;
-	include "../connect.php";
-		$sql="select student.name,student.student_id,Check_answer.check_id,Proposition.proposition from SendAnswer,Proposition,student,Check_answer  where (Check_answer.ref_answer=SendAnswer.answer_id and SendAnswer.ref_question=Proposition.question_id and SendAnswer.ref_student=student.student_id)   and Proposition.ref_lesson='$lesson' and  student.section='$section'  and student.student_id='$student_id'";
-	$result=mysql_db_query($dbname,$sql);
-	while($record=mysql_fetch_array($result)) {
-		
-		echo "
-		
-		<tr> 
-			<td>$count</td>
-			<td>$record[proposition]</td>
-			<td><a href=\"check_al_st.php?check_id=$record[check_id]\">detail</a></td>
-		</tr>";
-		$count++;
+$count=1;
+include "../connect.php";
+$sql="select student.name,student.student_id,check_answer.check_id,proposition.proposition from sendanswer,proposition,student,check_answer where (check_answer.ref_answer=sendanswer.answer_id and sendanswer.ref_question=proposition.question_id and sendanswer.ref_student=student.student_id) and proposition.ref_lesson='$lesson' and student.section='$section' and student.student_id='$student_id'";
+$result=mysql_db_query($dbname,$sql);
+while($record=mysql_fetch_array($result)) {
 
-		
-	}
-	mysql_close();
+echo "
+<tr>
+<td>$count</td>
+<td>$record[proposition]</td>
+<td><a href=\"check_al_st.php?check_id=$record[check_id]\">detail</a></td>
+</tr>";
+$count++;
+
+
+}
+mysql_close();
 ?>
 </table>
 

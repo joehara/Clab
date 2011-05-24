@@ -3,7 +3,7 @@
 <meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
 <meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
 <link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
-<meta content="text/html; charset=TIS-620" http-equiv="content-type">
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
 <style type="text/css">
 <!--
 .style1 {font-size: 36px}
@@ -81,7 +81,7 @@ $easy=$_POST[easy];
 $HH=$_POST[HH];
 $MM=$_POST[MM];
 include "../connect.php";
-$sql="update HeadLesson set  lesson='$lesson',detail='$detail' ,hard='$hard',easy='$easy',time='$HH:$MM' where id='$id_edit' ";
+$sql="update headlesson set  lesson='$lesson',detail='$detail' ,hard='$hard',easy='$easy',time='$HH:$MM' where id='$id_edit' ";
 $result=mysql_db_query($dbname,$sql);
 if ($result) {
 	echo "<h3>Edit Lesson Successful</h3>";

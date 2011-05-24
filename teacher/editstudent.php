@@ -28,7 +28,7 @@ $reg_date=$record[st_reg];
 <meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
 <meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
 <link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
-<meta content="text/html; charset=TIS-620" http-equiv="content-type">
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
 <style type="text/css">
 <!--
 .style1 {font-size: 36px}
@@ -98,15 +98,15 @@ $reg_date=$record[st_reg];
   <TABLE CELLSPACING="2">
     <TR> 
     <TR> 
-<TD><B>code student : </B></TD>
+<TD><B>Student ID : </B></TD>
 <TD><?=$code?>   [ <a href="resetpw.php?id_edit=<?=$id_edit;?>&code_st=<?=$code?>">reset password</a> ]</TD>
 	</TR>
     <TR> 
-      <TD><B>name-sername : </B></TD>
+      <TD><B>Name : </B></TD>
 	<TD><INPUT NAME="name" TYPE="text" VALUE="<?=$name?>" SIZE="26"></TD>
     </TR>
     <TR> 
-      <TD><B>section : </B></TD>
+      <TD><B>Section : </B></TD>
 	  <TD><select name="section" id="province">
         <? 
      $sql="select * from Section ";  

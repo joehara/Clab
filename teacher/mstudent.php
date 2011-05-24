@@ -89,7 +89,7 @@ if ($sess_table<>teacher) {
 <td><center><a href="report_scroll.php"><img src="../images/gtk_print_report.png" alt="รายงานผลคะแนน" /><br>รายงานผลคะแนน</a></center></td>
 </tr>
 </table>
-</center>     
+</center>
 
 <p>&nbsp;</p>
 </div></div>
