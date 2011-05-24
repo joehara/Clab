@@ -1,0 +1,61 @@
+/* CSS RESET */
+html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{
+	font-size:24px;
+	font-weight:normal;
+}q:before,q:after{content:'';}abbr,acronym {border:0;font-variant:normal;}sup {vertical-align:text-top;}sub {vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}legend{color:#000;}
+
+body {font:13px/1.231 arial,helvetica,clean,sans-serif;}table{font-size:inherit;font-size:100%;}pre,code,kbd,samp,tt{font-family:monospace;line-height:100%;}
+/* CSS RESET */
+
+
+
+body {
+	text-align:center;
+	background:url(images/bg.gif);
+	
+}
+a {
+	text-decoration:none;
+	color:#FFFFFF
+}
+a:hover {
+	text-decoration: underline;
+	color:#990000
+}
+#wrap {
+	width:742px;
+	text-align:left;
+	margin:0 auto;padding:50px 
+	
+}
+
+.fl{ float:left}
+.fr{ float:right}
+.clearfix{ clear:both}
+
+
+
+/* header */
+#header {background: url(images/hd.png); height:161px; position:relative }
+#header .quest {background:url(images/b.gif); height:116px; width:177px;  position:absolute; top:40px; right:30px; font-size:18px; text-align:center; padding-top:25px}
+#logo { position:absolute; top:50px; left:30px}
+#logo div{ position: relative; top:-10px; left:30px}
+
+#logo h1 { font-size:50px; font-weight:700; color:#F79C1A}
+#logo div {font-weight:700}
+/* content */
+#content { background: url(images/ct.png); height:397px;  position:relative}
+
+.main { width:160px}
+.main h2 {font-size:16px}
+.side {margin:70px 0 0 0 ; width: 250px;}
+.si {margin-left: 60px;}
+#ct { width:380px; padding:50px 0 0 50px; font-size:11px}
+#ct div.fr h2 {font-size:24px; font-weight:700; text-align:right}
+ul#nav li {float:left; padding:0 10px}
+ul#nav {position:absolute; right:10px; top:10px; font-weight:700}
+ul#nav li a:hover {color:#990000}
+div.bt  { margin:50px 0 0 70px}
+/* footer */
+#footer { height:50px; margin:20px}
+#footer a {color:#333333}

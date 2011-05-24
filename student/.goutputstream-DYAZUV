@@ -1,0 +1,174 @@
+<?
+
+include "../function.php";
+
+$codepw =1234; 
+?>
+<HTML>
+<HEAD><TITLE>Registration</TITLE></HEAD>
+<meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
+<meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
+<link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
+<meta content="text/html; charset=TIS-620" http-equiv="content-type">
+<style type="text/css">
+<!--
+.style1 {font-size: 36px}
+-->
+
+</style>
+</head>
+
+<body>
+
+<div id="templatemo_container">
+   
+    <div id="templatemo_header" >
+   	  <div id="logosection"></div>
+    	<div id="header">
+        	<div class="title">
+        	  <p class="style1">&nbsp;</p>
+        	  <p>&nbsp;</p>
+        	</div>
+
+        </div>
+	</div>
+    
+	<div id="templatemo_menu">
+    	<div id="search">
+	<? $today=date("r");
+echo "$today"; ?>
+    	</div>
+        <div id="menu">
+            <ul>
+                <li><a href="../index.html" class="current">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+	</div>
+    
+    <!-- start of content -->
+    
+	<div id="templatemo_content">
+
+</div>
+    
+    	<!-- start of left column -->
+     <div id="leftcolumn_box01">
+                <div class="leftcolumn_box01_top">
+                    <h2>Registration</h2>		
+                </div>
+                <div class="leftcolumn_box01_bottom">
+                        <div class="form_row">
+                        <label>ข้อความชี้แนะ</label><p>กรุณากรอกข้อมูลให้ถูกต้องและครบถ้วน</p>                                      
+			
+
+                    </form>
+                </div>            
+            </div>
+            <div id="leftcolumn_box02">
+            	<h2>Link</h2>
+                <ul>
+                <a href="http://lms.kmutnb.ac.th/"><img src="../images/banner_LMS.gif" alt="Elearning" /></a>                
+		<a href="http://wasana.kmutnb.ac.th//"><img src="../images/wireless.gif" alt="wireless" /></a>
+                <a href="http://k-radio.kmutnb.ac.th/"><img src="../images/banner-K_radio.gif" alt="K_radio" /></a>
+
+		</ul>
+            </div>            	            
+        </div>
+    	
+        <!-- end of left column -->
+        
+       <!-- start of middle column -->
+<div id="templatemo_middle_column">
+
+<center>
+<p><h1>:: Registration Student ::</h1><br><br>
+<FORM METHOD="POST" ACTION="register2.php"> 
+
+  <TABLE CELLSPACING="2">
+    <TR> 
+<TD><B>code student : </B></TD><TD><input name="codest" type="text"></TD>
+	</TR>
+<TR>
+      <TD><B>name-sername : </B></TD>
+	<TD><INPUT NAME="namest" TYPE="text"  SIZE="26"></TD>
+    </TR>
+    <TR> 
+      <TD><B>section : </B></TD>
+	<TD><select name="section" id="province">
+      <? 
+	  include "../connect.php";
+     $sql="select * from Section ";  
+     $result=mysql_db_query($dbname,$sql);
+     while($rs=mysql_fetch_array($result)){  
+ ?>
+       <option value="<?=$rs[section_name]?>" selected><?=$rs[section_name]?></option>  
+ <?php } ?>      
+                            </select>&nbsp;<a href="add_section.php" target="_blank">add</a></TD>
+    </TR>
+    <TR>
+      <TD><strong>ปีการศึกษา :</strong></TD>
+      <TD><select name="year" id="year">
+        <? 
+     $sql2="select * from Academic_year ";  
+     $result2=mysql_db_query($dbname,$sql2);
+     while($rs2=mysql_fetch_array($result2)){  
+ ?>
+         <option value="<?=$rs2[Academic_detail]?>" selected><?=$rs2[Academic_detail]?></option>  
+ <?php } ?>      
+                            </select>
+        <a href="add_academic_year.php">add</a>
+      </label></TD>
+    </TR>
+    <TR>
+      <TD><strong>อาจารย์ผู้สอน :</strong></TD>
+      <TD><select name="teach" id="teach">
+        <? 
+     $sql3="select * from teacher ";  
+     $result3=mysql_db_query($dbname,$sql3);
+     while($rs3=mysql_fetch_array($result3)){  
+ if($tech==$rs3[name]){
+	 $sel = "selected";
+	 }else{
+	 $sel = "";
+	 }
+	        echo" <option value=\"$rs3[name]\" $sel>
+          $rs3[name]
+          </option>";
+		  } ?>
+      </select></TD>
+    </TR>
+    <TR> 
+      <TD><B>Email : </B></TD>
+      <TD><INPUT NAME="email_st" TYPE="text"  SIZE="26"> * </TD>
+    </TR>
+    <TR> 
+      <TD><B>Telephone : </B></TD>
+      <TD><INPUT NAME="phone_st" TYPE="text"  SIZE="26"></TD>
+    </TR>
+    <TR> 
+      <TD VALIGN="top"><B>Address :</B></TD>
+      <TD><TEXTAREA NAME="address_st" COLS="35" ROWS="3"></TEXTAREA></TD>
+    </TR>
+    <TR>
+      <TD></TD>
+      <TD></TD>
+    </TR>
+    <TR> 
+      <TD>&nbsp;</TD>
+      <TD><INPUT TYPE="Submit" VALUE="Submit"> <INPUT TYPE="Reset" VALUE="Reset"></TD>
+    </TR>
+  </TABLE>
+</FORM>
+[ <a href="main.php">Quit</a> ] 
+</center>
+<div id="templatemo_footer">
+        <blockquote>
+          <blockquote>
+            <blockquote>
+              <blockquote>
+                <blockquote>
+                  <blockquote>
+                    <blockquote>
+                      <p align="center">Copyright 
