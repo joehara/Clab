@@ -10,7 +10,7 @@ if ($sess_table<>teacher) {
 <meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
 <meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
 <link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
-<meta content="text/html; charset=TIS-620" http-equiv="content-type">
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
 <style type="text/css">
 <!--
 .style1 {font-size: 36px}
@@ -75,13 +75,13 @@ if ($sess_table<>teacher) {
         <!-- start of middle column -->
 <div id="templatemo_middle_column">
 <center>
-<h1>:: �ѡ�֡�ҷ���觧ҹ�����::</h1></center><br><br>
-[ <a href="main.php">Back Main</a> &gt; <a href="mstudent.php">Back manage student</a>&nbsp;&gt; <a href="report.php">Section ����觧ҹ�����</a> &gt; �ѡ�֡�ҷ���觧ҹ�����</p><br>
+<h1>:: นักศึกษาที่ส่งงานเข้ามา::</h1></center><br><br>
+[ <a href="main.php">Back Main</a> &gt; <a href="mstudent.php">Back manage student</a>&nbsp;&gt; <a href="report.php">Section ที่ส่งงานเข้ามา</a> &gt; นักศึกษาที่ส่งงานเข้ามา</p><br>
 <table border="0">
   <tr bgcolor="#D3D3D3"> 
     
     <td>NO.</td>
-    <td>�ѡ�֡�ҷ���觧ҹ�����</td>
+    <td>นักศึกษาที่ส่งงานเข้ามา</td>
   </tr>
   <?
 include "../connect.php";
@@ -95,7 +95,7 @@ $record=mysql_fetch_array($resultx);
   $student_id=$_GET[student];
 	$count=1;
 	
-	$sql="select student.student_id,student.name,HeadLesson.lesson,student.section,student.year from SendAnswer,Proposition,student,HeadLesson  where (SendAnswer.ref_question=Proposition.question_id and SendAnswer.ref_student=student.student_id and Proposition.ref_lesson=HeadLesson.lesson )and student.section='$section' and student.teach='$record[name]'  and student.year='$year' GROUP BY student.name";
+	$sql="select student.student_id,student.name,headlesson.lesson,student.section,student.year from sendanswer,proposition,student,headlesson  where (sendanswer.ref_question=proposition.question_id and sendanswer.ref_student=student.student_id and proposition.ref_lesson=headlesson.lesson )and student.section='$section' and student.teach='$record[name]'  and student.year='$year' GROUP BY student.name";
 	$result=mysql_db_query($dbname,$sql);
 	while($record=mysql_fetch_array($result)) {
 		

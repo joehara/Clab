@@ -16,34 +16,34 @@ if ($result) {
 	echo "<h3>ERROR Delete student unsucessful</h3>";
 }
 	
-$sql2="select  Check_answer.check_id,Check_answer.ref_answer,SendAnswer.answer_id from Check_answer,SendAnswer where (Check_answer.ref_answer=SendAnswer.answer_id) and SendAnswer.ref_student='$id'";
+$sql2="select  check_answer.check_id,check_answer.ref_answer,sendanswer.answer_id from check_answer,sendanswer where (check_answer.ref_answer=sendanswer.answer_id) and sendanswer.ref_student='$id'";
 $result2=mysql_db_query($dbname,$sql2);
 		while($record=mysql_fetch_array($result2)) {
-		$sql3="delete from Check_answer where ref_answer='$record[answer_id]'";
+		$sql3="delete from check_answer where ref_answer='$record[answer_id]'";
 		$result3=mysql_db_query($dbname,$sql3);
 	
 		}
 		
 		
-$sql2="select * from SendAnswer where ref_student='$id'";
+$sql2="select * from sendanswer where ref_student='$id'";
 $result2=mysql_db_query($dbname,$sql2);
 while($record=mysql_fetch_array($result2)) {
-		$sql3="delete from SendAnswer where ref_student='$id'";
+		$sql3="delete from sendanswer where ref_student='$id'";
 		$result3=mysql_db_query($dbname,$sql3);
 	
 		}
 
-$sql2="select * from Random where ref_student='$id'";
+$sql2="select * from random where ref_student='$id'";
 $result2=mysql_db_query($dbname,$sql2);
 while($record=mysql_fetch_array($result2)) {
-		$sql3="delete from Random where ref_student='$id'";
+		$sql3="delete from random where ref_student='$id'";
 		$result3=mysql_db_query($dbname,$sql3);
 	
 		}
-$sql2="select * from Time_use where ref_student='$id'";
+$sql2="select * from time_use where ref_student='$id'";
 $result2=mysql_db_query($dbname,$sql2);
 while($record=mysql_fetch_array($result2)) {
-		$sql3="delete from Time_use where ref_student='$id'";
+		$sql3="delete from time_use where ref_student='$id'";
 		$result3=mysql_db_query($dbname,$sql3);
 	
 		}

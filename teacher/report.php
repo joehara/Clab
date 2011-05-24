@@ -10,7 +10,7 @@ if ($sess_table<>teacher) {
 <meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
 <meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
 <link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
-<meta content="text/html; charset=TIS-620" http-equiv="content-type">
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
 <style type="text/css">
 <!--
 .style1 {font-size: 36px}
@@ -75,13 +75,13 @@ if ($sess_table<>teacher) {
         <!-- start of middle column -->
 <div id="templatemo_middle_column">
 <center>
-<h1>:: Section ที่ส่งงานเข้ามา::</h1></center><br><br>
-[ <a href="main.php">Back Main</a> &gt; <a href="mstudent.php">Back manage student</a>&nbsp;&gt; Section ที่ส่งงานเข้ามา<br><br><br>
+<h1>:: Section เธ—เธตเนเธชเนเธเธเธฒเธเน€เธเนเธฒเธกเธฒ::</h1></center><br><br>
+[ <a href="main.php">Back Main</a> &gt; <a href="mstudent.php">Back manage student</a>&nbsp;&gt; Section เธ—เธตเนเธชเนเธเธเธฒเธเน€เธเนเธฒเธกเธฒ<br><br><br>
 <table border="0">
   <tr bgcolor="#D3D3D3"> 
     
     <td>NO.</td>
-    <td>SECTION ที่ส่งงานเข้ามา</td><td>ปีการศึกษา</td>
+    <td>SECTION เธ—เธตเนเธชเนเธเธเธฒเธเน€เธเนเธฒเธกเธฒ</td><td>เธเธตเธเธฒเธฃเธจเธถเธเธฉเธฒ</td>
   </tr>
   <?
 	$count=1;
@@ -91,7 +91,7 @@ if ($sess_table<>teacher) {
 	$resultx=mysql_db_query($dbname,$sqlx);
 	$record=mysql_fetch_array($resultx);
 
-		$sql2="select student.section,student.year from SendAnswer,student where (SendAnswer.ref_student=student.student_id and SendAnswer.ref_student=student.student_id and student.teach='$record[name]') GROUP BY student.section,student.year";
+		$sql2="select student.section,student.year from sendanswer,student where (sendanswer.ref_student=student.student_id and sendanswer.ref_student=student.student_id and student.teach='$record[name]') GROUP BY student.section,student.year";
  		$result2=mysql_db_query($dbname,$sql2);
 		while($record=mysql_fetch_array($result2)) {
 		echo "<tr> 
@@ -110,6 +110,3 @@ if ($sess_table<>teacher) {
 </div>
 </BODY>
 </HTML>
-
-
-

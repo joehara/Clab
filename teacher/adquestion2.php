@@ -3,7 +3,7 @@
 <meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
 <meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
 <link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
-<meta content="text/html; charset=TIS-620" http-equiv="content-type">
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
 <style type="text/css">
 <!--
 .style1 {font-size: 36px}
@@ -69,14 +69,14 @@ $result=mysql_db_query($dbname,$sql);
 $record=mysql_fetch_array($result);
 $name=$record[name];
 
-$sql2="select * from Proposition where proposition='$question' ";
+$sql2="select * from proposition where proposition='$question' ";
 $result2=mysql_db_query($dbname,$sql2);
 $num2=mysql_num_rows($result2);
 if($num2>0) {
 	echo "<h3>ERROR : Question duplicate in Database</h3>";	 exit();
 }
 
-$sql3="insert into Proposition values('','$question','$help2','$name','$level','$lesson')";
+$sql3="insert into proposition values('','$question','$help2','$name','$level','$lesson')";
 $result3=mysql_db_query($dbname,$sql3);
 if ($result3) {
 	echo "<h3>Insert question successful</h3>";
