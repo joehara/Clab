@@ -1,10 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Untitled Document</title>
-</head>
-<body>
+<?
+include "../chksession.php";
+
+if ($sess_table<>admin) {
+        header( "Location: ../index.html");     exit();
+}
+?>
+<html>
+<? require "_header.php"; ?>
 
 <?
 $id=$_GET[question_id];
@@ -20,5 +22,5 @@ if ($result) {
 mysql_close();
 ?>
 
-</body>
+<? require "_footer.php"; ?>
 </html>
