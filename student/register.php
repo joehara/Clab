@@ -6,13 +6,13 @@ $codepw =1234;
 ?>
 <HTML>
 <HEAD><TITLE>Registration</TITLE>
-<link href="../templatemo_style2.css" rel="stylesheet" type="text/css" />
+<link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
 <meta content="text/html; charset=UTF-8" http-equiv="content-type">
 </HEAD>
 <body>
 <FORM METHOD="POST" ACTION="register2.php"> 
 <center>
-<img src="/Clab/images/templatemo_heading_background.jpg" width="690" height="146"></center><br><br><br>
+<img src="../images/templatemo_heading_background.jpg" width="690" height="146"></center><br><br><br>
 <center><h1>Registration Student</h1></center><br>
 
   <center><TABLE CELLSPACING="2" style="background-color:#FFE4C4;">

@@ -18,7 +18,7 @@
                 start_highlight: true,
                 allow_resize: "both",
                 allow_toggle : false,
-                word_wrap: true,
+                word_wrap: false,
                 language: "en",
                 syntax: "c",
                 toolbar: "search, go_to_line, |, undo, redo"

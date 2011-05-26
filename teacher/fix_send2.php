@@ -19,7 +19,7 @@ $today=date("Y-m-d");
 
 
 //echo"Date Diff =".DateDiff(
-if(DateTimeDiff($today,$time)<0){
+if(DateDiff($today,$time)<0){
 echo"วันที่และเวลาตั้งน้อยกว่าปัจจุบัน กรุณาตั้งวันทีและเวลา่ใหม่";
 exit();
 }
