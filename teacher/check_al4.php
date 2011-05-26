@@ -2,11 +2,12 @@
 include "../chksession.php";
 
 if ($sess_table<>teacher) {
-	header( "Location: /Clab/index.html"); 	exit();
+	header( "Location: ../index.html"); 	exit();
 }
   $lesson=$_GET[lesson];
   $section=$_GET[section];
   $student_id=$_GET[id];
+  $year=$_GET[year];
 ?>
 <HTML>
 <? require "_header.php"; ?>
@@ -18,12 +19,13 @@ if ($sess_table<>teacher) {
   <tr bgcolor="#D3D3D3">
     <td>NO.</td>
     <td>โจทย์ที่ส่ง</td>
+    <td>รายละเอียด</td>
   </tr>
 <?
 
 $count=1;
 include "../connect.php";
-$sql="select student.name,student.student_id,check_answer.check_id,proposition.proposition from sendanswer,proposition,student,check_answer where (check_answer.ref_answer=sendanswer.answer_id and sendanswer.ref_question=proposition.question_id and sendanswer.ref_student=student.student_id) and proposition.ref_lesson='$lesson' and student.section='$section' and student.student_id='$student_id'";
+$sql="select sendanswer.answer_id,proposition.proposition,sendanswer.ref_question from sendanswer,proposition,student where (sendanswer.ref_question=proposition.question_id and sendanswer.ref_student=student.student_id) and proposition.ref_lesson='$lesson' and student.section='$section' and student.student_id='$student_id' and student.year=$year and status = 1 order by sendanswer.ref_question";
 $result=mysql_db_query($dbname,$sql);
 while($record=mysql_fetch_array($result)) {
 
@@ -31,7 +33,7 @@ echo "
 <tr>
 <td>$count</td>
 <td>$record[proposition]</td>
-<td><a href=\"check_al_st.php?check_id=$record[check_id]\">detail</a></td>
+<td><a href=\"check_al_st.php?check_id=$record[ref_question]&id=$student_id\">detail</a></td>
 </tr>";
 $count++;
 

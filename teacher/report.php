@@ -24,7 +24,7 @@ if ($sess_table<>teacher) {
 	$resultx=mysql_db_query($dbname,$sqlx);
 	$record=mysql_fetch_array($resultx);
 
-		$sql2="select student.section,student.year from sendanswer,student where (sendanswer.ref_student=student.student_id and sendanswer.ref_student=student.student_id and student.teach='$record[name]' and status=0) GROUP BY student.section,student.year";
+		$sql2="select student.section,student.year from sendanswer,student where (sendanswer.ref_student=student.student_id and student.teach='$record[name]' and status=0) GROUP BY student.section,student.year";
  		$result2=mysql_db_query($dbname,$sql2);
 		while($record=mysql_fetch_array($result2)) {
 		echo "<tr> 

@@ -2,42 +2,40 @@
 include "../chksession.php";
 
 if ($sess_table<>teacher) {
-	header( "Location: /Clab/index.html"); 	exit();
+	header( "Location: ../index.html"); 	exit();
 }
-
-  $lesson=$_GET[lesson];
-  $section=$_GET[section];
 ?>
 <HTML>
 <? require "_header.php"; ?>
 
 <center>
-<h1>:: ผู้ส่งข้อสอบ::</h1></center><br><br>
-[<a href="main.php">Main</a> &gt; <a href="mstudent.php">manage student</a> &gt; <a href="check_al.php"> Section ที่ตรวจแล้ว</a> &gt; <a href="check_al2.php?lesson=<?=$lesson?>&section=<?=$section?>">บทที่ ตรวจแล้ว</a> &gt;ผู้ทำส่งข้อสอบ<br><br><br>
+<h1>:: Question ที่ตรวจแล้ว ::</h1></center><br><br>
+[ <a href="main.php"> Main</a> &gt; <a href="mstudent.php"> manage student</a>&nbsp;&gt; <a href="check_al.php">Section ที่ตรวจแล้ว</a> &gt; Question ที่ตรวจแล้ว<br><br><br>
 <table border="0">
-<tr bgcolor="#D3D3D3">
-<td>NO.</td>
-<td>ผู้ส่งข้อสอบ</td>
+  <tr bgcolor="#D3D3D3"> 
+    
+    <td>บทที่</td>
+    <td>Question</td>
+  </tr>
+  <?
+  $section=$_GET[section];
+  $year=$_GET[year];
+  $student_id = $_GET[id];
+	include "../connect.php";
+$sqlx="select * from teacher where username='$sess_username'";
+$resultx=mysql_db_query($dbname,$sqlx);
+$record=mysql_fetch_array($resultx);
 
-</tr>
-<?
-
-$count=1;
-include "../connect.php";
-$sql="select student.name,student.student_id from sendanswer,proposition,student,check_answer where (check_answer.ref_answer=sendanswer.answer_id and sendanswer.ref_question=proposition.question_id and sendanswer.ref_student=student.student_id) and proposition.ref_lesson='$lesson' and student.section='$section' GROUP BY student.name" ;
-$result=mysql_db_query($dbname,$sql);
-while($record=mysql_fetch_array($result)) {
-
-echo "
-<tr>
-<td>$count</td>
-<td><a href=\"check_al4.php?id=$record[student_id]&lesson=$lesson&section=$section\">$record[name]</a></td>
-</tr>";
-$count++;
-
-
-}
-mysql_close();
+	$sql="select distinct headlesson.detail,headlesson.lesson,student.section from sendanswer,proposition,student,headlesson  where sendanswer.ref_question=proposition.question_id and sendanswer.ref_student=student.student_id and proposition.ref_lesson=headlesson.lesson and student.teach='$record[name]' and student.section='$section' and status=1 and student.year=$year and student.student_id=$student_id order by headlesson.lesson";
+	$result=mysql_db_query($dbname,$sql);
+	while($record=mysql_fetch_array($result)) {
+		echo "<tr> 
+			<td>$record[lesson]</td>
+			<td><a href=\"check_al4.php?id=$student_id&lesson=$record[lesson]&section=$record[section]&year=$year\">$record[detail]</a></td>
+			
+		</tr>";
+	}
+	mysql_close();
 ?>
 </table>
 
