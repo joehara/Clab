@@ -2,7 +2,7 @@
 include "../chksession.php";
 
 if ($sess_table<>teacher) {
-	header( "Location: ../index.html"); 	exit();
+	header( "Location: /Clab/index.html"); 	exit();
 }
 
   $lesson=$_GET[lesson];
@@ -14,7 +14,7 @@ if ($sess_table<>teacher) {
 <HEAD><title>ผู้ส่งข้อสอบ</title></HEAD>
 <meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
 <meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
-<link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
+<link href="/Clab/templatemo_style.css" rel="stylesheet" type="text/css" />
 <meta content="text/html; charset=UTF-8" http-equiv="content-type">
 <style type="text/css">
 <!--
@@ -41,7 +41,7 @@ if ($sess_table<>teacher) {
     
 	<div id="templatemo_menu">
     	<div id="search">
-	Welcome, <a href="showprofile.php" style="color:#000000"><b><?=$sess_username?></b></a>&nbsp;&nbsp;<a href="../logout.php"><img src="../images/logout.gif" alt="Logout" /></a>
+	Welcome, <a href="showprofile.php" style="color:#000000"><b><?=$sess_username?></b></a>&nbsp;&nbsp;<a href="./Clab/logout.php"><img src="/Clab/images/logout.gif" alt="Logout" /></a>
     	</div>
         <div id="menu">
             <ul>
@@ -81,43 +81,37 @@ if ($sess_table<>teacher) {
 <div id="templatemo_middle_column">
 <center>
 <h1>:: โจทย์ที่ส่ง ::</h1></center><br><br>
-<p>[<a href="main.php">Main</a> &gt; <a href="mstudent.php">manage student</a>
-&gt; <a href="report.php"> Section ราย</a> &gt; <a href="report2.php?id=<?$student_id?>&lesson=<?=$lesson?>&amp;section=<?=$section?>&year=<?=$year?>">ราย2</a> &gt;<a href="question_report.php?student=<?=$student_id?>&lesson=<?=$lesson?>&section=<?=$section?>&year=<?=$year?>">ราย3</a>&gt; ราย4 </p>
-<br><br>
+[<a href="main.php"> Back Main</a> &gt; <a href="mstudent.php">manage student</a>
+&gt; <a href="report.php"> Section ที่ส่งงานเข้ามา</a> &gt; <a href="report2.php?id=<?$student_id?>&lesson=<?=$lesson?>&amp;section=<?=$section?>&year=<?=$year?>">บทที่ส่งงานเข้ามา</a> &gt;<a href="question_report.php?student=<?=$student_id?>&lesson=<?=$lesson?>&section=<?=$section?>&year=<?=$year?>">ผู้ส่งข้อสอบ</a>&gt; โจทย์ที่ทำส่ง
+<br><br><br>
 <table border="0">
 <tr bgcolor="#D3D3D3">
 <td>NO.</td>
-<td>ราย5</td>
+<td>โจทย์ที่ส่ง</td>
 </tr>
 <?
 
-$count=1;
-include "../connect.php";
-$sql="select proposition.proposition,student.name,student.student_id,sendanswer.answer_id from sendanswer,proposition,student where (sendanswer.ref_question=proposition.question_id and sendanswer.ref_student=student.student_id) and proposition.ref_lesson='$lesson' and student.section='$section' and student.student_id='$student_id'";
-$result=mysql_db_query($dbname,$sql);
-while($record=mysql_fetch_array($result)) {
+	$count=1;
+	include "../connect.php";
+	$sql="select proposition.proposition,student.name,student.student_id,sendanswer.answer_id from sendanswer,proposition,student where (sendanswer.ref_question=proposition.question_id and sendanswer.ref_student=student.student_id) and proposition.ref_lesson='$lesson' and student.section='$section' and student.student_id='$student_id'";
+	$result=mysql_db_query($dbname,$sql);
+	while($record=mysql_fetch_array($result)) {
 
-$sql2="select * from check_answer where ref_answer='$record[answer_id]'";
-$result2=mysql_db_query($dbname,$sql2);
-$record2=mysql_fetch_array($result2);
-$num2=mysql_num_rows($result2);
-if($num2<=0) {
-echo "<tr>
-<td>$count</td>
-<td>$record[proposition]</td>
-<td><a href=\"question_check.php?ans_id=$record[answer_id]\">รายยยยย</a></td>
-</tr>";
-}else{
+	$sql2="select * from check_answer where ref_answer='$record[answer_id]'";
+		$result2=mysql_db_query($dbname,$sql2);
+		$record2=mysql_fetch_array($result2);
+		$num2=mysql_num_rows($result2);
+		if($num2<=0) {
+		echo "<tr>
+			<td>$count</td>
+			<td>$record[proposition]</td>
+			<td><a href=\"question_check.php?ans_id=$record[answer_id]\">ตรวจ</a></td>
+		</tr>";
 
-echo "<tr>
-<td>$count</td>
-<td>$record[proposition]</td>
-<td><a href=\"check_al_st.php?check_id=$record2[check_id]&page=2\">รายยยยยยย</a></td>
-</tr>";
-}
+	}
 
-$count++;
-}
+	$count++;
+	}
 
 mysql_close();
 ?>

@@ -37,6 +37,22 @@ mysql_close();
 -->
 
 </style>
+<script language="Javascript" type="text/javascript" src="../editarea/edit_area/edit_area_full.js">
+</script>
+<script language="Javascript" type="text/javascript">
+	editAreaLoader.init({
+		id: "student_code",
+		start_highlight: true,
+		allow_resize: "both",
+		allow_toggle : false,
+		word_wrap: true,
+		language: "en",
+		syntax: "c",
+		toolbar: "search, go_to_line, |, undo, redo"
+
+	});	
+</script>
+
 </head>
 
 <body>
@@ -132,7 +148,7 @@ Question ::<br>
       <td style="vertical-align: top;">&#3650;&#3588;&#3619;&#3591;&#3626;&#3619;&#3657;&#3634;&#3591;&#3586;&#3629;&#3591;&#3650;&#3611;&#3619;&#3649;&#3585;&#3619;&#3617;&#3648;&#3610;&#3639;&#3657;&#3629;&#3591;&#3605;&#3657;&#3609;&#3592;&#3632;&#3607;&#3635;&#3651;&#3627;&#3657;&#3609;&#3633;&#3585;&#3624;&#3638;&#3585;&#3625;&#3634;&#3648;&#3586;&#3637;&#3618;&#3609;&#3650;&#3611;&#3619;&#3649;&#3585;&#3619;&#3617;&#3652;&#3604;&#3657;&#3591;&#3656;&#3634;&#3618;&#3586;&#3638;&#3657;&#3609;<br>
 &#3649;&#3621;&#3632;&#3592;&#3632;&#3607;&#3635;&#3651;&#3627;&#3657;&#3605;&#3619;&#3591;&#3585;&#3633;&#3610; flow chart &#3607;&#3637;&#3656;&#3605;&#3657;&#3629;&#3591;&#3585;&#3634;&#3619; <a href="example.php" target="_blank">&#3605;&#3633;&#3623;&#3629;&#3618;&#3656;&#3634;&#3591;</a><br>
         <br>
-        <textarea cols="70" rows="20" name="help" class="ckeditor"><?=$help?></textarea><br></td>
+        <textarea id="student_code" cols="80" rows="20" name="help" ><?=$help?></textarea><br></td>
       <td style="vertical-align: top;"><br>      </td>
     </tr>
     <tr>

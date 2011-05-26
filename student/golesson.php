@@ -32,8 +32,6 @@ $help=$code;
 <HTML>
 <head>
 <meta content="text/html; charset=UTF-8" http-equiv="content-type">
-<meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
-<meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
 <title>Lesson</title>
 <link href="/Clab/templatemo_style.css" rel="stylesheet" type="text/css" />
 <style type="text/css">
@@ -110,11 +108,11 @@ $help=$code;
   </tr>
   <tr>
     <td height="40">&nbsp;</td>
-    <td> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;âš·Âì::
+    <td> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;โจทย์ ::
      
       <?=$question?><input type="hidden" name="id_question" value="<?=$id_question?>">
       <input name="ref_student" type="hidden" id="ref_student" value="<?=$ref_student?>"></td>
-    <td>àÇÅÒ·ÕèàÃÔèÁ·Ó 
+    <td>เวลาที่เริ่มทำ
 	<? 
 $sql2="select * from random where ref_question='$id_question' and ref_student='$ref_student'";
 $result2=mysql_db_query($dbname,$sql2);

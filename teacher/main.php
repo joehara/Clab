@@ -2,19 +2,16 @@
 include "../chksession.php";
 
 if ($sess_table<>teacher) {
-	header( "Location: ../index.html"); 	exit();
+	header( "Location: /Clab/index.html"); 	exit();
 }
 ?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Welcome</title>
-<meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
-<meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
-<link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
-<meta content="text/html; charset=TIS-620" http-equiv="content-type">
+<link href="/Clab/templatemo_style.css" rel="stylesheet" type="text/css" />
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
 <style type="text/css">
 <!--
 .style1 {font-size: 36px}
@@ -38,7 +35,7 @@ if ($sess_table<>teacher) {
     
 	<div id="templatemo_menu">
     	<div id="search">
-	Welcome, <a href="showprofile.php" style="color:#000000"><b><?=$sess_username?></b></a>&nbsp;&nbsp;<a href="../logout.php"><img src="../images/logout.gif" alt="Logout" /></a>
+	Welcome, <a href="showprofile.php" style="color:#000000"><b><?=$sess_username?></b></a>&nbsp;&nbsp;<a href="/Clab/logout.php"><img src="/Clab/images/logout.gif" alt="Logout" /></a>
     	</div>
         <div id="menu">
             <ul>
@@ -94,10 +91,10 @@ echo"<span style=\"color: rgb(255, 0, 0);\">password ของคุณยัง
 <br><br>
 <center><table border="0">
 <tr>
-<td><center><a href="mstudent.php"><img src="../images/personal.png" alt="Management Student" /><br><b>Management Student</b></a></center></td>
-<td><center><a href="showlesson.php"><img src="../images/file_manager.png" alt="add/edit lesson" /><br><b>add/edit lesson</b></a></center></td>
-<td><center><a href="showprofile.php"><img src="../images/summer_user.png" alt="Show Profile" /><br><b>Show Profile</b></a></center></td>
-<td><center><a href="../logout.php"><img src="../images/application_exit.png" alt="Logout" /><br><b>Logout</b></a></center></td>
+<td><center><a href="mstudent.php"><img src="/Clab/images/personal.png" alt="Management Student" /><br><font size="2"><b>Management Student</b></font></a></center></td>
+<td><center><a href="showlesson.php"><img src="/Clab/images/file_manager.png" alt="add/edit lesson" /><br><font size="2"><b>add/edit lesson</b></font></a></center></td>
+<td><center><a href="showprofile.php"><img src="/Clab/images/summer_user.png" alt="Show Profile" /><br><font size="2"><b>Show Profile</b></font></a></center></td>
+<td><center><a href="../logout.php"><img src="/Clab/images/application_exit.png" alt="Logout" /><br><font size="2"><b>Logout</b></font></a></center></td>
 </tr>
 </table>
 </center>

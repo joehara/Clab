@@ -76,7 +76,7 @@ if ($sess_table<>teacher) {
 <div id="templatemo_middle_column">
 <center>
 <h1>:: นักศึกษาที่ส่งงานเข้ามา::</h1></center><br><br>
-[ <a href="main.php">Back Main</a> &gt; <a href="mstudent.php">Back manage student</a>&nbsp;&gt; <a href="report.php">Section ที่ส่งงานเข้ามา</a> &gt; นักศึกษาที่ส่งงานเข้ามา</p><br>
+[ <a href="main.php">Back Main</a> &gt; <a href="mstudent.php">Back manage student</a>&nbsp;&gt; <a href="report.php">Section ที่ส่งงานเข้ามา</a> &gt; นักศึกษาที่ส่งงานเข้ามา<br><br><br>
 <table border="0">
   <tr bgcolor="#D3D3D3"> 
     

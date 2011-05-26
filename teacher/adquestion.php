@@ -1,7 +1,7 @@
 <? 
 include "../chksession.php";
 if ($sess_table<>teacher) {
-	header( "Location: ../index.html"); 	exit();
+	header( "Location: /Clab/index.html"); 	exit();
 }
 $id=$_GET[id_edit];
 $lesson=$_GET[lesson];
@@ -19,9 +19,7 @@ mysql_close();
 ?>
 <HTML>
 <HEAD><TITLE>Add Question</TITLE></HEAD>
-<meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
-<meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
-<link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
+<link href="/Clab/templatemo_style.css" rel="stylesheet" type="text/css" />
 <meta content="text/html; charset=UTF-8" http-equiv="content-type">
 <style type="text/css">
 <!--
@@ -127,8 +125,8 @@ Question <?=$code?><INPUT name="no" type="hidden" value="<?=$code?>">::<br>
       </tr>
 <tr>
       <td style="vertical-align: top;"><br>      </td>
-      <td style="vertical-align: top;">โครงสร้างของโปรแกรมเบื้องต้นจะทำให้นักศึกษาเขียนโปรแกรมได้ง่ายขึ้น
-และจะทำให้ตรงกับ flow chart ที่ต้องการ <a href="example.php" target="_blank">&#3605;&#3633;&#3623;&#3629;&#3618;&#3656;&#3634;&#3591;</a><br>
+      <td style="vertical-align: top;"><br>
+แสดงตารางใส่ Code ในตารางด้านล่างนี้
         <br>
         <textarea id="student_code" cols="80" rows="20" name="help" >
 

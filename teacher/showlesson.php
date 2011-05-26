@@ -83,9 +83,9 @@ include "../chksession.php";
     
     <td>Lesson</td>
     <td><center>Detail Lesson</center></td>
-<td>รายยย</td>
-<td>รายยย</td>
-<td>รายยยย</td>
+<td>แก้ไข</td>
+<td>ข้อง่าย/สุ่ม</td>
+<td>ข้อยาก/สุ่ม</td>
 </tr>
 <?
 $count=0;

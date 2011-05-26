@@ -13,7 +13,7 @@ $st_reg=date("Y-m-d");
 ?>
 <HTML>
 <HEAD><TITLE>Registration</TITLE>
-<link href="../templatemo_style2.css" rel="stylesheet" type="text/css" />
+<link href="/Clab/templatemo_style2.css" rel="stylesheet" type="text/css" />
 <meta content="text/html; charset=UTF-8" http-equiv="content-type">
 <meta http-equiv="Refresh" content="2; URL=/Clab/student/register.php">
 </HEAD>
@@ -51,9 +51,9 @@ $sql3="insert into student values('','$code_st','$password','$name','$section',
 $result2=mysql_db_query($dbname,$sql3);
 if ($result2) {
 	echo "<h3>Insert student successful</h3>";
-	echo "ÃÍ¡ÒÃµÍºÃÑºšÒ¡ ÍÒšÒÃÂì ·Õè»ÃÖ¡ÉÒ";
+	echo "รอการตอบรับจาก อาจารย์ ที่ปรึกษา";
 
-	echo "<A HREF='../../index.html'>¡ÅÑºÊÙèË¹éÒËÅÑ¡</A><BR><BR>";
+	echo "<A HREF='../../index.html'>กลับสู่หน้าหลัก</A><BR><BR>";
 } else {
 	echo "<h3>Error Can't insert to database</h3>";
 }

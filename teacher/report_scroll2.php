@@ -1,6 +1,6 @@
 <? include"../chksession.php";
 if ($sess_table<>teacher) {
-	header( "Location: ../index.html"); 	exit();
+	header( "Location: /Clab/index.html"); 	exit();
 }
 ?>
 <html>
@@ -52,7 +52,7 @@ if ($sess_table<>teacher) {
 $section=$_GET[section];
 $year=$_GET[year];
 include "../connect.php";
-$sql="select * from HeadLesson";
+$sql="select * from headlesson";
 $result=mysql_db_query($dbname,$sql);
 $num=mysql_num_rows($result);
 

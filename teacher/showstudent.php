@@ -12,6 +12,7 @@ if ($sess_table<>teacher) {
 <link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
 <meta content="text/html; charset=UTF-8" http-equiv="content-type">
 <style type="text/css">
+
 <!--
 .style1 {font-size: 36px}
 -->
@@ -101,13 +102,13 @@ if ($sess_table<>teacher) {
 <table width="512" border="1" >
   
 <tr bgcolor="#D3D3D3">
-		<th width="91"> <div align="center">No. </div></th>
-		<th width="98"> <div align="center">student code </div></th>
-		<th width="198"> <div align="center">name-surname</div></th>
-		<th width="97"> <div align="center">section </div></th>
-		<th width="97"> <div align="center">year</div></th>
-        <th></div></th>
-        <th></div></th>
+		<th width="91"> <div align="center">No.</div></th>
+		<th width="98"> <div align="center">Student ID</div></th>
+		<th width="198"> <div align="center">Name</div></th>
+		<th width="97"> <div align="center">Section</div></th>
+		<th width="97"> <div align="center">Year</div></th>
+		<th width="97"> <div align="center">Edit</div></th>        	
+		<th width="97"> <div align="center">Delete</div></th>
 	  </tr>
 <?
 	include"../connect.php";
@@ -168,8 +169,8 @@ if($_GET["Keyword"] != "")
 		<td><?=$objResult["name"];?></td>
 		<td><div align="center"><?=$objResult["section"];?></div></td>
 		<td><?=$objResult["year"];?></td>
-        <td><a href="editstudent.php?id_edit=<?=$objResult["student_id"]?>">edit</a></td>
-			<td><a href="drop_student.php?id=<?=$objResult["student_id"]?>" onclick=\"return confirm(' ต้องการลบ $record[name] ออกจากระบบจริงหรือไม่ ')\">ลบ</a>
+        <td><a href="editstudent.php?id_edit=<?=$objResult["student_id"]?>"><img src="/Clab/images/icon-edit.gif"></a></td>
+			<td><a href="drop_student.php?id=<?=$objResult["student_id"]?>" onclick=\"return confirm(' ต้องการลบ $record[name] ออกจากระบบจริงหรือไม่ ')\"><img src="/Clab/images/b_drop.png"></a>
 	  </tr>
 	<?
 	$count++;
@@ -245,10 +246,10 @@ while($record3=mysql_fetch_array($result3)) {
 			<td>$count</td>
 			<td>$record3[code_st]</td>
 			<td>$record3[name]</td>
-			<td>$record3[section]</td>
-			<td>$record3[year]</td>
-			<td><a href=\"editstudent.php?id_edit=$record3[student_id]\"><img src=\"../images/icon-edit.gif\"></a></td>
-			<td><a href=\"drop_student.php?id=$record3[student_id]\" onclick=\"return confirm(' ต้องการลบ $record[name] ออกจากระบบจริงหรือไม่ ')\"><img src=\"../images/b_drop.png\"></a>
+			<td><center>$record3[section]</center></td>
+			<td><center>$record3[year]</center></td>
+			<td><center><a href=\"editstudent.php?id_edit=$record3[student_id]\"><img src=\"/Clab/images/icon-edit.gif\"></a></center></td>
+			<td><center><a href=\"drop_student.php?id=$record3[student_id]\" onclick=\"return confirm(' ต้องการลบ $record[name] ออกจากระบบจริงหรือไม่ ')\"><img src=\"/Clab/images/b_drop.png\"></a></center>
 		</tr>";
 	}
 ?>

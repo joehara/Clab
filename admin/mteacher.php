@@ -104,8 +104,8 @@ if ($sess_table<>admin) {
 			<td > $count</td>
 			<td>$record[name]</td>
 			<td>$record[email]</td>
-			<td><a href=\"editteacher.php?id_edit=$record[teacher_id]\"><img src=\"../images/icon-edit.gif\"></a></td>
-			<td><a href=\"drop_teacher.php?id=$record[teacher_id]\" onclick=\"return confirm(' ต้องการลบ $record[name] ออกจากระบบจริงหรือไม่ ')\"><img src=\"../images/b_drop.png\"></a></td>
+			<td><center><a href=\"editteacher.php?id_edit=$record[teacher_id]\"><img src=\"../images/icon-edit.gif\"></a></center></td>
+			<td><center><a href=\"drop_teacher.php?id=$record[teacher_id]\" onclick=\"return confirm(' ต้องการลบ $record[name] ออกจากระบบจริงหรือไม่ ')\"><img src=\"../images/b_drop.png\"></a></center></td>
 		</tr>";
 	}
 	mysql_close();

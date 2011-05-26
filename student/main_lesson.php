@@ -128,9 +128,9 @@ $num6=mysql_num_rows($result6);
 			<td>$count</td>
 			<td><a href=\"golesson.php?id_question=$record[question_id]&ref_student=$ref_student\">$record[proposition]</a></td>";
 			if($num6<=0){
-			echo"<td>ÂÑ§äÁèäŽéÊè§€ÓµÍº </td>";
+			echo"<td>ยังไม่ได้ส่งคำตอบ</td>";
 			}else{
-			echo"<td>Êè§€ÓµÍºáÅéÇ </td>";
+			echo"<td>ส่งคำตอบแล้ว</td>";
 			$success++;
 
 			if($success==($hard+$easy)){
@@ -159,7 +159,7 @@ $sql="select * from proposition,teacher_random,teacher where teacher_random.ques
 			
 			<td>$count</td>
 			<td><a href=\"golesson.php?id_question=$record[question_id]&ref_student=$ref_student\">$record[proposition]</a></td>
-			<td>ÂÑ§äÁèäŽéÊè§€ÓµÍº</td>
+			<td>ยังไม่ได้ส่งคำตอบ</td>
 			</tr>";
 			$count++;
 			$sql3="insert into random values('','$record[question_id]','$ref_student','$time')";
@@ -177,7 +177,7 @@ $sql="select * from proposition,teacher_random,teacher where teacher_random.ques
 			
 			<td>$count</td>
 			<td><a href=\"golesson.php?id_question=$record[question_id]&ref_student=$ref_student\">$record[proposition]</a></td>
-			<td>ÂÑ§äÁèäŽéÊè§€ÓµÍº</td>
+			<td>ยังไม่ได้ส่งคำตอบ</td>
 			</tr>";
 			$count++;
 			$sql4="insert into Random values('','$record[question_id]','$ref_student','$time')";
@@ -196,7 +196,7 @@ echo"</table>";
 
 
 
-	echo"<h3>äÁèÁÕâš·Âì</h3><br>";
+	echo"<h3>ไม่มีโจทย์</h3><br>";
 	}
 
 	}

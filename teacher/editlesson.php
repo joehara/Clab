@@ -2,11 +2,11 @@
 include "../chksession.php";
 
 if ($sess_table<>teacher) {
-	header( "Location: ../index.html"); 	exit();
+	header( "Location: /Clab/index.html"); 	exit();
 }
 $id_edit=$_GET[id_edit];
 include "../connect.php";
-$sql="select * from HeadLesson where id='$id_edit' ";
+$sql="select * from headlesson where id='$id_edit' ";
 $result=mysql_db_query($dbname,$sql);
 $record=mysql_fetch_array($result);
 $lesson=$record[lesson];
@@ -17,9 +17,7 @@ $time=$record[time];
 ?>
 <HTML>
 <HEAD><TITLE>Edit Lesson</TITLE></HEAD>
-<meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
-<meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
-<link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
+<link href="/Clab/templatemo_style.css" rel="stylesheet" type="text/css" />
 <meta content="text/html; charset=UTF-8" http-equiv="content-type">
 <style type="text/css">
 <!--
@@ -46,7 +44,7 @@ $time=$record[time];
     
 	<div id="templatemo_menu">
     	<div id="search">
-	Welcome, <a href="showprofile.php" style="color:#000000"><b><?=$sess_username?></b></a>&nbsp;&nbsp;<a href="../logout.php"><img src="../images/logout.gif" alt="Logout" /></a>
+	Welcome, <a href="showprofile.php" style="color:#000000"><b><?=$sess_username?></b></a>&nbsp;&nbsp;<a href="/Clab/logout.php"><img src="/Clab/images/logout.gif" alt="Logout" /></a>
     	</div>
         <div id="menu">
             <ul>

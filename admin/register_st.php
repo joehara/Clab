@@ -105,8 +105,8 @@ if ($sess_table<>admin) {
 			<td>$record[code_st]</td>
 			<td>$record[name]</td>
 			<td>$record[section]</td>
-			<td><a href=\"register_st2.php?id=$record[student_id]&permission=1\"><img src=\"../images/b_usrcheck.png\"></a></td>
-			<td><a href=\"register_st2.php?id2=$record[student_id]\" onclick=\"return confirm(' ต้องการลบ $record[name] ออกจากระบบจริงหรือไม่ ')\"><img src=\"../images/b_usrdrop.png\"></a></td>
+			<td><center><a href=\"register_st2.php?id=$record[student_id]&permission=1\"><img src=\"../images/b_usrcheck.png\"></a></center></td>
+			<td><center><a href=\"register_st2.php?id2=$record[student_id]\" onclick=\"return confirm(' ต้องการลบ $record[name] ออกจากระบบจริงหรือไม่ ')\"><img src=\"../images/b_usrdrop.png\"></a></center></td>
 		</tr>";
 	}
 	mysql_close();

@@ -2,7 +2,7 @@
 include "../chksession.php";
 
 if ($sess_table<>teacher) {
-	header( "Location: ../index.html"); 	exit();
+	header( "Location: /Clab/index.html"); 	exit();
 }
 ?>
 <HTML>
@@ -36,7 +36,7 @@ if ($sess_table<>teacher) {
     
 	<div id="templatemo_menu">
     	<div id="search">
-	Welcome, <a href="showprofile.php" style="color:#000000"><b><?=$sess_username?></b></a>&nbsp;&nbsp;<a href="../logout.php"><img src="../images/logout.gif" alt="Logout" /></a>
+	Welcome, <a href="showprofile.php" style="color:#000000"><b><?=$sess_username?></b></a>&nbsp;&nbsp;<a href="/Clab/logout.php"><img src="/Clab/images/logout.gif" alt="Logout" /></a>
     	</div>
         <div id="menu">
             <ul>
@@ -90,7 +90,7 @@ $sqlx="select * from teacher where username='$sess_username'";
 $resultx=mysql_db_query($dbname,$sqlx);
 $record=mysql_fetch_array($resultx);
 
-	$sql="select headlesson.detail ,headlesson.lesson,student.section from sendanswer,proposition,student,headlesson  where sendanswer.ref_question=proposition.question_id and sendanswer.ref_student=student.student_id and proposition.ref_lesson=headlesson.lesson and student.teach='$record[name]' and student.section='$section'";
+	$sql="select headlesson.detail,headlesson.lesson,student.section from sendanswer,proposition,student,headlesson  where sendanswer.ref_question=proposition.question_id and sendanswer.ref_student=student.student_id and proposition.ref_lesson=headlesson.lesson and student.teach='$record[name]' and student.section='$section'";
 	$result=mysql_db_query($dbname,$sql);
 	while($record=mysql_fetch_array($result)) {
 		

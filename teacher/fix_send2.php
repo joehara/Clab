@@ -4,12 +4,11 @@ include "../function.php";
 if ($sess_table<>teacher) {
 header( "Location: ../index.html"); 	exit();
 }
-$lesson=$_POST[HeadLesson];
+$lesson=$_POST[headlesson];
 $section=$_POST[section];
 $year=$_POST[year];
 $time=$_POST[time];
-$HH=$_POST[HH];
-$MM=$_POST[MM];
+
 
 ?>
 
@@ -19,11 +18,11 @@ $MM=$_POST[MM];
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <?
 
-$today=date("Y-m-d H:s:i"); 
-$time_today=date("H:s:i");
+$today=date("Y-m-d"); 
+
 
 //echo"Date Diff =".DateDiff(
-if(DateTimeDiff($today,"$time $HH:$MM:00")<0){
+if(DateTimeDiff($today,$time)<0){
 echo"วันที่และเวลาตั้งน้อยกว่าปัจจุบัน กรุณาตั้งวันทีและเวลา่ใหม่";
 exit();
 }
@@ -39,12 +38,13 @@ $num=mysql_num_rows($result);
 
 
 if($num>0){
-	echo"<a href='fix_send.php'>มีการกำหนดเวลาในการส่งของ Section ในระบบแล้ว</a>";
-	exit();
+	$fixid = mysql_result($result,0,0);
+	$sql2="update time_fix set time_finish='$time' where fix_id=$fixid";
+	$result2=mysql_db_query($dbname,$sql2);
+} else {
+	$sql2="insert into time_fix values('','$section','$year','$lesson','$record[teacher_id]','$time')";
+	$result2=mysql_db_query($dbname,$sql2);
 }
-
-$sql2="insert into time_fix values('','$section','$year','$lesson','$record[teacher_id]','$time $HH:$MM:00')";
-$result2=mysql_db_query($dbname,$sql2);
 if($result2){
 echo"<a href='fix_send.php'>เรียบร้อยแล้วครับ</a>";
 }

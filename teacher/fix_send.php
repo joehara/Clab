@@ -57,19 +57,19 @@ $(function(){
  }
  </script>
 <h1>กำหนดระยะเวลาในการส่งงาน<br></h1>
-<a href="main.php">main</a>
+<a href="mstudent.php">Back</a>
 <form name="form1" method="post" action="fix_send2.php">
   <table width="45%" border="0.5">
     <tr>
       <td width="38%">บทเรียน</td>
-      <td width="62%"><select name="HeadLesson" id="HeadLesson">
+      <td width="62%"><select name="headlesson" id="headlesson">
         <? 
-     $sql="select * from HeadLesson order by lesson asc";  
+     $sql="select * from headlesson order by lesson asc";  
      $result=mysql_db_query($dbname,$sql);
 $count=1;
      while($rs=mysql_fetch_array($result)){  
  ?>
-        <option value="<?=$rs[lesson]?>" selected><? echo "บทที่่ $count $rs[detail]";?></option>
+        <option value="<?=$rs[lesson]?>" selected><? echo "บทที่ $count $rs[detail]";?></option>
         <?php 
 $count++;} ?>
       </select></td>
@@ -78,7 +78,7 @@ $count++;} ?>
       <td> &nbsp;Section</td>
       <td><select name="section" id="section">
         <? 
-     $sql="select * from Section ";  
+     $sql="select * from section ";  
      $result=mysql_db_query($dbname,$sql);
      while($rs=mysql_fetch_array($result)){  
  ?>
@@ -92,7 +92,7 @@ $count++;} ?>
       <td>&nbsp;&nbsp;ปีการศึกษา</td>
       <td><select name="year" id="province">
         <? 
-     $sql="select * from Academic_year ";  
+     $sql="select * from academic_year ";  
      $result=mysql_db_query($dbname,$sql);
      while($rs=mysql_fetch_array($result)){  
  ?>
@@ -106,25 +106,8 @@ $count++;} ?>
       <td>กำหนดวันส่งงาน</td>
       <td>
       <input   id="dateInput"  type="input" name="time" value=""> &nbsp;
-      <select name="HH" id="HH">
-        <?
-for($x=0;$x<=23;$x++) {
-?>
-        <option value=<? echo "$x";?> >
-          <?  if($x<10){echo"0".$x;}else{echo"$x";}?>
-          </option>
-        <? } ?>
-      </select>
-      &nbsp;
-      <select name="MM" id="MM">
-        <?
-for($x=0;$x<=59;$x++) {
-?>
-        <option value=<? echo"$x";?>>
-          <?  if($x<10){echo"0".$x;}else{echo"$x";}?>
-          </option>
-        <? } ?>
-      </select></td>
+     
+ </td>
     </tr>
     <tr>
       <td>&nbsp;</td>
@@ -137,7 +120,7 @@ for($x=0;$x<=59;$x++) {
   <tr>
     <td width="12%"><div align="center">Section</div></td>
     <td width="14%"><div align="center">Year</div></td>
-    <td width="46%"><div align="center">บทเรียน</div></td>
+    <td width="60%"><div align="center">บทเรียน</div></td>
     <td width="28%"><div align="center">กำหนดเวลาที่ต้องส่ง</div></td>
   </tr>
 

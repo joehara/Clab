@@ -242,8 +242,8 @@ while($record3=mysql_fetch_array($result3)) {
 			<td>$record3[code_st]</td>
 			<td>$record3[name]</td>
 			<td>$record3[section]</td>
-			<td><a href=\"editstudent.php?id_edit=$record3[student_id]\"><img src=\"../images/icon-edit.gif\"></a></td>
-			<td><a href=\"drop_student.php?id=$record3[student_id]\" onclick=\"return confirm(' ต้องการลบ $record[name] ออกจากระบบจริงหรือไม่ ')\"><img src=\"../images/b_drop.png\"></a>
+			<td><center><a href=\"editstudent.php?id_edit=$record3[student_id]\"><img src=\"../images/icon-edit.gif\"></a></center></td>
+			<td><center><a href=\"drop_student.php?id=$record3[student_id]\" onclick=\"return confirm(' ต้องการลบ $record[name] ออกจากระบบจริงหรือไม่ ')\"><img src=\"../images/b_drop.png\"></a></center>
 		</tr>";
 	}
 ?>

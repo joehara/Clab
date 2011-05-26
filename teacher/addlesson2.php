@@ -2,16 +2,15 @@
 include "../chksession.php";
 
 if ($sess_table<teacher) {
-	header( "Location: ../index.html"); 	exit();
+	header( "Location: /Clab/index.html"); 	exit();
 }
 ?>
 
 <HTML>
 <HEAD><TITLE>Add Lesson</TITLE></HEAD>
-<meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
-<meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
-<link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
+<link href="/Clab/templatemo_style.css" rel="stylesheet" type="text/css" />
 <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+<meta http-equiv="Refresh" content="2; URL=/Clab/teacher/addlesson.php">
 <style type="text/css">
 <!--
 .style1 {font-size: 36px}
@@ -37,7 +36,7 @@ if ($sess_table<teacher) {
     
 	<div id="templatemo_menu">
     	<div id="search">
-	Welcome, <a href="showprofile.php" style="color:#000000"><b><?=$sess_username?></b></a>&nbsp;&nbsp;<a href="../logout.php"><img src="../images/logout.gif" alt="Logout" /></a>
+	Welcome, <a href="showprofile.php" style="color:#000000"><b><?=$sess_username?></b></a>&nbsp;&nbsp;<a href="/Clab/logout.php"><img src="/Clab/images/logout.gif" alt="Logout" /></a>
     	</div>
         <div id="menu">
             <ul>

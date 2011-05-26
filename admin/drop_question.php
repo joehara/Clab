@@ -2,17 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" type="text/css" href="../Oranges/style.css" />
 <title>Untitled Document</title>
 </head>
 <body>
 
 <?
-$id=$_GET[id];
+$id=$_GET[question_id];
 include "../connect.php";
-$sql2="delete from headlesson where question_id='$id' ";
-$result2=mysql_db_query($dbname,$sql2);
-if ($result2) {
+$sql="delete from proposition where question_id='$id' ";
+$result=mysql_db_query($dbname,$sql);
+if ($result) {
 	echo "<h3>Delete successful</h3>";
 	echo "<meta http-equiv=\"Refresh\" content=\"2; URL=proposition.php\">";
 } else {

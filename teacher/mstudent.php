@@ -82,11 +82,11 @@ if ($sess_table<>teacher) {
 <br><br>      
 <center><table border="0">
 <tr>
-<td><center><a href="showstudent.php"><img src="../images/user_group_01.png" alt="show student/detail" /><br>show student/detail</a></center></td>
-<td><center><a href="report.php"><img src="../images/check.png" alt="ตรวจข้อสอบที่มีการส่งเข้ามา" /><br>ตรวจข้อสอบที่มีการส่งเข้ามา</a></center></td>
-<td><center><a href="check_al.php"><img src="../images/check_mark.png" alt="ข้อสอบที่ทำการตรวจแล้ว" /><br>ข้อสอบที่ทำการตรวจแล้ว</a></center></td>
-<td><center><a href="fix_send.php"><img src="../images/clock4.png" alt="กำหนดเวลาในการส่งงาน" /><br>กำหนดเวลาในการส่งงาน</a></td>
-<td><center><a href="report_scroll.php"><img src="../images/gtk_print_report.png" alt="รายงานผลคะแนน" /><br>รายงานผลคะแนน</a></center></td>
+<td><center><a href="showstudent.php"><img src="../images/user_group_01.png" alt="show student/detail" /><br><font size="1">show student/detail</font></a></center></td>
+<td><center><a href="report.php"><img src="../images/check.png" alt="ตรวจข้อสอบที่มีการส่งเข้ามา" /><br><font size="1">ตรวจข้อสอบที่มีการส่งเข้ามา</font></a></center></td>
+<td><center><a href="check_al.php"><img src="../images/check_mark.png" alt="ข้อสอบที่ทำการตรวจแล้ว" /><br><font size="1">ข้อสอบที่ทำการตรวจแล้ว</font></a></center></td>
+<td><center><a href="fix_send.php"><img src="../images/clock4.png" alt="กำหนดเวลาในการส่งงาน" /><br><font size="1">กำหนดเวลาในการส่งงาน</font></a></td>
+<td><center><a href="report_scroll.php"><img src="../images/gtk_print_report.png" alt="รายงานผลคะแนน" /><br><font size="1">รายงานผลคะแนน</font></a></center></td>
 </tr>
 </table>
 </center>

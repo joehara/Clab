@@ -81,14 +81,14 @@ if ($sess_table<>teacher) {
 <div id="templatemo_middle_column">
 <center>
 <h1>:: บทที่ส่งเข้ามา ::</h1></center><br><br>
-<p>[<a href="main.php">Main</a> &gt; <a href="mstudent.php">manage student</a>
-&gt; <a href="report.php"> Section ราย1</a> &gt; <a href="report2.php?id=<?$student_id?>&lesson=<?=$lesson?>&section=<?=$section?>&year=<?=$year?>">ราย2</a> &gt; ราย3 </p><br><br>
+[<a href="main.php"> Back Main</a> &gt; <a href="mstudent.php">manage student</a>
+&gt; <a href="report.php"> Section ที่ส่งงานเข้ามา</a> &gt; <a href="report2.php?id=<?$student_id?>&lesson=<?=$lesson?>&section=<?=$section?>&year=<?=$year?>">นักศึกษาที่ส่งงานเข้ามา</a> &gt; บทที่ส่งเข้ามา<br><br><br>
 <table border="0">
 <tr bgcolor="#D3D3D3">
 <td>NO.</td>
-<td>ราย4</td>
-<td>ราย5</td>
-<td>ราย6</td>
+<td>บทที่ส่งเข้ามา</td>
+<td>จำนวนข้อยาก</td>
+<td>จำนวนข้อง่าย</td>
 
 </tr>
 <?

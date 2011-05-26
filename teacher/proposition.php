@@ -2,16 +2,14 @@
 include "../chksession.php";
 
 if ($sess_table<>teacher) {
-	header( "Location: ../index.html"); 	exit();
+	header( "Location: /Clab/index.html"); 	exit();
 }
 $id=$_GET[id_edit];
 $lesson=$_GET[lesson];
 ?>
 <HTML>
 <HEAD><TITLE>Proposition</TITLE></HEAD>
-<meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
-<meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
-<link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
+<link href="/Clab/templatemo_style.css" rel="stylesheet" type="text/css" />
 <meta content="text/html; charset=UTF-8" http-equiv="content-type">
 <style type="text/css">
 <!--
@@ -38,7 +36,7 @@ $lesson=$_GET[lesson];
     
 	<div id="templatemo_menu">
     	<div id="search">
-	Welcome, <a href="showprofile.php" style="color:#000000"><b><?=$sess_username?></b></a>&nbsp;&nbsp;<a href="../logout.php"><img src="../images/logout.gif" alt="Logout" /></a>
+	Welcome, <a href="showprofile.php" style="color:#000000"><b><?=$sess_username?></b></a>&nbsp;&nbsp;<a href="/Clab/logout.php"><img src="/Clab/images/logout.gif" alt="Logout" /></a>
     	</div>
         <div id="menu">
             <ul>
@@ -81,7 +79,7 @@ $lesson=$_GET[lesson];
 
 <table border="0">
 <tr>
-<td><center><a href="adquestion.php?id_edit=<?=$id?>&lesson=<?=$lesson?>"><img src="../images/comment_add2.png" alt="Add Proposition" /><br> Add Proposition </a></center></td>
+<td><center><a href="adquestion.php?id_edit=<?=$id?>&lesson=<?=$lesson?>"><img src="/Clab/images/comment_add2.png" alt="Add Proposition" /><br> Add Proposition </a></center></td>
 </tr>
 </table>
 
@@ -131,13 +129,13 @@ include"../connect.php";
 $sql = "SELECT * FROM proposition where ref_lesson='$lesson'";
 $result=mysql_db_query($dbname,$sql);
 ?>
-<table width="770" border="1">
+<table width="650" border="1">
   <tr bgcolor="#D3D3D3">
-    <th width="56"> <div align="center">No</div></th>
+    <th width="56"> <div align="center">No.</div></th>
     <th width="488"> <div align="center">Question</div></th>
     <th width="120"> <div align="center">ผู้ออกโจทย์</div></th>
     <th width="55"> <div align="center">ระดับ</div></th>
-    <th width="38"> <div align="center">
+    <th width="38"> <div align="center">เลือกทั้งหมด
       <input name="CheckAll" type="checkbox" id="CheckAll" value="Y" onClick="ClickCheckAll(this);">
     </div></th>
   </tr>
@@ -166,7 +164,7 @@ $i++;
     <td><div align='center'><?=$i;?></div></td>
     <td><? 
 if($objResult[create_by]==$record[name]){
-echo"<a href='edquestion.php?id=$objResult[question_id]'>";
+echo"<a href='edquestion.php?id=$objResult[question_id]&lesson=$lesson'>";
 echo"$objResult[proposition]";
 }else{
 echo "$objResult[proposition]";

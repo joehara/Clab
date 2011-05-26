@@ -5,7 +5,7 @@ include "../chksession.php";
 $code=$_POST[help];
 $output=$_POST[output];
 $id_question=$_POST[id_question];
-$time=date("Y-m-d G:i:s");
+$time=date("Y-m-d");
 ?>
 
 <HTML>

@@ -2,7 +2,7 @@
 
 include "../chksession.php";
 if ($sess_table<>teacher) {
-	header( "Location: ../index.html"); 	exit();}
+	header( "Location: /Clab/index.html"); 	exit();}
 
 
 include "../function.php";
@@ -116,7 +116,7 @@ mysql_close();
     </tr>
   </tbody></table>
 </form>
-<a href="changepw.php"><img src="../images/changePass.jpeg" alt="Change Password" /></a><br>
+<a href="changepw.php"><img src="/Clab/images/changePass.jpeg" alt="Change Password" /></a><br>
 <a href="changepw.php">Change Password</a></center>
 </div></div>
 </body></html>

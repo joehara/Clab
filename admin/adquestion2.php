@@ -4,9 +4,10 @@ include "../chksession.php";
 if ($sess_table<>admin) {
 	header( "Location: ../index.html"); 	exit();
 }
+
 ?>
 <HTML>
-<HEAD><TITLE>Manage Lesson</TITLE></HEAD>
+<HEAD><TITLE>add question</TITLE></HEAD>
 <meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
 <meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
 <link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
@@ -17,6 +18,21 @@ if ($sess_table<>admin) {
 -->
 
 </style>
+<script language="Javascript" type="text/javascript" src="../editarea/edit_area/edit_area_full.js">
+</script>
+<script language="Javascript" type="text/javascript">
+	editAreaLoader.init({
+		id: "student_code",
+		start_highlight: true,
+		allow_resize: "both",
+		allow_toggle : false,
+		word_wrap: true,
+		language: "en",
+		syntax: "c",
+		toolbar: "search, go_to_line, |, undo, redo"
+
+	});	
+</script>
 </head>
 
 <body>
@@ -61,7 +77,7 @@ if ($sess_table<>admin) {
                 </div>
                 <div class="leftcolumn_box01_bottom">
                         <div class="form_row">
-              <label><a href="main.php" style="color:#FE9A2E"><b>[ Main ]</b></a></label><br><br>
+             <label><a href="main.php" style="color:#FE9A2E"><b>[ Main ]</b></a></label><br><br>
  			<label><a href="mstudent.php" style="color:#FE9A2E"><b>[  Student Management ]</b></a></label><br><br>
 			<label><a href="mteacher.php" style="color:#FE9A2E"><b>[  Teacher Management ]</b></a></label><br><br>
 			<label><a href="m_lesson.php" style="color:#FE9A2E"><b>[  Lesson Management ]</b></a></label><br><br>
@@ -76,54 +92,41 @@ if ($sess_table<>admin) {
         <!-- end of left column -->
         
         <!-- start of middle column -->
-        
-    	<div id="templatemo_middle_column"><center>
-<h1>:: Manage Lesson ::</h1></center><br><br>
-  [ <a href="main.php">Back Main</a>&gt;Manage Lesson<br  /><br />
+<div id="templatemo_middle_column">
+<?
 
-<table border="0">
-<tr>
-<td><center><a href="addlesson.php"><img src="../images/comment_add2.png" alt="Add Lesson" /><br> Add Lesson </a></center></td>
-</tr>
-</table>
-  
-  <table border="1">
-    <tr bgcolor="#D3D3D3">
-	<td><center><b>Lesson</b></center></td>
-	<td><center><b>Detail Lesson</b></center></td>
-        <td><center><b>Edit</b></center></td>
-        <td><center><b>จำนวนข้อง่าย</b></center></td>
-	<td><center><b>จำนวนข้อยาก</b></center></td>
-    </tr>
-    <?
-	$count=0;
-	include "../connect.php";
-	$sql="select * from headlesson  ORDER BY lesson ";
-	$result=mysql_db_query($dbname,$sql);  
-	while($record=mysql_fetch_array($result)) {
-		
-		$sql2="select count(level) as level from proposition where ref_lesson=$record[lesson] and level=0" ;
-		$result2=mysql_db_query($dbname,$sql2);
-		$record2=mysql_fetch_array($result2);
-		$easy=$record2[level];
-		
-		$sql3="select count(level) as level from proposition where ref_lesson=$record[lesson] and level=1" ;
-		$result3=mysql_db_query($dbname,$sql3);
-		$record3=mysql_fetch_array($result3);
-		$hard=$record3[level];
-		echo "
-		<tr> 
-			
-			<td>$record[lesson]</td>
-			<td><a href=\"proposition.php?id_edit=$record[id]&lesson=$record[lesson]\">$record[detail]</a></td>
-			<td><center><a href=\"editlesson.php?id_edit=$record[id]\"><img src=\"../images/icon-edit.gif\"></a></center></td>
-			<td><center>$easy</center></td>
-			<td><center>$hard</center></td>
-		</tr>";
-	}
-	mysql_close();
+$lesson=$_GET[lesson];
+$question=$_POST[question];
+$help=$_POST[help];
+$level=$_POST[level];
+$help2 = htmlspecialchars($help, ENT_QUOTES);
+
+if ($question=="" ) {
+	echo "<h3>ERROR : Don't have Question<h3>"; exit();
+}
+
+
+include "../connect.php";
+
+
+$sql2="select * from proposition where proposition='$question' ";
+$result2=mysql_db_query($dbname,$sql2);
+$num2=mysql_num_rows($result2);
+if($num2>0) {
+	echo "<h3>ERROR : Question duplicate in Database</h3>";	 exit();
+}
+
+$sql3="insert into proposition values('','$question','$help2','','$level','$lesson')";
+$result3=mysql_db_query($dbname,$sql3);
+if ($result3) {
+	echo "<h3>Insert question successful</h3>";
+	echo "<A HREF='proposition.php?id_edit=$id&lesson=$lesson'>Back Management</A><BR><BR>";
+} else {
+	echo "<h3>Error Can't insert to database</h3>";
+
+}
+mysql_close();
 ?>
-  </table>
 </div>
 </div>
 </body>

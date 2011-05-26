@@ -2,7 +2,7 @@
 include "../chksession.php";
 
 if ($sess_table<>teacher) {
-	header( "Location: ../index.html"); 	exit();
+	header( "Location: /Clab/index.html"); 	exit();
 }
   $lesson=$_GET[lesson];
   $section=$_GET[section];
@@ -77,14 +77,14 @@ if ($sess_table<>teacher) {
         
         <!-- start of middle column -->
 <div id="templatemo_middle_column">
- <center>
+<center>
 <h1>:: โจทย์ที่ส่ง::</h1></center><br><br>
-<p>[<a href="main.php">Main</a> &gt; <a href="mstudent.php">manage student</a>&gt; <a href="check_al.php"> Section อะไรหว่า1</a> &gt; <a href="check_al2.php?lesson=<?=$lesson?>&amp;section=<?=$section?>">อะไรหว่า2</a> &gt; อะไรหว่า3</p><br>
+[<a href="main.php">Main</a> &gt; <a href="mstudent.php">manage student</a> &gt; <a href="check_al.php"> Section ที่ตรวจแล้ว</a> &gt; <a href="check_al2.php?lesson=<?=$lesson?>&amp;section=<?=$section?>">บทที่ ตรวจแล้ว</a> &gt;ผู้ทำส่งข้อสอบ<br><br><br>
 <table border="0">
-<tr bgcolor="#D3D3D3">
-<td>NO.</td>
-<td>อะไรหว่า4</td>
-</tr>
+  <tr bgcolor="#D3D3D3">
+    <td>NO.</td>
+    <td>โจทย์ที่ส่ง</td>
+  </tr>
 <?
 
 $count=1;

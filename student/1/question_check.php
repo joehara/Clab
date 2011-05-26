@@ -24,21 +24,6 @@ $ans_id=$_GET[ans_id];
 -->
 
 </style>
-<script language="Javascript" type="text/javascript" src="../editarea/edit_area/edit_area_full.js">
-</script>
-<script language="Javascript" type="text/javascript">
-	editAreaLoader.init({
-		id: "student_code",
-		start_highlight: true,
-		allow_resize: "both",
-		allow_toggle : false,
-		word_wrap: true,
-		language: "en",
-		syntax: "c",
-		toolbar: "search, go_to_line, |, undo, redo"
-
-	});	
-</script>
 </head>
 
 
@@ -97,10 +82,13 @@ $ans_id=$_GET[ans_id];
         <!-- start of middle column -->
 <div id="templatemo_middle_column">
 <center>
- <?	
-   	include "../connect.php";
 
-	$sql="select * from sendanswer,proposition,headlesson,student,time_use,time_fix where  sendanswer.ref_question=proposition.question_id and sendanswer.ref_student=student.student_id and proposition.ref_lesson=headlesson.lesson and sendanswer.answer_id='$ans_id'";
+
+
+ <?
+	
+   	include "../connect.php";
+	$sql="select * from sendanswer,proposition,headlesson,student where sendanswer.ref_question=proposition.question_id and sendanswer.ref_student=student.student_id and proposition.ref_lesson=headlesson.lesson and sendanswer.answer_id='$ans_id'";
 $result=mysql_db_query($dbname,$sql);
 $record=mysql_fetch_array($result);
 
@@ -121,8 +109,13 @@ $result=mysql_db_query($dbname,$sql);
 $record=mysql_fetch_array($result);
 $teacher_name=$record[name];
 
+
+$sql2="select * from time_fix where fix_sec='$section' and fix_year='$year' and ref_lesson='$lesson' and ref_teacher='$record[teacher_id]'";
+$result2=mysql_db_query($dbname,$sql2);
+$record2=mysql_fetch_array($result2);
+
 ?><br>
-[<a href="main.php"> Back Main</a> &gt; <a href="mstudent.php">manage student</a> &gt; <a href="report.php"> Section ที่ส่งงานเข้ามา</a> &gt; <a href="report2.php?lesson=<?=$lesson?>&amp;section=<?=$section?>">บทที่ส่งงานเข้ามา</a> &gt;<a href="question_report.php?lesson=<?=$lesson?>&amp;section=<?=$section?>">ผู้ส่งข้อสอบ</a>&gt;<a href="question_report2.php?id=<?=$student_id?>&amp;lesson=<?=$lesson?>&amp;section=<?=$section?>">โจทย์ที่ทำส่ง</a>&gt;รายละเอียด</center>
+[<a href="main.php">Main</a> &gt; <a href="mstudent.php">manage student</a> &gt; <a href="report.php"> Section ที่ส่งงานเข้ามา</a> &gt; <a href="report2.php?lesson=<?=$lesson?>&amp;section=<?=$section?>">บทที่ส่งงานเข้ามา</a> &gt;<a href="question_report.php?lesson=<?=$lesson?>&amp;section=<?=$section?>">ผู้ส่งข้อสอบ</a>&gt;<a href="question_report2.php?id=<?=$student_id?>&amp;lesson=<?=$lesson?>&amp;section=<?=$section?>">โจทย์ที่ทำส่ง</a>&gt;รายละเอียด</p></center>
     <script type="text/javascript" src="../ckeditor/ckeditor.js"></script>
 <form id="form1" name="form1" method="post" action="question_check2.php">
 <br>
@@ -147,18 +140,12 @@ $teacher_name=$record[name];
     <tr>
       <td>วันที่ทำส่ง:</td>
       <td><?
-	  $sql="select time_finish from time_fix where fix_sec='$section' and fix_year='$year' and ref_lesson='$lesson'";
-	$result=mysql_db_query($dbname,$sql);
-	if(mysql_num_rows($result) > 0) {
-		$time_finish = mysql_result($result,0,0);
-		if(DateTimeDiff($time_finish,$time_answer)<0){
-			echo"<font color=red>$time_answer (ส่งช้า)</font>";
-		} else {
-			echo"$time_answer";
-		}
-	} else {
-		echo "มีปัญหาขัดข้องกับระบบฐานข้อมูล";	
-	}
+	  if(DateTimeDiff("$record[time_finish]","$time_answer")<0){
+echo"<span class='style2'>$time_answer</span>";
+
+}else{
+echo"$time_answer";
+}
 	  
 	  
 	  
@@ -180,7 +167,7 @@ $teacher_name=$record[name];
     <tr>
       <td>Code ที่ส่ง:</td>
       <td><label>
-        <textarea id="student_code" cols="80" rows="20" name="help" ><?=$code?>
+        <textarea name="code_comment" id="code_comment" cols="70" rows="20" class="ckeditor"><?=$code?>
         </textarea>
         </label></td>
     </tr>

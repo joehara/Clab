@@ -90,7 +90,7 @@ $resultx=mysql_db_query($dbname,$sqlx);
 $record=mysql_fetch_array($resultx);
 
 		
-				$sql="select student.section,student.year from check_answer,sendAnswer,student where check_answer.ref_answer=sendanswer.answer_id and sendanswer.ref_student=student.student_id and student.teach='$record[name]' GROUP BY student.section";
+				$sql="select student.section,student.year from check_answer,sendanswer,student where check_answer.ref_answer=sendanswer.answer_id and sendanswer.ref_student=student.student_id and student.teach='$record[name]' GROUP BY student.section";
  		$result=mysql_db_query($dbname,$sql);
 	while($record=mysql_fetch_array($result)) {
 		
