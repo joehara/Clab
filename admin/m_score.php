@@ -2,7 +2,7 @@
 include "../chksession.php";
 
 if ($sess_table<>admin) {
-	header( "Location: /Clab/index.html"); 	exit();
+	header( "Location: ../index.html"); 	exit();
 }
 ?>
 <HTML>
@@ -15,19 +15,21 @@ if ($sess_table<>admin) {
 <table border="1">
   <tr bgcolor="#D3D3D3">
     <td><b><center>NO.</center></b></td>
-    <td><b><center>SECTION ที่ส่งงานเข้ามา</center></b></td>
+    <td><b><center>ปีการศึกษา</center></b></td>
+    <td><b><center>Section</center></b></td>
   </tr>
   <?
 	$count=1;
 	include "../connect.php";
-		$sql="select student.section from check_answer,sendanswer,student where check_answer.ref_answer=sendanswer.answer_id and sendanswer.ref_student=student.student_id GROUP BY  student.section ";
+		$sql="select distinct student.section, student.year from sendanswer,student where sendanswer.ref_student=student.student_id and status = 1 ORDER BY  student.year desc, student.section asc";
  		$result=mysql_db_query($dbname,$sql);
 	while($record=mysql_fetch_array($result)) {
 		
 		
 		echo "<tr> 
 			<td>$count</td>
-			<td><a href=\"m_scroll_name.php?section=$record[section]\">$record[section]</a></td>
+			<td>$record[year]</td>
+			<td><a href=\"m_score_name.php?section=$record[section]&year=$record[year]\">$record[section]</a></td>
 		    </tr>";
 			$count++;	
 			

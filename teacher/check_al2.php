@@ -22,13 +22,13 @@ if ($sess_table<>teacher) {
 <?
 
 include "../connect.php";
-$sql="select student.name,student.student_id from sendanswer,student where sendanswer.ref_student=student.student_id and student.section='$section' and student.year=$year and status = 1 GROUP BY student.name order by student.student_id" ;
+$sql="select student.name,student.student_id,student.code_st from sendanswer,student where sendanswer.ref_student=student.student_id and student.section='$section' and student.year=$year and status = 1 GROUP BY student.name order by student.student_id" ;
 $result=mysql_db_query($dbname,$sql);
 while($record=mysql_fetch_array($result)) {
 
 echo "
 <tr>
-<td>$record[student_id]</td>
+<td>$record[code_st]</td>
 <td><a href=\"check_al3.php?id=$record[student_id]&section=$section&year=$year\">$record[name]</a></td>
 </tr>";
 
