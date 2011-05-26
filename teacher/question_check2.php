@@ -1,11 +1,3 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Untitled Document</title>
-</head>
-
-<body>
 <?
 include "../chksession.php";
 
@@ -18,7 +10,12 @@ $teacher_name=$_POST[teacher_name];
 $result=$_POST[point];
 $code_comment=$_POST[code_comment];
 $check_date=date("Y-m-d");
+?>
 
+<html>
+<? require "_header.php"; ?>
+
+<?
 include "../connect.php";
 
 $sql2="select  * from sendanswer,proposition,student  where (sendanswer.ref_question=proposition.question_id and sendanswer.ref_student=student.student_id) and sendanswer.answer_id='$ans_id' ";
@@ -40,10 +37,8 @@ if ($result) {
 } else {
 	echo "<h3>ERROR ไม่สามารถตรวจได้</h3>";
 }
-
-
-
 mysql_close();
 ?>
-</body>
+
+<? require "_footer.php"; ?>
 </html>

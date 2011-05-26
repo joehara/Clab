@@ -4,43 +4,8 @@ if ($sess_table<>teacher) {
 }
 ?>
 <html>
-<meta content="text/html; charset=UTF-8" http-equiv="content-type">
-<body>
-<style type="text/css">
-/* class สำหรับแถวส่วนหัวของตาราง */
-.tr_head{ 
-	background-color:#333333;
-	color:#FFFFFF;
-}
-/* class สำหรับแถวแรกของรายละเอียด */
-.tr_odd{
-	background-color:#F8F8F8;
-}
-/* class สำหรับแถวสองของรายละเอียด */
-.tr_even{
-	background-color:#F2F2F2;
-}
-</style>
+<? require "_header.php"; ?>
 
-<script language="javascript">
-  window.onload = function () {    
-	 	var a=document.getElementById('mytable'); // อ้างอิงตารางด้วยตัวแปร a
-		for(i=0;i<a.rows.length;i++){ // วน Loop นับจำนวนแถวในตาราง
-			if(i>0){  // ตรวจสอบถ้าไม่ใช่แถวหัวข้อ
-				if(i%2==1){   // ตรวจสอบถ้าไม่ใช่แถวรายละเอียด
-					a.rows[i].className="tr_odd";	  // กำหนด class แถวแรก
-				}else{
-					a.rows[i].className="tr_even";	// กำหนด class แถวที่สอง
-				}	
-			}else{ // ถ้าเป็นแถวหัวข้อกำหนด class 
-				a.rows[i].className="tr_head";	
-			}	
-		}
- }
- </script>
- </body>
- <body>
- <br>
 <h3>รายงานผลการเรียนของนักศึกษา <?=$_GET[section];?> ปีการศึกษาที่ <?=$_GET[year];?></h3>
 
 <table id="mytable" border="0" cellspacing="0" cellpadding="0">
@@ -100,5 +65,6 @@ $count++;
 </tr>
 </table>
 <input type="submit" value="Print" onClick="window.print()">
-</body>
+
+<? require "_footer.php"; ?>
 </html>

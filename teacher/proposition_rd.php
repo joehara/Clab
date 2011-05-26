@@ -3,50 +3,8 @@ include "../chksession.php";
 $lesson=$_POST[lesson];
 ?>
 <HTML>
-<HEAD><TITLE>Proposition</TITLE></HEAD>
-<meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
-<meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
-<link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
-<meta content="text/html; charset=UTF-8" http-equiv="content-type">
-<style type="text/css">
-<!--
-.style1 {font-size: 36px}
--->
+<? require "_header.php"; ?>
 
-</style>
-</head>
-
-<body>
-
-<div id="templatemo_container">
-   
-    <div id="templatemo_header" >
-   	  <div id="logosection"></div>
-    	<div id="header">
-        	<div class="title">
-        	  <p class="style1">&nbsp;</p>
-        	  <p>&nbsp;</p>
-        	</div>
-
-        </div>
-	</div>
-    
-	<div id="templatemo_menu">
-    	<div id="search">
-	Welcome, <a href="showprofile.php" style="color:#000000"><b><?=$sess_username?></b></a>&nbsp;&nbsp;<a href="../logout.php"><img src="../images/logout.gif" alt="Logout" /></a>
-    	</div>
-        <div id="menu">
-            <ul>
-                <li></li>
-                <li><a href="about_us.php">About Us</a></li>
-                <li><a href="contact_us.php">Contact Us</a></li>
-            </ul>
-        </div>
-	</div>
-        <!-- end of left column -->
-        
-        <!-- start of middle column -->
-<div id="templatemo_middle_column">
 <p><a href="proposition.php?id_edit=<?=$id?>&amp;lesson=<?=$lesson?>">back Question</a></p>
 <p>
   <?
@@ -75,11 +33,6 @@ $result3=mysql_db_query($dbname,$sql3);
 
 }
 }
-
-
-
-
-
 
 echo"<table border='1'>";
 
@@ -111,6 +64,6 @@ echo "up date complete  " ;
 mysql_close( );
 ?>
 </p>
-</div></div>
-</body>
+
+<? require "_footer.php"; ?>
 </html>
