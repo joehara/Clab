@@ -10,7 +10,7 @@ $username=$_POST[username];
 $name=$_POST[name];
 $email=$_POST[email];
 $phone=$_POST[phone];
-$address=$_POST[address];
+
 
 ?>
 
@@ -24,7 +24,7 @@ if (!checkemail($email)) {
 	echo "<h3>ERROR :Email differant format </h3>"; exit();
 }
 include "../connect.php";
-$sql="update teacher set  name='$name',username='$username',email='$email',phone='$phone',address='$address' where teacher_id='$id' ";
+$sql="update teacher set  name='$name',username='$username',email='$email',phone='$phone' where teacher_id='$id' ";
 $result=mysql_db_query($dbname,$sql);
 if ($result) {
 	echo "<h3>Edit Profile Successful</h3>";

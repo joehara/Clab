@@ -10,8 +10,8 @@ if ($sess_table<>admin) {
 <? require "_header.php"; ?>
 
 <center>
-<h1>:: Add Student ::</h1></center><br>
-<p><a href="main.php">Back Main</a>&gt;<a href="mstudent.php"> Student Management</a>&gt; Add Student</p><br>
+<h1>เพิ่มข้อมูลนักศึกษา</h1></center><br><br>
+<a href="main.php">Home</a>&gt;<a href="mstudent.php"> จัดการข้อมูลนักศึกษา</a>&gt; เพิ่มข้อมูลนักศึกษา<br><br><b>
 
 <FORM METHOD="POST" ACTION="addstudent2.php">
   <TABLE CELLSPACING="2">
@@ -70,10 +70,6 @@ if ($sess_table<>admin) {
     <TR> 
       <TD><B>Telephone : </B></TD>
       <TD><INPUT NAME="phone_st" TYPE="text"  SIZE="26"></TD>
-    </TR>
-    <TR> 
-      <TD VALIGN="top"><B>Address :</B></TD>
-      <TD><TEXTAREA NAME="address_st" COLS="35" ROWS="3"></TEXTAREA></TD>
     </TR>
     <TR>
       <TD></TD>

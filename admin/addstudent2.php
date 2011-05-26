@@ -11,7 +11,6 @@ $namest=$_POST[namest];
 $secst=$_POST[section];
 $email_st=$_POST[email_st];
 $phone_st=$_POST[phone_st];
-$address_st=$_POST[address_st];
 $permission=$_POST[permission];
 $date_reg=date("Y-m-d");
 ?>
@@ -44,7 +43,7 @@ if($num>0){
 
 
 $sql3="insert into student values('','$code','$userst','$passst','$namest','$secst',
-'$email_st','$phone_st','$address_st','$permission','$date_reg')";
+'$email_st','$phone_st','$permission','$date_reg')";
 $result2=mysql_db_query($dbname,$sql3);
 if ($result2) {
 	echo "<h3>Insert student successful</h3>";

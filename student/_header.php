@@ -67,7 +67,8 @@
                        	 <label><a href="main.php" style="color:#FE9A2E"><b>[ Home ]</b></a></label><br><br>
                        	 <label><a href="lesson.php" style="color:#FE9A2E"><b>[ แบบฝึกหัด ]</b></a></label><br><br>
                        	 <label><a href="showprofile.php" style="color:#FE9A2E"><b>[ ข้อมูลส่วนตัว ]</b></a></label><br><br>
-                	 <a href="/Clab/logout.php"><img src="/Clab/images/logout.gif" alt="Logout" /></a>
+			 <label><a href="../logout.php" style="color:#FE9A2E"><b>[ Logout ]</b></a></label><br><br>
+                	 
                        </div>
                 </div>
         </div>

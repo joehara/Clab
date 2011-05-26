@@ -20,7 +20,6 @@ $year=$record[year];
 $teach=$record[teach];
 $email=$record[email];
 $phone=$record[phone];
-$address=$record[address];
 $permission=$record[permission];
 $reg_date=$record[st_reg];
 ?>
@@ -28,9 +27,9 @@ $reg_date=$record[st_reg];
 <? require "_header.php"; ?>
 
 <center>
-<h1>:: Edit Student ::</h1></center><br><br>
-<p><a href="main.php">Back Main</a>&gt;<a href="mstudent.php"> Student Management</a>&gt; Edit Student</p><br>
-
+<h1>แก้ไขข้อมูลนักศึกษา</h1></center><br><br>
+<a href="main.php">Home</a>&gt;<a href="mstudent.php"> จัดการข้อมูลนักศึกษา</a>&gt; แก้ไขข้อมูลนักศึกษา<br>
+<br><br>
 <FORM METHOD="POST" ACTION="editstudent2.php?id_edit=<?=$id_edit;?>">
   <TABLE CELLSPACING="2">
     <TR> 
@@ -107,10 +106,6 @@ $reg_date=$record[st_reg];
     <TR> 
       <TD><B>Telephone : </B></TD>
       <TD><INPUT NAME="phone" TYPE="text" VALUE="<?=$phone?>" SIZE="26"></TD>
-    </TR>
-    <TR> 
-      <TD VALIGN="top"><strong>Address :</strong></TD>
-      <TD><TEXTAREA NAME="address" COLS="35" ROWS="3"><?=$address?></TEXTAREA></TD>
     </TR>
     <TR>
       <TD><strong>Register โดย</strong></TD>

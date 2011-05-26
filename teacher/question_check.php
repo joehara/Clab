@@ -13,7 +13,7 @@ $ans_id=$_GET[ans_id];
 <?	
 include "../connect.php";
 
-$sql="select * from sendanswer,proposition,headlesson,student,time_use,time_fix where  sendanswer.ref_question=proposition.question_id and sendanswer.ref_student=student.student_id and proposition.ref_lesson=headlesson.lesson and sendanswer.answer_id='$ans_id'";
+$sql="select * from sendanswer,proposition,headlesson,student,time_fix where  sendanswer.ref_question=proposition.question_id and sendanswer.ref_student=student.student_id and proposition.ref_lesson=headlesson.lesson and sendanswer.answer_id='$ans_id'";
 $result=mysql_db_query($dbname,$sql);
 $record=mysql_fetch_array($result);
 

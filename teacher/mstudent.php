@@ -9,12 +9,10 @@ if ($sess_table<>teacher) {
 
 <? require "_header.php"; ?>
 <center>
-<H1>:: Manage Student ::</H1><br><br></center>
-<p>[ <a href="main.php"> Main</a> &gt;  manage student<br>
-</p>
-<br>
+<H1>จัดการข้อมูลนักศึกษา</H1><br><br></center>
+<a href="main.php"> Home</a> &gt;  จัดการข้อมูลนักศึกษา<br>
 
-<br><br>      
+<br><br><br>      
 <center><table border="0">
 <tr>
 <td><center><a href="showstudent.php"><img src="../images/user_group_01.png" alt="show student/detail" /><br><font size="1">show student/detail</font></a></center></td>

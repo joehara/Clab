@@ -9,8 +9,8 @@ if ($sess_table<>admin) {
 ?>
 <html>
 <? require "_header.php"; ?>
-
-<p><a href="main.php">Back Main</a>&gt; <a href="mclass.php">Class Management</a>&gt; Add Year</p><br><br><br>
+<center><h1>เพิ่มปีการศึกษา</h1></center><br><br>
+<a href="main.php">Home</a>&gt; <a href="mclass.php"> จัดการห้องเรียน</a>&gt; เพิ่มปีการศึกษา<br><br><br>
 <form id="form1" name="form1" method="post" action="add_academic_year2.php">
 <TD><label>
 <TD><B>ปีการศึกษา : </B></TD>
@@ -26,7 +26,7 @@ if ($sess_table<>admin) {
         
       </label></TD>
 <td>
-  <label>ADD ปีการศึกษา
+  <label>เพิ่มปีการศึกษา
   <input type="text" name="add_year" />
   </label>
   <label>

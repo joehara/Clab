@@ -11,8 +11,8 @@ $lesson=$_GET[lesson];
 <HTML>
 <? require "_header.php"; ?>
 
-<center><h1>:: QUESTION ::</h1></center><br><br>
-<p><a href="main.php">Back Main</a>&gt;<a href="m_lesson.php"> Lesson Management</a>&gt;Question<br>
+<center><h1>คำถาาม</h1></center><br><br>
+<a href="main.php">Home</a>&gt;<a href="m_lesson.php"> จัดการบทเรียน</a>&gt;<a href="proposition.php?id_edit=<?=$id?>&lesson=<?=$lesson?>"> บทเรียนที่ <?=$lesson?></a>&gt; คำถาม<br>
 <br>
 <?
 include "../connect.php";
@@ -24,16 +24,16 @@ echo"$name_lesson";
 ?><br>
 <table border="0">
 <tr>
-<td><center><a href="adquestion.php?id_edit=<?=$id?>&lesson=<?=$lesson?>"><img src="../images/comment_add2.png" alt="Add Proposition" /><br> Add Question </a></center></td>
+<td><center><a href="adquestion.php?id_edit=<?=$id?>&lesson=<?=$lesson?>"><img src="../images/comment_add2.png" alt="Add Proposition" /><br> เพิ่มคำถาม </a></center></td>
 </tr>
 </table>
 
 <table border="1">
   <tr bgcolor="#D3D3D3"> 
-    <td><center><b>No.</center></b></td>
-    <td><b><center>Question</center></b></td>
-	<td><b><center>Edit</center></b></td>
-	<td><b><center>Delete</center></b></td>
+    <td><center><b>ข้อที่</center></b></td>
+    <td><b><center>คำถาม</center></b></td>
+	<td><b><center>แก้ไข</center></b></td>
+	<td><b><center>ลบ</center></b></td>
   </tr>
   <?
 	$count=0;

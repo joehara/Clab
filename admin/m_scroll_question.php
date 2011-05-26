@@ -13,8 +13,8 @@ if ($sess_table<>admin) {
 <? require "_header.php"; ?>
 
 <center>
-<h1>:: ข้อต่างๆที่ส่งเข้ามา ::</h1></center><br><br>
-<p><a href="main.php">Back Main</a> &gt; <a href="m_scroll.php"> Score Management</a>&nbsp;&gt;
+<h1>ข้อต่างๆที่ส่งเข้ามา</h1></center><br><br>
+<p><a href="main.php">Home</a> &gt; <a href="m_scroll.php"> จัดการคะแนน</a>&nbsp;&gt;
 <a href="m_scroll_name.php?section=<?=$section?>"> รายชื่อที่ส่งงานเข้ามา</a>&gt;
 <a href="m_scroll_lesson.php?section=<?=$section?>&amp;id=<?=$student_id?>"> บทต่างๆที่ส่งเข้ามา</a>&gt; ข้อต่างๆที่ส่งเข้ามา</p></br>
 </br>

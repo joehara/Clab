@@ -8,13 +8,13 @@ if ($sess_table<>admin) {
 <html>
 <? require "_header.php"; ?>
 
-<center><h1><u>Class Management</u></h1></center>
+<center><h1>จัดการห้องเรียน</h1></center>
 <br><br> 
-<p><a href="main.php">Back Main</a>&gt; <a href="mclass.php">Class Management</a></p><br><br><br>
+<a href="main.php">Home</a>&gt; จัดการห้องเรียน</a><br><br><br>
 <center><table border="0">
 <tr>
-<td><center><a href="add_section.php"><img src="/Clab/images/network_add.png" alt="Add Section" /><br>Add Section</a></center></td>
-<td><center><a href="add_academic_year.php"><img src="/Clab/images/x_office_calendar.png" alt="Add Year" /><br>Add Year</a></center></td>
+<td><center><a href="add_section.php"><img src="/Clab/images/network_add.png" alt="Add Section" /><br>เพิ่มห้องเรียน</a></center></td>
+<td><center><a href="add_academic_year.php"><img src="/Clab/images/x_office_calendar.png" alt="Add Year" /><br>เพิ่มปีการศึกษา</a></center></td>
 
 </tr>
 

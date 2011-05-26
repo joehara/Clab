@@ -2,15 +2,15 @@
 include "../chksession.php";
 
 if ($sess_table<>admin) {
-	header( "Location: /Clab/index.html"); 	exit();
+	header( "Location: ../index.html"); 	exit();
 }
 ?>
 <HTML>
 <? require "_header.php"; ?>
 
 <center>
-<h1>:: Change Password ::</h1></center><br><br>
-<a href="main.php">Back Main</a>&gt; Change Password<br><br>
+<h1>เปลี่ยนรหัสผ่าน</h1></center><br><br>
+<a href="main.php">Home</a>&gt; เปลี่ยนรหัสผ่าน<br><br>
 <FORM METHOD=POST ACTION="changepw2.php">
   <TABLE cellspacing="2">
     <TR> 

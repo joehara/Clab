@@ -11,7 +11,7 @@ $year=$_POST[year];
 $teach=$_POST[teach];
 $email=$_POST[email];
 $phone=$_POST[phone];
-$address=$_POST[address];
+
 ?>
 
 
@@ -25,7 +25,7 @@ if (!checkemail($email)) {
 	echo "<h3>ERROR :Email differant format </h3>"; exit();
 }
 include "../connect.php";
-$sql="update student set  name='$name',section='$section',year='$year',teach='$teach',email='$email', phone='$phone' ,address='$address' where student_id='$id_edit' ";
+$sql="update student set  name='$name',section='$section',year='$year',teach='$teach',email='$email', phone='$phone' where student_id='$id_edit' ";
 $result=mysql_db_query($dbname,$sql);
 if ($result) {
 	echo "<h3>Edit Profile Successful</h3>";

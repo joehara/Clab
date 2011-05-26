@@ -7,7 +7,7 @@ ob_start();
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Login To C programming Exam</title></head>
-<meta http-equiv="Refresh" content="2; URL=/Clab/index.html">
+<meta http-equiv="Refresh" content="2; URL=../index.html">
 <body bgcolor="#ADD8E6">
 <br><br><br><br><br><br>
 <center>

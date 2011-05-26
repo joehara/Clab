@@ -8,8 +8,8 @@ header( "Location: /Clab/index.html"); exit();
 <HTML>
 <? require "_header.php"; ?>
 <center>
-<H1>:: นักศึกษาที่ลงทะเบียนเข้ามา ::</H1></center><br><br>
-[ <a href="main.php">Back Main</a> &gt; <a href="mstudent.php">manage student</a> &gt;<a href="showstudent.php">Show Student/detail</a>&gt;นักศึกษาที่ลงทะเบียนผ่านเว็บ<br>
+<H1>นักศึกษาที่ลงทะเบียนผ่านเว็บ</H1></center><br><br>
+<a href="main.php">Home</a>&gt; <a href="mstudent.php"> จัดการข้อมูลนักศึกษา</a>&gt;<a href="showstudent.php"> show student/detail</a>&gt; นักศึกษาที่ลงทะเบียนผ่านเว็บ<br>
 <br><br>
 
 <table border="1">

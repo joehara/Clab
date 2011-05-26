@@ -8,13 +8,13 @@ if ($sess_table<>admin) {
 <HTML>
 <? require "_header.php"; ?>
 
-<center><H1>:: Student Management ::</H1></center><br><br>
-<a href="main.php">Back Main</a>&gt; Student Management<br><br><br>
+<center><H1>จัดการข้อมูลนักศึกษา</H1></center><br><br>
+<a href="main.php"> Home</a> &gt; จัดการข้อมูลนักศึกษา<br><br><br>
 <table border="0">
 <tr>
-<td><center><a href="addstudent.php"><img src="/Clab/images/userblue_add.png" alt="Add Student" /><br> Add Student </a></center></td>
-<td><center><a href="import.php"><img src="/Clab/images/import_document.png" alt="Import file" /><br> Import file </a></center></td>
-<td><center><a href="register_st.php"><img src="/Clab/images/user_expert.png" alt="นักศึกษาที่ลงทะเบียนผ่านเว็บ" /><br> นักศึกษาที่ลงทะเบียนผ่านเว็บ </a></center></td>
+<td><center><a href="addstudent.php"><img src="/Clab/images/userblue_add.png" alt="Add Student" /><br><font size="2">เพิ่มนักศึกษา </a></center></font></td>
+<td><center><a href="import.php"><img src="/Clab/images/import_document.png" alt="Import file" /><br><font size="2">Import file </a></center></font></td>
+<td><center><a href="register_st.php"><img src="/Clab/images/user_expert.png" alt="นักศึกษาที่ลงทะเบียนผ่านเว็บ" /><br><font size="2">นักศึกษาที่ลงทะเบียนผ่านเว็บ </a></center></font></td>
 </tr>
 </table>
 

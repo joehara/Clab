@@ -3,19 +3,19 @@ include "../chksession.php";
 ?>
 <HTML>
 <? require "_header.php"; ?>
-<center><h1>:: Show Lesson ::</h1></center><br><br>
-[ <a href="main.php">Back Main</a> ] <br><br>
+<center><h1>จัดการบทเรียน</h1></center><br><br>
+<a href="main.php">Home</a>&gt; จัดการบทเรียน <br><br><br>
 <table border="0">
 <tr>
-<td><center><a href="addlesson.php"><img src="../images/comment_add2.png" alt="Add Lesson" /><br> add lesson </a></center></td>
+<td><center><a href="addlesson.php"><img src="/Clab/images/comment_add2.png" alt="Add Lesson" /><br> เพิ่มบทเรียน </a></center></td>
 </tr>
 </table>
 
 <table border="1">
   <tr bgcolor="#D3D3D3"> 
     
-    <td>Lesson</td>
-    <td><center>Detail Lesson</center></td>
+    <td>บทที่</td>
+    <td><center>หัวข้อ</center></td>
 <td>แก้ไข</td>
 <td>ข้อง่าย/สุ่ม</td>
 <td>ข้อยาก/สุ่ม</td>

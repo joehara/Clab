@@ -9,8 +9,8 @@ if ($sess_table<>admin) {
 <? require "_header.php"; ?>
 
 <center>
-<h1>:: Score Management ::</h1></center><br><br>
-<a href="main.php">Back Main</a>&gt; Section <br />
+<h1>จัดการคะแนน</h1></center><br><br>
+<a href="main.php">Home</a>&gt; จัดการคะแนน<br />
 <br />
 <table border="1">
   <tr bgcolor="#D3D3D3">

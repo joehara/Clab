@@ -9,8 +9,8 @@ if ($sess_table<>admin) {
 <? require "_header.php"; ?>
 
 <center>
-<h1>:: รายชื่อที่ส่งงานเข้ามา ::</h1></center><br><br>
-<p><a href="main.php">Back Main</a> &gt; <a href="m_scroll.php"> Score Management</a>&nbsp;&gt; รายชื่อที่ส่งงานเข้ามา</p><br>
+<h1>รายชื่อที่ส่งงานเข้ามา</h1></center><br><br>
+<p><a href="main.php">Home</a> &gt; <a href="m_scroll.php"> จัดการคะแนน</a>&nbsp;&gt; รายชื่อที่ส่งงานเข้ามา</p><br>
 
 <table border="0">
   <tr bgcolor="#D3D3D3"> 

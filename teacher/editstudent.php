@@ -18,15 +18,14 @@ $name=$record[name];
 $section=$record[section];
 $email=$record[email];
 $phone=$record[phone];
-$address=$record[address];
 $reg_date=$record[st_reg];
 ?>
 <HTML>
 <? require "_header.php"; ?>
 
 <center>
-<H1>:: Edit Student :::</H1></center><br><br>
-
+<H1>แก้ไขข้อมูลนักศึกษา</H1></center><br><br>
+<a href="main.php">Home</a>&gt; <a href="mstudent.php"> จัดการข้อมูลนักศึกษา</a>t &gt; <a href="showstudent.php"> show student/detail</a>&gt; แก้ไขข้อมูลนักศึกษา<br><br><br>
 <FORM METHOD="POST" ACTION="editstudent2.php?id_edit=<?=$id_edit;?>">
   <TABLE CELLSPACING="2">
     <TR> 
@@ -42,7 +41,7 @@ $reg_date=$record[st_reg];
       <TD><B>Section : </B></TD>
 	  <TD><select name="section" id="province">
         <? 
-     $sql="select * from Section ";  
+     $sql="select * from section ";  
      $result=mysql_db_query($dbname,$sql);
      while($rs=mysql_fetch_array($result)){  
 	 
@@ -71,11 +70,7 @@ $reg_date=$record[st_reg];
       <TD><B>Telephone : </B></TD>
       <TD><INPUT NAME="phone" TYPE="text" VALUE="<?=$phone?>" SIZE="26"></TD>
     </TR>
-    <TR> 
-      <TD VALIGN="top"><B>Address :</B></TD>
-      <TD><TEXTAREA NAME="address" COLS="35" ROWS="3"><?=$address?></TEXTAREA></TD>
-    </TR>
-    <TR>
+       <TR>
       <TD><B>Register Date :</B></TD>
       <TD><?=displaydate($reg_date)?></TD>
     </TR>
@@ -86,7 +81,7 @@ $reg_date=$record[st_reg];
   </TABLE>
 </FORM>
 <BR>
-[ <a href="main.php">Back Main</a> ] 
+
 <? mysql_close(); ?>
 
 <? require "_footer.php"; ?>

@@ -1,8 +1,6 @@
 <head>
 <title>Practical-Based Online Testing System :: Admin</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
-<meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
 <link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
 <style type="text/css">
 <!--
@@ -95,7 +93,7 @@ $(function(){
 
         <div id="templatemo_menu">
         <div id="search">
-        Welcome, <a href="changepw.php" style="color:#000000"><b><?=$sess_username?></b></a>&nbsp;&nbsp;<a href="../logout.php"><img src="../images/logout.gif" alt="Logout" /></a>
+        Welcome, <a href="changepw.php" style="color:#000000"><b><?=$sess_username?></b></a>&nbsp;&nbsp;
         </div>
         <div id="menu">
             <ul>
@@ -120,12 +118,13 @@ $(function(){
                 <div class="leftcolumn_box01_bottom">
 			<div class="form_row">
                         <label><a href="main.php" style="color:#FE9A2E"><b>[ Home ]</b></a></label><br><br>
+			<label><a href="mclass.php" style="color:#FE9A2E"><b>[ จัดการห้องเรียน ]</b></a></label><br><br>
                         <label><a href="mstudent.php" style="color:#FE9A2E"><b>[ จัดการข้อมูลนักศึกษา ]</b></a></label><br><br>
                         <label><a href="mteacher.php" style="color:#FE9A2E"><b>[ จัดการข้อมูลอาจารย์ ]</b></a></label><br><br>
                         <label><a href="m_lesson.php" style="color:#FE9A2E"><b>[ จัดการบทเรียน ]</b></a></label><br><br>
                         <label><a href="m_scroll.php" style="color:#FE9A2E"><b>[ จัดการคะแนน ]</b></a></label><br><br>
                         <label><a href="changepw.php" style="color:#FE9A2E"><b>[ เปลี่ยนรหัสผ่าน ]</b></a></label><br><br>
-                        <label><a href="changepw.php" style="color:#FE9A2E"><b>[ Logout ]</b></a></label><br><br>
+                        <label><a href="../logout.php" style="color:#FE9A2E"><b>[ Logout ]</b></a></label><br><br>
 
                </div>
             </div>

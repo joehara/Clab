@@ -7,13 +7,12 @@ $year=$_POST[year];
 $teach=$_POST[teach];
 $email=$_POST[email_st];
 $phone=$_POST[phone_st];
-$address=$_POST[address_st];
 $st_reg=date("Y-m-d");
 
 ?>
 <HTML>
 <HEAD><TITLE>Registration</TITLE>
-<link href="/Clab/templatemo_style2.css" rel="stylesheet" type="text/css" />
+<link href="../templatemo_style2.css" rel="stylesheet" type="text/css" />
 <meta content="text/html; charset=UTF-8" http-equiv="content-type">
 <meta http-equiv="Refresh" content="2; URL=/Clab/student/register.php">
 </HEAD>
@@ -47,7 +46,7 @@ if($num>0){
 
 
 $sql3="insert into student values('','$code_st','$password','$name','$section',
-'$year','$teach','$email','$phone','$address','0','$st_reg')";
+'$year','$teach','$email','$phone','0','$st_reg')";
 $result2=mysql_db_query($dbname,$sql3);
 if ($result2) {
 	echo "<h3>Insert student successful</h3>";

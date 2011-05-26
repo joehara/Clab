@@ -27,27 +27,18 @@ mysql_close();
 <HTML>
 <? require "_header.php"; ?>
 
-<a href="main.php">Back Main</a> &gt;<a href="m_lesson.php"> Lesson Management</a>&gt;<a href="proposition.php?id=<?=$id?>&lesson=<?=$lesson?>"> Question</a>&gt; Edit Question<br>
-<script type="text/javascript" src="../ckeditor/ckeditor.js"></script>
-  <title>Question</title>
-
-  
-</head><body>
-<br>
-
+<center><h1>แก้ไขคำถาม</h1></center><br><br>
+<a href="main.php">Home</a>&gt;<a href="m_lesson.php"> จัดการบทเรียน</a>&gt;<a href="proposition.php?id_edit=<?=$id?>&lesson=<?=$lesson?>"> บทเรียนที่ <?=$lesson?></a>&gt; แก้ไขคำถาม<br><br><br>
 <form method="post" action="edquestion2.php?id=<?=$id?>&lesson=<?=$lesson?>"><br>
 
-<br>
 <table style="text-align: left; width: 652px; height: 738px;" border="0" cellpadding="2" cellspacing="2">
   <tbody>
     <tr>
       <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br>      </td>
-      <td style="vertical-align: top; text-align: center;">:: Edit
-Question ::<br>
-        <br>
+      <td style="vertical-align: top; text-align: center;">
 &#3650;&#3592;&#3607;&#3618;&#3660;&#3588;&#3635;&#3606;&#3634;&#3617;&#3616;&#3634;&#3625;&#3634;&#3652;&#3607;&#3618;&#3649;&#3621;&#3632;&#3588;&#3635;&#3610;&#3619;&#3619;&#3603;&#3618;&#3634;&#3618;&#3607;&#3637;&#3656;&#3605;&#3657;&#3629;&#3591;&#3585;&#3634;&#3619;&#3651;&#3627;&#3657;&#3649;&#3626;&#3604;&#3591;&#3650;&#3594;&#3623;&#3660;<br>
-        <br></td>
+        </td>
       <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <br>      </td>
     </tr>
@@ -57,11 +48,9 @@ Question ::<br>
         <td style="vertical-align: top;"><br>        </td>
       </tr>
 <tr>
-      <td style="vertical-align: top;"><br>      </td>
-      <td style="vertical-align: top;">&#3650;&#3588;&#3619;&#3591;&#3626;&#3619;&#3657;&#3634;&#3591;&#3586;&#3629;&#3591;&#3650;&#3611;&#3619;&#3649;&#3585;&#3619;&#3617;&#3648;&#3610;&#3639;&#3657;&#3629;&#3591;&#3605;&#3657;&#3609;&#3592;&#3632;&#3607;&#3635;&#3651;&#3627;&#3657;&#3609;&#3633;&#3585;&#3624;&#3638;&#3585;&#3625;&#3634;&#3648;&#3586;&#3637;&#3618;&#3609;&#3650;&#3611;&#3619;&#3649;&#3585;&#3619;&#3617;&#3652;&#3604;&#3657;&#3591;&#3656;&#3634;&#3618;&#3586;&#3638;&#3657;&#3609;<br>
-&#3649;&#3621;&#3632;&#3592;&#3632;&#3607;&#3635;&#3651;&#3627;&#3657;&#3605;&#3619;&#3591;&#3585;&#3633;&#3610; flow chart &#3607;&#3637;&#3656;&#3605;&#3657;&#3629;&#3591;&#3585;&#3634;&#3619; <a href="example.php" target="_blank">&#3605;&#3633;&#3623;&#3629;&#3618;&#3656;&#3634;&#3591;</a><br>
-        <br>
-        <textarea id="student_code" cols="80" rows="20" name="help" ><?=$help?></textarea><br></td>
+      <td style="vertical-align: top;"><br> <br>     </td>
+      <td style="vertical-align: top;">แสดงตารางใส่ Code ในตารางด้านล่างนี้<br>
+         <textarea id="student_code" cols="80" rows="20" name="help" ><?=$help?></textarea><br></td>
       <td style="vertical-align: top;"><br>      </td>
     </tr>
     <tr>

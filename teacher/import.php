@@ -9,12 +9,12 @@ if ($sess_table<>teacher) {
 <? require "_header.php"; ?>
 
 <center>
-<h1>:: Import student from file ::</h1><br></center>
-[ <a href="mstudent.php">Manage Student</a> ]<br>
+<h1>Import student from file</h1><br><br></center>
+<a href="main.php">Home</a>&gt; <a href="mstudent.php"> จัดการข้อมูลนักศึกษา</a>&gt;<a href="showstudent.php"> show student/detail</a>&gt; Import student from file<br><br>
 <br>
 <table border="0">
 <tr>
-<tr><td><center><b>วิธีการนำข้อมูลนักเรียนเข้า database</b></center></td></tr>
+<tr><td><b>วิธีการนำข้อมูลนักเรียนเข้า database</b></td></tr>
 <tr><td>1.download file ต้นฉบับ นาสกุล CSV &nbsp;&nbsp;<a href="EXEM/Book1.csv">download here</a></td></tr>
 <tr><td>2.เปิด file โดยใช้ โปรแกรม microsoft excel หรือ  OpenOffice Spreadsheet</td></tr>
 <tr><td>3.พิมพ์ข้อมูลโดยพิมพ์เรียงลงมาทีละแถวดังตัวอย่าง ของไฟล์ต้นฉบับ โดยข้อมูลต้องเรียงตามลงมา</td></tr>

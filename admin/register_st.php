@@ -8,8 +8,8 @@ if ($sess_table<>admin) {
 <HTML>
 <? require "_header.php"; ?>
 
-<center><h1>:: นักศึกษาที่ลงทะเบียนผ่านเว็บ  ::</h1></center><br><br>
-<p><a href="main.php">Back Main</a>&gt;<a href="mstudent.php"> Student Management</a>&gt; นักศึกษาที่ลงทะเบียนผ่านเว็บ </p><br><br>
+<center><h1>นักศึกษาที่ลงทะเบียนผ่านเว็บ</h1></center><br><br>
+<a href="main.php">Home</a>&gt;<a href="mstudent.php"> จัดการข้อมูลนักศึกษา</a>&gt; นักศึกษาที่ลงทะเบียนผ่านเว็บ <br><br><br>
 <form name="form1" method="post" action="">
   <table border="1">
     <tr bgcolor="#D3D3D3">

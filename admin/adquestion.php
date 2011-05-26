@@ -19,32 +19,21 @@ mysql_close();
 ?>
 <HTML>
 <? require "_header.php"; ?>
+<center><h1>เพิ่มคำถามข้อที่ <?=$code?><h1></center><br><br>
 
+<a href="main.php">Home</a>&gt;<a href="m_lesson.php"> จัดการบทเรียน</a>&gt;<a href="proposition.php?id_edit=<?=$id?>&lesson=<?=$lesson?>"> บทเรียนที่ <?=$lesson?></a>&gt; เพิ่มคำถาม<br><br><br>
 
-<a href="main.php">Back Main</a> &gt;<a href="m_lesson.php"> Lesson Management</a>&gt;<a href="proposition.php?id=<?=$id?>&lesson=<?=$lesson?>"> Question</a>&gt; Add Question<br>
-
-<script type="text/javascript" src="../ckeditor/ckeditor.js"></script>
-  <title>Question </title>
-
-  
-</head><body>
-<br>
-
-<form method="post" action="adquestion2.php?id_edit=<?=$id?>&lesson=<?=$lesson?>"><br>
-
-<br>
+<form method="post" action="adquestion2.php?id_edit=<?=$id?>&lesson=<?=$lesson?>">
 <table style="text-align: left; width: 652px; height: 738px;" border="0" cellpadding="2" cellspacing="2">
   <tbody>
     <tr>
       <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br>      </td>
-      <td style="vertical-align: top; text-align: center;"><b>:: Add
-Question of <?=$code?><INPUT name="no" type="hidden" value="<?=$code?>">::</b><br>
-        <br>
-&#3650;&#3592;&#3607;&#3618;&#3660;&#3588;&#3635;&#3606;&#3634;&#3617;&#3616;&#3634;&#3625;&#3634;&#3652;&#3607;&#3618;&#3649;&#3621;&#3632;&#3588;&#3635;&#3610;&#3619;&#3619;&#3603;&#3618;&#3634;&#3618;&#3607;&#3637;&#3656;&#3605;&#3657;&#3629;&#3591;&#3585;&#3634;&#3619;&#3651;&#3627;&#3657;&#3649;&#3626;&#3604;&#3591;&#3650;&#3594;&#3623;&#3660;<br>
-        <br></td>
-      <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <br>      </td>
+      <td style="vertical-align: top; text-align: center;"><b></b>
+        
+&#3650;&#3592;&#3607;&#3618;&#3660;&#3588;&#3635;&#3606;&#3634;&#3617;&#3616;&#3634;&#3625;&#3634;&#3652;&#3607;&#3618;&#3649;&#3621;&#3632;&#3588;&#3635;&#3610;&#3619;&#3619;&#3603;&#3618;&#3634;&#3618;&#3607;&#3637;&#3656;&#3605;&#3657;&#3629;&#3591;&#3585;&#3634;&#3619;&#3651;&#3627;&#3657;&#3649;&#3626;&#3604;&#3591;&#3650;&#3594;&#3623;&#3660;
+        </td>
+      <td style="vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
     </tr>
     <tr>
         <td style="vertical-align: top;"><br>        </td>

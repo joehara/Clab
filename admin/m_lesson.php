@@ -8,20 +8,19 @@ if ($sess_table<>admin) {
 <HTML>
 <? require "_header.php"; ?>
 
-<center><h1>:: Lesson Management ::</h1></center><br><br>
-<a href="main.php">Back Main</a>&gt; Lesson Management<br><br>
-
+<center><h1>จัดการบทเรียน</h1></center><br><br>
+<a href="main.php">Home</a>&gt; จัดการบทเรียน<br><br><br>
 <table border="0">
 <tr>
-<td><center><a href="addlesson.php"><img src="/Clab/images/comment_add2.png" alt="Add Lesson" /><br> Add Lesson </a></center></td>
+<td><center><a href="addlesson.php"><img src="/Clab/images/comment_add2.png" alt="Add Lesson" /><br><font size="2"> เพิ่มบทเรียน </font></a></center></td>
 </tr>
 </table>
   
   <table border="1">
     <tr bgcolor="#D3D3D3">
-	<td><center><b>Lesson</b></center></td>
-	<td><center><b>Detail Lesson</b></center></td>
-        <td><center><b>Edit</b></center></td>
+	<td><center><b>บทที่</b></center></td>
+	<td><center><b>หัวข้อ</b></center></td>
+        <td><center><b>แก้ไข</b></center></td>
         <td><center><b>จำนวนข้อง่าย</b></center></td>
 	<td><center><b>จำนวนข้อยาก</b></center></td>
     </tr>

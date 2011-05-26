@@ -8,8 +8,7 @@ $lesson=$_POST[lesson];
 $h_lesson=$_POST[h_lesson];
 $hard=$_POST[hard];
 $easy=$_POST[easy];
-$HH=$_POST[HH];
-$MM=$_POST[MM];
+
 
 ?>
 
@@ -27,7 +26,7 @@ $num=mysql_num_rows($result);
 if($num>0) {
 	echo "<h3>ERROR : บทนี้มีอยู่ในระบบแล้ว</h3>";	 exit();
 }
-$sql="insert into headlesson values('','$lesson','$h_lesson','$hard','$easy','$HH:$MM')";
+$sql="insert into headlesson values('','$lesson','$h_lesson','$hard','$easy')";
 $result=mysql_db_query($dbname,$sql);
 if ($result) {
 	echo "<h3>Insert Lesson successful</h3>";

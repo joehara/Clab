@@ -10,10 +10,10 @@ $username=$_GET[username];
 ?>
 <HTML>
 <? require "_header.php"; ?>
+<center><H1>คุณต้องการเปลี่ยนรหัสผ่านของ  <?=$username?></H1></center><br><br>
+<a href="main.php">Home</a>&gt;<a href="mteacher.php"> จัดการข้อมูลอาจารย์</a>&gt;<a href="editteacher.php?id_edit=<?=$id_edit;?>&username=<?=$username?>""> แก้ไขข้อมูลอาจารย์</a>&gt; เปลี่ยนรหัสผ่าน<br><br><br>
 
-<a href="main.php">Back Main</a>&gt;<a href="mteacher.php"> Teacher Management</a>&gt;<a href="editteacher.php?id_edit=<?=$id_edit;?>&username=<?=$username?>""> Edit Teacher</a>&gt; Reset Password<br><br>
 
-<p><H1>You are changing password  <?=$username?></H1></p>
 <form method="post" action="resetpw2.php?username=<?=$username?>" >
   <table style="text-align: left; width: 361px; height: 36px;" cellspacing="2">
     <tbody>

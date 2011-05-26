@@ -18,8 +18,8 @@ $time=$record[time];
 <HTML>
 <? require "_header.php"; ?>
 
-<center><h1>:: Edit Lesson::</h1></center><br><br>
-  <a href="main.php">&nbsp;Back Main</a>&gt;<a href="showlesson.php">Manage Lesson</a>&gt;Edit Lesson<br><br>
+<center><h1>แก้ไขบทเรียน</h1></center><br><br>
+<a href="main.php">Home</a>&gt;<a href="showlesson.php"> จัดการบทเรียน</a>&gt; แก้ไขบทเรียน<br><br>
   
   <form method="post" action="editlesson2.php?id_edit=<?=$id_edit;?>">
   <table border="0" cellpadding="2" cellspacing="2">
@@ -70,28 +70,7 @@ for($x=1;$x<=20;$x++) {
 </select>
           &nbsp;<span class="style3">&nbsp;ข้อ</span></td>
       </tr>
-      <tr>
-        <td class="style3">เวลาในการทำ <? list($HH, $MM,$SS) = explode(':', $time);
-		
-		?> </td>
-        <td>
-          <select name="HH" id="HH">
-                   <?
-for($x=0;$x<=23;$x++) {
-?>
-<option value=<? echo"$x";?> <? if($x==$HH){echo "selected";} ?>><?  if($x<10){echo"0$x";}else{echo"$x";}?></option>
-<? } ?>
-</select>
-          :
-          <select name="MM" id="MM">
-           <?
-for($x=0;$x<=59;$x++) {
-?>
-<option value=<? echo"$x";?> <? if($x==$MM){echo "selected";} ?>><?  if($x<10){echo"0$x";}else{echo"$x";}?></option>
-<? } ?>
-</select> 
-          <span class="style3">&nbsp;ชั่วโมง </span></td>
-      </tr>
+      
       <tr>
         <td><br>
         </td>

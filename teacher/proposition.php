@@ -10,12 +10,12 @@ $lesson=$_GET[lesson];
 <HTML>
 <? require "_header.php"; ?>
 <center>
-<h1>:: Question of Lesson <?=$lesson?> ::</h1></center><br><br>
-[ <a href="showlesson.php">Back Lesson</a> ]<br><br><br>
+<h1>บทที่ <?=$lesson?> </h1></center><br><br>
+<a href="main.php">Home</a>&gt;<a href="showlesson.php"> จัดการบทเรียน</a>&gt; บทที่ <?=$lesson?><br><br><br>
 
 <table border="0">
 <tr>
-<td><center><a href="adquestion.php?id_edit=<?=$id?>&lesson=<?=$lesson?>"><img src="/Clab/images/comment_add2.png" alt="Add Proposition" /><br> Add Proposition </a></center></td>
+<td><center><a href="adquestion.php?id_edit=<?=$id?>&lesson=<?=$lesson?>"><img src="/Clab/images/comment_add2.png" alt="Add Proposition" /><br> เพิ่มคำถาม </a></center></td>
 </tr>
 </table>
 
@@ -67,8 +67,8 @@ $result=mysql_db_query($dbname,$sql);
 ?>
 <table width="650" border="1">
   <tr bgcolor="#D3D3D3">
-    <th width="56"> <div align="center">No.</div></th>
-    <th width="488"> <div align="center">Question</div></th>
+    <th width="56"> <div align="center">ข้อที่</div></th>
+    <th width="488"> <div align="center">คำถาม</div></th>
     <th width="120"> <div align="center">ผู้ออกโจทย์</div></th>
     <th width="55"> <div align="center">ระดับ</div></th>
     <th width="38"> <div align="center">เลือกทั้งหมด

@@ -9,11 +9,11 @@ if ($sess_table<>admin) {
 <? require "_header.php"; ?>
 
 <center>
-<p><h1>:: Manage Teacher ::</h1></center><br>
-<p><a href="main.php">Back Main</a>&gt;<a href="mstudent.php"> Teacher Management</a></p><br><br>
+<h1>จัดการข้อมูลอาจารย์</h1></center><br><br>
+<a href="main.php">Home</a>&gt; จัดการข้อมูลอาจารย์</a><br><br><br>
 <table border="0">
 <tr>
-<td><center><a href="addteacher.php"><img src="../images/user_male_add2.png" alt="Add teacher" /><br> Add Teacher </a></center></td>
+<td><center><a href="addteacher.php"><img src="../images/user_male_add2.png" alt="Add teacher" /><br><font size="2"> เพิ่มอาจารย์ </a></font></center></td>
 </tr>
 </table>
 <table border="1">

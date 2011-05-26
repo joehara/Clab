@@ -6,8 +6,8 @@ if ($sess_table<>teacher) {
 <html>
 <? require "_header.php"; ?>
 
-<h3>รายงานผลการเรียนของนักศึกษา <?=$_GET[section];?> ปีการศึกษาที่ <?=$_GET[year];?></h3>
-
+<font size="4"><b>รายงานผลคะแนนของนักศึกษา <?=$_GET[section];?> ปีการศึกษาที่ <?=$_GET[year];?></b></font>
+<br><br>
 <table id="mytable" border="0" cellspacing="0" cellpadding="0">
 
 <tr >

@@ -17,8 +17,8 @@ $code++;
 
 <? require "_header.php"; ?>
 
-<center><h1>:: Add Lesson::</h1></center><br><br>
-[<a href="showlesson.php">Back Show lesson</a> ]<br><br>
+<center><h1>เพิ่มบทเรียน</h1></center><br><br>
+<a href="main.php">Home</a>&gt;<a href="showlesson.php"> จัดการบทเรียน</a>&gt; เพิ่มบทเรียน<br><br>
 <form method="post" action="addlesson2.php">
   <table border="0" cellpadding="2" cellspacing="2">
     <tbody>

@@ -6,7 +6,7 @@ $codepw =1234;
 ?>
 <HTML>
 <HEAD><TITLE>Registration</TITLE>
-<link href="/Clab/templatemo_style2.css" rel="stylesheet" type="text/css" />
+<link href="../templatemo_style2.css" rel="stylesheet" type="text/css" />
 <meta content="text/html; charset=UTF-8" http-equiv="content-type">
 </HEAD>
 <body>
@@ -28,7 +28,7 @@ $codepw =1234;
 	<TD><select name="section" id="province">
       <? 
 	  include "../connect.php";
-     $sql="select * from Section ";  
+     $sql="select * from section ";  
      $result=mysql_db_query($dbname,$sql);
      while($rs=mysql_fetch_array($result)){  
  ?>
@@ -40,7 +40,7 @@ $codepw =1234;
       <TD>ปีการศึกษา :</TD>
       <TD><select name="year" id="year">
         <? 
-     $sql2="select * from Academic_year ";  
+     $sql2="select * from academic_year ";  
      $result2=mysql_db_query($dbname,$sql2);
      while($rs2=mysql_fetch_array($result2)){  
  ?>
@@ -74,14 +74,6 @@ $codepw =1234;
     <TR> 
       <TD>Telephone : </TD>
       <TD><INPUT NAME="phone_st" TYPE="text"  SIZE="26"></TD>
-    </TR>
-    <TR> 
-      <TD VALIGN="top">Address : </TD>
-      <TD><TEXTAREA NAME="address_st" COLS="35" ROWS="3"></TEXTAREA></TD>
-    </TR>
-    <TR>
-      <TD></TD>
-      <TD></TD>
     </TR>
     <TR> 
       <TD>&nbsp;</TD>

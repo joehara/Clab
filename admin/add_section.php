@@ -9,8 +9,8 @@ if ($sess_table<>admin) {
 
 <html>
 <? require "_header.php"; ?>
-
-<p><a href="main.php">Back Main</a>&gt; <a href="mclass.php">Class Management</a>&gt; Add Section</p><br><br><br>
+<center><h1>เพิ่มห้องเรียน</h1></center><br><br>
+<a href="main.php">Home</a>&gt; <a href="mclass.php"> จัดการห้องเรียน</a>&gt; เพิ่มห้องเรียน<br><br><br>
 <form id="form1" name="form1" method="post" action="add_section2.php">
 <TR> 
       <TD><B>Section : </B></TD>
@@ -24,7 +24,7 @@ if ($sess_table<>admin) {
  <?php } ?>      
                             </select>&nbsp;</TD>
     <td>
-  <label>ADD Section
+  <label>เพิ่มห้องเรียน
   <input type="text" name="add_section" id="add_section" />
   </label>
   <label>

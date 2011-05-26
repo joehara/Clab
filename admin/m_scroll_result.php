@@ -2,7 +2,7 @@
  include "../chksession.php";
  include "../function.php";
 if ($sess_table<>admin) {
-	header( "Location: /Clab/index.html"); 	exit();
+	header( "Location: ../index.html"); 	exit();
 }
 
 $section=$_GET[section];
@@ -16,7 +16,7 @@ $student_id=$_GET[id];
 
 <?
 	include "../connect.php";
-	$sql="select student.name,student.code_st,student.section,sendanswer.answer_id,proposition.proposition,sendanswer.code,check_answer.check_id,check_answer.code_comment,check_answer.result,check_answer.teacher_check,check_answer.check_date,student.student_id,proposition.ref_lesson,time_use.time_start from check_answer,sendanswer,proposition,student,time_use  where (check_answer.ref_answer=sendanswer.answer_id and sendanswer.ref_question=proposition.question_id and sendanswer.ref_student=student.student_id) and time_use.ref_student=student.student_id and sendanswer.ref_student='$student_id' and proposition.question_id='$question_id' ";
+	$sql="select student.name,student.code_st,student.section,sendanswer.answer_id,proposition.proposition,sendanswer.code,check_answer.check_id,check_answer.code_comment,check_answer.result,check_answer.teacher_check,check_answer.check_date,student.student_id,proposition.ref_lesson from check_answer,sendanswer,proposition,student,  where (check_answer.ref_answer=sendanswer.answer_id and sendanswer.ref_question=proposition.question_id and sendanswer.ref_student=student.student_id) and sendanswer.ref_student='$student_id' and proposition.question_id='$question_id' ";
 $result=mysql_db_query($dbname,$sql);
 $record=mysql_fetch_array($result);
 
@@ -25,7 +25,6 @@ $ans_id=$record[ans_id];
 $name=$record[name];
 $code_st=$record[code_st];
 $section=$record[section];
-$time_start=$record[time_start];
 $question=$record[proposition];
 $code=$record[code];
 $comment=$record[code_comment];
@@ -36,7 +35,7 @@ $teacher_check=$record[teacher_check];
 $check_date=$record[check_date];
 ?>
     &nbsp;<br />
-<a href="main.php">Back Main</a> &gt; <a href="m_scroll.php"> Score Management ]</a>&nbsp;&gt;<a href="m_scroll_name.php?section=<?=$section?>"> รายชื่อที่ส่งงานเข้ามา</a>&gt;<a href="m_scroll_lesson.php?section=<?=$section?>&amp;id=<?=$student_id?>"> บทต่างๆที่ส่งเข้ามา</a>&gt;<a href="m_scroll_question.php?section=<?=$section?>&amp;id=<?=$student_id?>&amp;lesson=<?=$lesson?>"> ข้อต่างๆที่ส่งเข้ามา</a>&gt; ผลคะแนน</p><br>
+<a href="main.php">Home</a> &gt; <a href="m_scroll.php"> จัดการคะแนน</a>&nbsp;&gt;<a href="m_scroll_name.php?section=<?=$section?>"> รายชื่อที่ส่งงานเข้ามา</a>&gt;<a href="m_scroll_lesson.php?section=<?=$section?>&amp;id=<?=$student_id?>"> บทต่างๆที่ส่งเข้ามา</a>&gt;<a href="m_scroll_question.php?section=<?=$section?>&amp;id=<?=$student_id?>&amp;lesson=<?=$lesson?>"> ข้อต่างๆที่ส่งเข้ามา</a>&gt; ผลคะแนน</p><br>
 <form id="form1" name="form1" method="post" action="m_scroll_result2.php">
   <table width="100%" border="0">
     <tr>

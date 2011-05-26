@@ -13,7 +13,6 @@ $username=$record[username];
 $name=$record[name];
 $email=$record[email];
 $phone=$record[phone];
-$address=$record[address];
 $reg_date=$record[reg_date];
 mysql_close();
 
@@ -21,8 +20,8 @@ mysql_close();
 <HTML>
 <? require "_header.php"; ?>
 <center>
-<h1>:: Show Profile ::</h1><br><br></center>
-[ <a href="main.php">Back Main</a> ]<center><br>
+<h1>ข้อมูลส่วนตัว</h1><br><br></center>
+<a href="main.php">Home</a>&gt; ข้อมูลส่วนตัว<center><br>
   <table cellspacing="2">
     <tbody><tr> 
       <td><b>Username : </b></td><td><?=$username?></td>
@@ -35,9 +34,6 @@ mysql_close();
     </tr>
     <tr> 
       <td><b>Telephone : </b></td><td><?=$phone?></td>
-    </tr>
-    <tr> 
-      <td valign="top"><b>Address :</b></td><td><?=$address?></td>
     </tr>
     <tr>
       <td><b>Register Date :</b></td><td><?= displaydate($reg_date) ?></td>

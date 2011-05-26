@@ -8,8 +8,8 @@ if ($sess_table<>teacher) {
 <HTML>
 <? require "_header.php"; ?>
 <center>
-<H1>:: Show Student ::</H1></center><br><br>
-[ <a href="main.php">Back Main</a>&gt; <a href="mstudent.php">manage studen</a>t &gt; show student/detail<br><br>
+<H1>show student/detail</H1></center><br><br>
+<a href="main.php">Home</a>&gt; <a href="mstudent.php"> จัดการข้อมูลนักศึกษา</a>t &gt; show student/detail<br><br>
 
 <table border="0">
 <tr>

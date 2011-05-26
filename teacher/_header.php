@@ -1,9 +1,7 @@
 <head>
 <title>Practical-Based Online Testing System :: Teacher</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
-<meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
-<link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
+<link href="/Clab/templatemo_style.css" rel="stylesheet" type="text/css" />
 <style type="text/css">
 <!--
 .style1 {font-size: 36px}
@@ -95,7 +93,7 @@ $(function(){
 
         <div id="templatemo_menu">
         <div id="search">
-        Welcome, <a href="changepw.php" style="color:#000000"><b><?=$sess_username?></b></a>&nbsp;&nbsp;<a href="../logout.php"><img src="../images/logout.gif" alt="Logout" /></a>
+        Welcome, <a href="changepw.php" style="color:#000000"><b><?=$sess_username?></b></a>&nbsp;&nbsp;
         </div>
         <div id="menu">
             <ul>
@@ -119,11 +117,11 @@ $(function(){
                 </div>
                 <div class="leftcolumn_box01_bottom">
                         <div class="form_row">
-                        <label><a href="main.php" style="color:#FE9A2E"><b>[ Main ]</b></a></label><br><br>
-                        <label><a href="mstudent.php" style="color:#FE9A2E"><b>[ Management Student ]</b></a></label><br><br>
-                        <label><a href="showlesson.php" style="color:#FE9A2E"><b>[ add/edit lesson ]</b></a></label><br><br>
-                        <label><a href="showprofile.php" style="color:#FE9A2E"><b>[ Show Profile ]</b></a></label><br><br>
-
+                        <label><a href="main.php" style="color:#FE9A2E"><b>[ Home ]</b></a></label><br><br>
+                        <label><a href="mstudent.php" style="color:#FE9A2E"><b>[ จัดการข้อมูลนักศึกษา ]</b></a></label><br><br>
+                        <label><a href="showlesson.php" style="color:#FE9A2E"><b>[ จัดการบทเรียน ]</b></a></label><br><br>
+                        <label><a href="showprofile.php" style="color:#FE9A2E"><b>[ ข้อมูลส่วนตัว ]</b></a></label><br><br>
+			<label><a href="../logout.php" style="color:#FE9A2E"><b>[ Logout ]</b></a></label><br><br>
                </div>
             </div>
         </div>

@@ -10,7 +10,6 @@ $password=base64_encode(1234);
 $name=$_POST[name];
 $email=$_POST[email];
 $phone=$_POST[phone];
-$address=$_POST[address];
 $date_reg=date("Y-m-d");
 ?>
 
@@ -36,7 +35,7 @@ if($num>0) {
 
 
 $sql="insert into teacher values('','$username','$password','$name',
-'$email','$phone','$address','$date_reg')";
+'$email','$phone','$date_reg')";
 $result=mysql_db_query($dbname,$sql);
 if ($result) {
 	echo "<h3>Insert Teacher successful</h3>";

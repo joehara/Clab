@@ -25,10 +25,10 @@ echo"<span style=\"color: rgb(255, 0, 0);\">password ของคุณยัง
 <br><br>
 <center><table border="0">
 <tr>
-<td><center><a href="mstudent.php"><img src="/Clab/images/personal.png" alt="Management Student" /><br><font size="2"><b>Management Student</b></font></a></center></td>
-<td><center><a href="showlesson.php"><img src="/Clab/images/file_manager.png" alt="add/edit lesson" /><br><font size="2"><b>add/edit lesson</b></font></a></center></td>
-<td><center><a href="showprofile.php"><img src="/Clab/images/summer_user.png" alt="Show Profile" /><br><font size="2"><b>Show Profile</b></font></a></center></td>
-<td><center><a href="../logout.php"><img src="/Clab/images/application_exit.png" alt="Logout" /><br><font size="2"><b>Logout</b></font></a></center></td>
+<td><center><a href="mstudent.php"><img src="/Clab/images/personal.png" alt="Management Student" /><br><font size="2"><b>จัดการข้อมูลนักศึกษา</b></font></a></center></td>
+<td><center><a href="showlesson.php"><img src="/Clab/images/file_manager.png" alt="add/edit lesson" /><br><font size="2"><b>จัดการบทเรียน</b></font></a></center></td>
+<td><center><a href="showprofile.php"><img src="/Clab/images/summer_user.png" alt="Show Profile" /><br><font size="2"><b>ข้อมูลส่วนตัว</b></font></a></center></td>
+<td><center><a href="../logout.php"><img src="/Clab/images/application_exit.png" alt="Logout" /><br><font size="2"><b>ออกจากระบบ</b></font></a></center></td>
 </tr>
 </table>
 </center>
