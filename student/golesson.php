@@ -31,14 +31,14 @@ $help=$code;
 ?>
 <HTML>
 <? require "_header.php"; ?>
-
+<center><h1>ตอบคำถาม<h1></center><br><br>
 <a href="main.php">Home</a>&gt;<a href="lesson.php"> แบบฝึกหัด</a>&gt;<a href="main_lesson.php?lesson=<?=$ref_lesson?>"> คำถามบททที่ <?=$lesson?></a>&gt; ตอบคำถาม
-<br>
+
 <form method="post" action="golesson3.php">
   <table width="100%" border="0">
   <tr>
     <td width="25%">&nbsp;</td>
-    <td><center><h1>ตอบคำถาม<h1></center></td>
+   
     <td width="25%">&nbsp;</td>
   </tr>
   <tr>

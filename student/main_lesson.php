@@ -21,9 +21,9 @@ if ($sess_table<>student) {
 <table border="1">
 <tr bgcolor="#D3D3D3"> 
     
-    <td>No</td>
-    <td><center>Detail Lesson</center></td>
-    <td><center>Status</center></td>
+    <td>ข้อที่</td>
+    <td><center>คำถาม</center></td>
+    <td><center>สถานะ</center></td>
 
 </tr>
 
