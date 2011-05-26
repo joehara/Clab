@@ -122,7 +122,7 @@ $(function(){
                         <label><a href="mstudent.php" style="color:#FE9A2E"><b>[ จัดการข้อมูลนักศึกษา ]</b></a></label><br><br>
                         <label><a href="mteacher.php" style="color:#FE9A2E"><b>[ จัดการข้อมูลอาจารย์ ]</b></a></label><br><br>
                         <label><a href="m_lesson.php" style="color:#FE9A2E"><b>[ จัดการบทเรียน ]</b></a></label><br><br>
-                        <label><a href="m_scroll.php" style="color:#FE9A2E"><b>[ จัดการคะแนน ]</b></a></label><br><br>
+                        <label><a href="m_score.php" style="color:#FE9A2E"><b>[ จัดการคะแนน ]</b></a></label><br><br>
                         <label><a href="changepw.php" style="color:#FE9A2E"><b>[ เปลี่ยนรหัสผ่าน ]</b></a></label><br><br>
                         <label><a href="../logout.php" style="color:#FE9A2E"><b>[ Logout ]</b></a></label><br><br>
 

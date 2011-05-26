@@ -2,7 +2,7 @@
 include "../chksession.php";
 
 if ($sess_table<>admin) {
-	header( "Location: /Clab/index.html"); 	exit();
+	header( "Location: ../index.html"); 	exit();
 }
 ?>
 <HTML>
@@ -21,16 +21,17 @@ if ($sess_table<>admin) {
   </tr>
   <?
   $section=$_GET[section];
+  $year=$_GET[year];
 	$count=1;
 	include "../connect.php";
-	$sql="select student.student_id,student.code_st,student.name from check_answer,sendanswer,student  where (check_answer.ref_answer=sendanswer.answer_id and sendanswer.ref_student=student.student_id and student.section='$section') GROUP BY student.name";
+	$sql="select student.student_id,student.code_st,student.name from sendanswer,student  where (sendanswer.ref_student=student.student_id and student.section='$section' and student.year=$year and status = 1) GROUP BY student.name order by student.code_st";
 	$result=mysql_db_query($dbname,$sql);
 	while($record=mysql_fetch_array($result)) {
 		
 		echo "<tr> 
 			<td>$count</td>
-			<td><a href=\"m_scroll_lesson.php?section=$section&id=$record[student_id]\">$record[code_st]</td>
-			<td>$record[name]</td>
+			<td>$record[code_st]</td>
+			<td><a href=\"m_score_lesson.php?section=$section&id=$record[student_id]&year=$year\">$record[name]</td>
 		</tr>";
 			
 			$count++;
