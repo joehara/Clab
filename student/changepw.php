@@ -7,9 +7,10 @@ if ($sess_table<>student) {
 <? require "_header.php"; ?>
 
 <center>
-<p><h1>:: Change Password ::</h1></b><br><br>
+<h1>เปลี่ยนรหัสผ่าน</h1></b><br><br></center>
+<a href="main.php">Home</a>&gt;<a href="showprofile.php"> ข้อมูลส่วนตัว</a>&gt; เปลี่ยนรหัสผ่าน<br><br>
 <FORM METHOD=POST ACTION="changepw2.php">
-  <TABLE cellspacing="2">
+ <TABLE cellspacing="2"> 
     <TR> 
       <TD>Username : </TD> <TD><?=$sess_username?></TD>
     </TR>

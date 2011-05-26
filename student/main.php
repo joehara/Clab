@@ -20,9 +20,9 @@ if ($sess_table<>student) {
 <br>
 <center><table border="0">
 <tr>
-<td><center><a href="lesson.php"><img src="/Clab/images/report_check.png" alt="Lesson" /><br><b>Lesson</b></a></center></td>
-<td><center><a href="showprofile.php"><img src="/Clab/images/summer_user.png" alt="Show Profile" /><br><b>Show Profile</b></a></center></td>
-<td><center><a href="../logout.php"><img src="/Clab/images/application_exit.png" alt="Logout" /><br><b>Logout</b></a></center></td>
+<td><center><a href="lesson.php"><img src="/Clab/images/report_check.png" alt="Lesson" /><br><b>แบบฝึกหัด</b></a></center></td>
+<td><center><a href="showprofile.php"><img src="/Clab/images/summer_user.png" alt="Show Profile" /><br><b>ข้อมูลส่วนตัว</b></a></center></td>
+<td><center><a href="../logout.php"><img src="/Clab/images/application_exit.png" alt="Logout" /><br><b>ออกจากระะบบ</b></a></center></td>
 </tr>
 </table>
 </center>            	

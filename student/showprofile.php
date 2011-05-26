@@ -23,8 +23,8 @@ mysql_close();
 <? require "_header.php"; ?>
 
 <center>
-<h1>:: Show Profile ::</h1><br><br></center>
-[ <a href="main.php">Back Main</a> ]<center><br>
+<h1>ข้อมูลส่วนตัว</h1><br><br></center>
+<a href="main.php">Home</a>&gt; ข้อมูลส่วนตัว<center><br>
   <table cellspacing="2">
     <tbody><tr> 
       <td><b>Student ID : </b></td><td><?=$code?></td>
@@ -54,6 +54,6 @@ mysql_close();
   </tbody></table>
 </form>
 <a href="changepw.php"><img src="/Clab/images/changePass.jpeg" alt="Change Password" /></a><br>
-<a href="changepw.php">Change Password</a></center>
+<a href="changepw.php">เปลี่ยนรหัสผ่าน/a></center>
 <?require "_footer.php"?>
 </html>

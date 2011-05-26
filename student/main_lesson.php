@@ -1,5 +1,5 @@
 <?
-header("Content-Type content=text/html; charset=UTF-8");
+
 $id=$_GET[id];
 $lesson=$_GET[lesson];
 $plus=$_GET[plus];
@@ -14,9 +14,9 @@ if ($sess_table<>student) {
 <HTML>
 <? require "_header.php"; ?>
 
-<h1>:: Question ::	</h1> </center><br><br>
+<center><h1> คำถาม </h1></center><br><br>
 
-[ <a href="lesson.php">Back Lesson</a> ]
+<a href="lesson.php">Home</a>&gt;<a href="lesson.php"> แบบฝึกหัด</a>&gt; คำถามบทที่ <?=$lesson?></a>
 <br><br><center>
 <table border="1">
 <tr bgcolor="#D3D3D3"> 
@@ -62,7 +62,7 @@ $num6=mysql_num_rows($result6);
 		<tr> 
 			
 			<td>$count</td>
-			<td><a href=\"golesson.php?id_question=$record[question_id]&ref_student=$ref_student\">$record[proposition]</a></td>";
+			<td><a href=\"golesson.php?id_question=$record[question_id]&ref_student=$ref_student&lesson=$lesson\">$record[proposition]</a></td>";
 			if($num6<=0){
 			echo"<td>ยังไม่ได้ส่งคำตอบ</td>";
 			}else{
@@ -70,7 +70,7 @@ $num6=mysql_num_rows($result6);
 			$success++;
 
 			if($success==($hard+$easy)){
-														$sql8="update  time_use set time_end='$time' where ref_lesson='$lesson' and ref_student='$ref_student'";
+			$sql8="update  time_use set time_end='$time' where ref_lesson='$lesson' and ref_student='$ref_student'";
 $result8=mysql_db_query($dbname,$sql8);
 			}
 			}
@@ -94,7 +94,7 @@ $sql="select * from proposition,teacher_random,teacher where teacher_random.ques
 		<tr> 
 			
 			<td>$count</td>
-			<td><a href=\"golesson.php?id_question=$record[question_id]&ref_student=$ref_student\">$record[proposition]</a></td>
+			<td><a href=\"golesson.php?id_question=$record[question_id]&ref_student=$ref_student&lesson=$lesson\">$record[proposition]</a></td>
 			<td>ยังไม่ได้ส่งคำตอบ</td>
 			</tr>";
 			$count++;
@@ -112,7 +112,7 @@ $sql="select * from proposition,teacher_random,teacher where teacher_random.ques
 		<tr> 
 			
 			<td>$count</td>
-			<td><a href=\"golesson.php?id_question=$record[question_id]&ref_student=$ref_student\">$record[proposition]</a></td>
+			<td><a href=\"golesson.php?id_question=$record[question_id]&ref_student=$ref_student&lesson=$lesson\">$record[proposition]</a></td>
 			<td>ยังไม่ได้ส่งคำตอบ</td>
 			</tr>";
 			$count++;
