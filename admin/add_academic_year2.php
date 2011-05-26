@@ -1,10 +1,12 @@
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Untitled Document</title>
-</head>
+<?
+include "../chksession.php";
 
-<body>
+if ($sess_table<>admin) {
+        header( "Location: ../index.html");     exit();
+}
+?>
+<html>
+<? require "_header.php"; ?>
 <?
 $add_year=$_POST[add_year];
 include "../connect.php";
@@ -24,5 +26,5 @@ echo"<meta http-equiv=\"Refresh\" content=\"5; URL=add_academic_year.php\">";
 }
 mysql_close();
 ?>
-</body>
+<? require "_footer.php"; ?>
 </html>

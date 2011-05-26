@@ -1,15 +1,14 @@
-<HTML>
-<meta content="text/html; charset=utf-8" http-equiv="content-type">
-<link rel="stylesheet" type="text/css" href="../Oranges/style.css" />
-<HEAD><TITLE>Show Student</TITLE></HEAD>
-<BODY>
-
 <?
 include "../chksession.php";
 
 if ($sess_table<>admin) {
-	header( "Location: ../index.html"); 	exit();
+        header( "Location: ../index.html");     exit();
 }
+?>
+<HTML>
+<? require "_header.php"; ?>
+
+<?
 $student_id=$_GET[id];
 $permission=$_GET[permission];
 include "../connect.php";
@@ -29,5 +28,5 @@ if ($result) {
 mysql_close();
 ?>
 
-</body>
+<? require "_footer.php"; ?>
 </HTML>
