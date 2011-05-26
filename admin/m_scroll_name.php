@@ -4,14 +4,12 @@
 include "../chksession.php";
 
 if ($sess_table<>admin) {
-	header( "Location: ../index.html"); 	exit();
+	header( "Location: /Clab/index.html"); 	exit();
 }
 ?>
 <HTML>
 <HEAD><TITLE>รายชื่อที่ส่งงานเข้ามา</TITLE></HEAD>
-<meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
-<meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
-<link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
+<link href="/Clab/templatemo_style.css" rel="stylesheet" type="text/css" />
 <meta content="text/html; charset=utf-8" http-equiv="content-type">
 <style type="text/css">
 <!--
@@ -82,7 +80,7 @@ if ($sess_table<>admin) {
     	<div id="templatemo_middle_column">
 <center>
 <h1>:: รายชื่อที่ส่งงานเข้ามา ::</h1></center><br><br>
-<p>[ <a href="main.php">Back Main</a> &gt; <a href="m_scroll.php">Manage Score</a>&nbsp;&gt;รายชื่อที่ส่งงานเข้ามา</p><br>
+<p><a href="main.php">Back Main</a> &gt; <a href="m_scroll.php"> Score Management</a>&nbsp;&gt; รายชื่อที่ส่งงานเข้ามา</p><br>
 
 <table border="0">
   <tr bgcolor="#D3D3D3"> 

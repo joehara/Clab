@@ -78,12 +78,12 @@ if ($sess_table<>admin) {
         <!-- start of middle column -->
         
     	<div id="templatemo_middle_column"><center>
-<h1>:: Manage Lesson ::</h1></center><br><br>
-  [ <a href="main.php">Back Main</a>&gt;Manage Lesson<br  /><br />
+<h1>:: Lesson Management ::</h1></center><br><br>
+<a href="main.php">Back Main</a>&gt; Lesson Management<br><br>
 
 <table border="0">
 <tr>
-<td><center><a href="addlesson.php"><img src="../images/comment_add2.png" alt="Add Lesson" /><br> Add Lesson </a></center></td>
+<td><center><a href="addlesson.php"><img src="/Clab/images/comment_add2.png" alt="Add Lesson" /><br> Add Lesson </a></center></td>
 </tr>
 </table>
   

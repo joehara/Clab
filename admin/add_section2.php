@@ -1,10 +1,14 @@
+<?
+include "../chksession.php";
+
+if ($sess_table<>admin) {
+	header( "Location: /Clab/index.html"); 	exit();
+}
+?>
 <HTML>
-<HEAD><TITLE>Add Lesson</TITLE></HEAD>
-<meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
-<meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
-<link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
+<HEAD><TITLE>Import Student From File</TITLE></HEAD>
+<link href="/Clab/templatemo_style.css" rel="stylesheet" type="text/css" />
 <meta content="text/html; charset=utf-8" http-equiv="content-type">
-<meta http-equiv="Refresh" content="3; URL=addlesson.php">
 <style type="text/css">
 <!--
 .style1 {font-size: 36px}
@@ -40,6 +44,33 @@
             </ul>
         </div>
 	</div>
+    
+    <!-- start of content -->
+    
+	<div id="templatemo_content">
+    
+    	<!-- start of left column -->
+    
+    	<div id="templatemo_left_column">        	
+
+            <div id="leftcolumn_box01">
+                <div class="leftcolumn_box01_top">
+                    <h2>Menu</h2>
+                </div>
+                <div class="leftcolumn_box01_bottom">
+                        <div class="form_row">
+              <label><a href="main.php" style="color:#FE9A2E"><b>[ Main ]</b></a></label><br><br>
+ 			<label><a href="mstudent.php" style="color:#FE9A2E"><b>[  Student Management ]</b></a></label><br><br>
+			<label><a href="mteacher.php" style="color:#FE9A2E"><b>[  Teacher Management ]</b></a></label><br><br>
+			<label><a href="m_lesson.php" style="color:#FE9A2E"><b>[  Lesson Management ]</b></a></label><br><br>
+			<label><a href="m_scroll.php" style="color:#FE9A2E"><b>[  Score Management ]</b></a></label><br><br>
+			<label><a href="changepw.php" style="color:#FE9A2E"><b>[ Change Password ]</b></a></label><br><br>
+
+		
+               </div> 
+            </div>            	            
+        </div>
+        </div>
         <!-- end of left column -->
         
         <!-- start of middle column -->
@@ -58,7 +89,7 @@ $sql="insert into section values('','$add_section')";
 $result=mysql_db_query($dbname,$sql);
 if ($result) {
 	echo "<h3>Insert section name successful</h3>";
-echo"<meta http-equiv=\"Refresh\" content=\"5; URL=addstudent.php\">";
+echo"<meta http-equiv=\"Refresh\" content=\"5; URL=add_section.php\">";
 } else {
 	echo "<h3>Error Can't insert to database</h3>";
 }

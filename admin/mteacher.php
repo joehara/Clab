@@ -79,6 +79,7 @@ if ($sess_table<>admin) {
         
     	<div id="templatemo_middle_column"><center>
 <p><h1>:: Manage Teacher ::</h1></center><br>
+<p><a href="main.php">Back Main</a>&gt;<a href="mstudent.php"> Teacher Management</a></p><br><br>
 <table border="0">
 <tr>
 <td><center><a href="addteacher.php"><img src="../images/user_male_add2.png" alt="Add teacher" /><br> Add Teacher </a></center></td>

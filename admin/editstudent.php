@@ -100,7 +100,7 @@ $reg_date=$record[st_reg];
         
     	<div id="templatemo_middle_column"><center>
 <h1>:: Edit Student ::</h1></center><br><br>
-<p>[ <a href="main.php">Back Main</a>&gt;<a href="mstudent.php">Show Student</a>&gt;Edit Student</p><br>
+<p><a href="main.php">Back Main</a>&gt;<a href="mstudent.php"> Student Management</a>&gt; Edit Student</p><br>
 
 <FORM METHOD="POST" ACTION="editstudent2.php?id_edit=<?=$id_edit;?>">
   <TABLE CELLSPACING="2">

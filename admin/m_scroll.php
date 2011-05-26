@@ -2,14 +2,12 @@
 include "../chksession.php";
 
 if ($sess_table<>admin) {
-	header( "Location: ../index.html"); 	exit();
+	header( "Location: /Clab/index.html"); 	exit();
 }
 ?>
 <HTML>
 <HEAD><TITLE>Manage Score</TITLE></HEAD>
-<meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
-<meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
-<link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
+<link href="/Clab/templatemo_style.css" rel="stylesheet" type="text/css" />
 <meta content="text/html; charset=utf-8" http-equiv="content-type">
 <style type="text/css">
 <!--
@@ -79,8 +77,8 @@ if ($sess_table<>admin) {
         
     	<div id="templatemo_middle_column">
 <center>
-<h1>:: Manage Score ::</h1></center><br><br>
-<a href="main.php">[Back Main</a>&gt;Section <br />
+<h1>:: Score Management ::</h1></center><br><br>
+<a href="main.php">Back Main</a>&gt; Section <br />
 <br />
 <table border="1">
   <tr bgcolor="#D3D3D3">

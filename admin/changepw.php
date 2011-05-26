@@ -2,14 +2,13 @@
 include "../chksession.php";
 
 if ($sess_table<>admin) {
-	header( "Location: ../index.html"); 	exit();
+	header( "Location: /Clab/index.html"); 	exit();
 }
 ?>
 <HTML>
 <HEAD><TITLE>Change Password</TITLE></HEAD>
-<meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
-<meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
-<link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
+
+<link href="/Clab/templatemo_style.css" rel="stylesheet" type="text/css" />
 <meta content="text/html; charset=utf-8" http-equiv="content-type">
 <style type="text/css">
 <!--
@@ -78,6 +77,7 @@ if ($sess_table<>admin) {
         <!-- start of middle column -->
 <div id="templatemo_middle_column"><center>
 <h1>:: Change Password ::</h1></center><br><br>
+<a href="main.php">Back Main</a>&gt; Change Password<br><br>
 <FORM METHOD=POST ACTION="changepw2.php">
   <TABLE cellspacing="2">
     <TR> 

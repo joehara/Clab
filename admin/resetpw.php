@@ -81,6 +81,7 @@ $username=$_GET[username];
         <!-- start of middle column -->
         
     	<div id="templatemo_middle_column">
+<a href="main.php">Back Main</a>&gt;<a href="mteacher.php"> Teacher Management</a>&gt;<a href="editteacher.php?id_edit=<?=$id_edit;?>&username=<?=$username?>""> Edit Teacher</a>&gt; Reset Password<br><br>
 
 <p><H1>You are changing password  <?=$username?></H1></p>
 <form method="post" action="resetpw2.php?username=<?=$username?>" >

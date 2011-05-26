@@ -62,6 +62,7 @@ if ($sess_table<>admin) {
                 <div class="leftcolumn_box01_bottom">
                         <div class="form_row">
                         <label><a href="main.php" style="color:#FE9A2E"><b>[ Main ]</b></a></label><br><br>
+			<label><a href="mclass.php" style="color:#FE9A2E"><b>[  Class Management ]</b></a></label><br><br>
  			<label><a href="mstudent.php" style="color:#FE9A2E"><b>[  Student Management ]</b></a></label><br><br>
 			<label><a href="mteacher.php" style="color:#FE9A2E"><b>[  Teacher Management ]</b></a></label><br><br>
 			<label><a href="m_lesson.php" style="color:#FE9A2E"><b>[  Lesson Management ]</b></a></label><br><br>
