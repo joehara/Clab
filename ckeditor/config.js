@@ -12,16 +12,10 @@ CKEDITOR.editorConfig = function( config )
 config.toolbar = 'MyToolBar';
 config.toolbar_MyToolBar = 
 [ 
-    ['Source'],
     ['Bold','Italic','Underline','Strike','-','Subscript','Superscript'],
     ['NumberedList','BulletedList'],
     ['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'],
-    ['Link','Unlink'],
-    ['Image','Flash','Table','HorizontalRule','Smiley','SpecialChar','PageBreak','Iframe'],
-    '/',
-    ['Styles','Format','Font','FontSize'],
+    ['Image','Flash','Table','HorizontalRule','Smiley','SpecialChar'],
     ['TextColor','BGColor']
-
-
                            ];
 };

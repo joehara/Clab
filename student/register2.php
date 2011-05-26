@@ -13,13 +13,13 @@ $st_reg=date("Y-m-d");
 ?>
 <HTML>
 <HEAD><TITLE>Registration</TITLE>
-<link href="/Clab/templatemo_style2.css" rel="stylesheet" type="text/css" />
+<link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
 <meta content="text/html; charset=UTF-8" http-equiv="content-type">
 <meta http-equiv="Refresh" content="2; URL=/Clab/student/register.php">
 </HEAD>
 <body>
 <center>
-<img src="/Clab/images/templatemo_heading_background.jpg" width="690" height="146"></center><br><br><br><br><br><br>
+<img src="../images/templatemo_heading_background.jpg" width="690" height="146"></center><br><br><br><br><br><br>
 <center>
 <?
 

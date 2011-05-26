@@ -31,68 +31,38 @@ $help=$code;
 ?>
 <HTML>
 <? require "_header.php"; ?>
-<center><h1>ตอบคำถาม<h1></center><br><br>
+<center><h1>ตอบคำถาม</h1></center><br><br>
 <a href="main.php">Home</a>&gt;<a href="lesson.php"> แบบฝึกหัด</a>&gt;<a href="main_lesson.php?lesson=<?=$ref_lesson?>"> คำถามบททที่ <?=$lesson?></a>&gt; ตอบคำถาม
-
+<br><br><br>
 <form method="post" action="golesson3.php">
   <table width="100%" border="0">
   <tr>
-    <td width="25%">&nbsp;</td>
-   
-    <td width="25%">&nbsp;</td>
+    <td><?=$question?><input type="hidden" name="id_question" value="<?=$id_question?>">
+      <input name="ref_student" type="hidden" id="ref_student" value="<?=$ref_student?>">
+    </td>
   </tr>
   <tr>
-    <td height="40">&nbsp;</td>
-    <td> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;โจทย์ ::
-     
-      <?=$question?><input type="hidden" name="id_question" value="<?=$id_question?>">
-      <input name="ref_student" type="hidden" id="ref_student" value="<?=$ref_student?>"></td>
-    <td>เวลาที่เริ่มทำ
-	<? 
-$sql2="select * from random where ref_question='$id_question' and ref_student='$ref_student'";
-$result2=mysql_db_query($dbname,$sql2);
-$record=mysql_fetch_array($result2);
-$time_random=$record[time_random];
-if($time_random==0){
-$time_random=date("y-m-d h:i:s");
-$sql3="update  random set time_random='$time_random' where ref_question='$id_question' and ref_student='$ref_student'";
-$result3=mysql_db_query($dbname,$sql3);
-
-}else{
-echo"$time_random<br>";
-
-}
-?></td>
+    <td><center>
+         <textarea name="help" id="student_code" cols="80" rows="40"><?=$help;?></textarea>
+        </center>
+    </td>
   </tr>
   <tr>
-    <td>&nbsp;</td>
-    <td><p align="center" style="vertical-align: top;">Help<br>
-          <textarea name="help" id="help" cols="70" rows="20"><?=$help;?>
-          </textarea>
-    </p>
-      <p style="vertical-align: top;">&nbsp;</p></td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td><div align="center"><span style="vertical-align: top; text-align: center;">
-      <input type="submit" name="button" id="button" value="SAVE">
-    </span></div></td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
+    <td>
+       <div align="center">
+          <span style="vertical-align: top; text-align: center;">
+             <input type="submit" name="button" id="button" value="ส่งคำตอบ">
+          </span>
+       </div>
+   </td>
   </tr>
 </table>
-<p>
-  <label></label>
-</p>
-<p>&nbsp;</p>
 </form>
+</center>
 <?
 mysql_close();
 ?>
+
+
 <? require "_footer.php"; ?>
 </html>

@@ -1,14 +1,12 @@
 <?
-
 $id=$_GET[id];
 $lesson=$_GET[lesson];
 $plus=$_GET[plus];
 include "../connect.php";
 include "../chksession.php";
-$time=date("Y-m-d G:i:s");
 
 if ($sess_table<>student) {
-	header( "Location: /Clab/index.html"); 	exit();
+	header( "Location: ../index.html"); 	exit();
 }
 ?>
 <HTML>
@@ -52,39 +50,57 @@ if($num>0){
 $count=1;
 
 
-while($record=mysql_fetch_array($result5)) {
+	while($record=mysql_fetch_array($result5)) {
 
-$sql6="select proposition.question_id,proposition.proposition,sendanswer.ref_question,sendanswer.ref_student from proposition,sendanswer where proposition.question_id=sendanswer.ref_question and sendanswer.ref_student='$ref_student'  and proposition.question_id='$record[question_id]' order by sendanswer.ref_question asc";
+$sql6="select sendanswer.status, sendanswer.result from proposition,sendanswer where proposition.question_id=sendanswer.ref_question and sendanswer.ref_student='$ref_student'  and proposition.question_id='$record[question_id]'";
 $result6=mysql_db_query($dbname,$sql6);
+$record6=mysql_fetch_array($result6);
 $num6=mysql_num_rows($result6);
-
-		echo "
+?>
 		<tr> 
-			
-			<td>$count</td>
-			<td><a href=\"golesson.php?id_question=$record[question_id]&ref_student=$ref_student&lesson=$lesson\">$record[proposition]</a></td>";
-			if($num6<=0){
-			echo"<td>ยังไม่ได้ส่งคำตอบ</td>";
-			}else{
-			echo"<td>ส่งคำตอบแล้ว</td>";
-			$success++;
+			<td><?= $count ?></td>
+<?
+			if($num6 <= 0) {
+				echo "<td><a href=\"golesson.php?id_question=$record[question_id]&ref_student=$ref_student&lesson=$lesson\">$record[proposition]</a></td>";
+				echo"<td>ยังไม่ได้ส่งคำตอบ</td>";
+			} else {
+				if($record6[status] == 1) {
+					echo "<td>$record[proposition]</td>";
+					echo "<td><center><a href=\"result_question_detail.php?check_id=$record[question_id]&id=$ref_student\">$record6[result]</a></center></td>";
+				} else {
+					echo "<td><a href=\"golesson.php?id_question=$record[question_id]&ref_student=$ref_student&lesson=$lesson\">$record[proposition]</a></td>";
+					echo"<td>ส่งคำตอบแล้ว</td>";
+				}
+			}
 
-			if($success==($hard+$easy)){
-			$sql8="update  time_use set time_end='$time' where ref_lesson='$lesson' and ref_student='$ref_student'";
-$result8=mysql_db_query($dbname,$sql8);
-			}
-			}
-			
 			echo "</tr>";
 			$count++;
 								
-			}
+	}
 			
 			
 													
 }else{
 
 $count=1;
+
+$sql="select * from proposition,teacher_random,teacher where teacher_random.question_id=proposition.question_id and teacher_random.teacher_id=teacher.teacher_id and proposition.ref_lesson='$lesson' and proposition.level=0 and teacher.name='$teach' ORDER BY rand()LIMIT $easy";
+	$result=mysql_db_query($dbname,$sql);
+	while($record=mysql_fetch_array($result)) {
+		
+		echo "
+		<tr> 
+			
+			<td>$count</td>
+			<td><a href=\"golesson.php?id_question=$record[question_id]&ref_student=$ref_student&lesson=$lesson\">$record[proposition]</a></td>
+			<td>ยังไม่ได้ส่งคำตอบ</td>
+			</tr>";
+			$count++;
+			$sql4="insert into random values('','$record[question_id]','$ref_student','$time')";
+			$result4=mysql_db_query($dbname,$sql4);
+		
+	}
+
 
 $sql="select * from proposition,teacher_random,teacher where teacher_random.question_id=proposition.question_id and teacher_random.teacher_id=teacher.teacher_id and proposition.ref_lesson='$lesson' and proposition.level=1 and teacher.name='$teach' ORDER BY rand()LIMIT $hard";
 	$result=mysql_db_query($dbname,$sql);
@@ -103,39 +119,8 @@ $sql="select * from proposition,teacher_random,teacher where teacher_random.ques
 			
 	}
 
-
-$sql="select * from proposition,teacher_random,teacher where teacher_random.question_id=proposition.question_id and teacher_random.teacher_id=teacher.teacher_id and proposition.ref_lesson='$lesson' and proposition.level=0 and teacher.name='$teach' ORDER BY rand()LIMIT $easy";
-	$result=mysql_db_query($dbname,$sql);
-	while($record=mysql_fetch_array($result)) {
-		
-		echo "
-		<tr> 
-			
-			<td>$count</td>
-			<td><a href=\"golesson.php?id_question=$record[question_id]&ref_student=$ref_student&lesson=$lesson\">$record[proposition]</a></td>
-			<td>ยังไม่ได้ส่งคำตอบ</td>
-			</tr>";
-			$count++;
-			$sql4="insert into Random values('','$record[question_id]','$ref_student','$time')";
-			$result4=mysql_db_query($dbname,$sql4);
-		
-	}
-echo"</table>";
-	$sql9="select * from proposition where ref_lesson='$lesson'";
-	$result9=mysql_db_query($dbname,$sql9);
-	$num9=mysql_num_rows($result9);
-	if($num9>0){
-	$sql7="insert into time_use values('','$lesson','$ref_student','$time','')";
-	$result7=mysql_db_query($dbname,$sql7);
-	}else{
-		
-
-
-
-	echo"<h3>ไม่มีโจทย์</h3><br>";
-	}
-
-	}
+	echo"</table>";
+}	
 	 
 
 mysql_close();

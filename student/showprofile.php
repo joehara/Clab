@@ -14,7 +14,6 @@ $name=$record[name];
 $section=$record[section];
 $email=$record[email];
 $phone=$record[phone];
-$address=$record[address];
 $reg_date=$record[st_reg];
 mysql_close();
 
@@ -41,9 +40,6 @@ mysql_close();
     <tr> 
       <td><b>Telephone : </b></td><td><?=$phone?></td>
     </tr>
-    <tr> 
-      <td valign="top"><b>Address :</b></td><td><?=$address?></td>
-    </tr>
     <tr>
       <td><b>Register Date :</b></td><td><?=displaydate($reg_date)?></td>
     </tr>	
@@ -53,7 +49,7 @@ mysql_close();
     </tr>
   </tbody></table>
 </form>
-<a href="changepw.php"><img src="/Clab/images/changePass.jpeg" alt="Change Password" /></a><br>
-<a href="changepw.php">เปลี่ยนรหัสผ่าน/a></center>
+<a href="changepw.php"><img src="../images/changePass.jpeg" alt="Change Password" /></a><br>
+<a href="changepw.php">เปลี่ยนรหัสผ่าน</a></center>
 <?require "_footer.php"?>
 </html>

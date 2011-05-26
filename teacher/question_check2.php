@@ -9,7 +9,6 @@ if ($sess_table<>teacher) {
 $teacher_name=$_POST[teacher_name];
 $result=$_POST[point];
 $code_comment=$_POST[code_comment];
-$check_date=date("Y-m-d");
 ?>
 
 <html>
@@ -27,9 +26,12 @@ $student_id=$record[student_id];
 $ref_lesson=$record[ref_lesson];
 $code_st=$record[code_st];
 
-$sql="insert into check_answer values('','$ans_id','$teacher_name','$code_comment','$result','$check_date')";
+$sql="update sendanswer set teacher_check='$teacher_name', code_comment='$code_comment',result=$result, check_date=NOW(), status=1 where answer_id=$ans_id";
 $result=mysql_db_query($dbname,$sql);
-
+/*
+$sql="insert into check_answer values('','$ans_id','$teacher_name','$code_comment','$result', NOW())";
+$result=mysql_db_query($dbname,$sql);
+*/
 
 if ($result) {
 	echo "<h3>ตรวจเรียบร้อย </h3>";
