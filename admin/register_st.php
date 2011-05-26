@@ -78,9 +78,8 @@ if ($sess_table<>admin) {
         <!-- start of middle column -->
         
     	<div id="templatemo_middle_column"><center>
-<p><h1>:: นักศึกษาที่ลงทะเบียนเข้ามา ::</h1></center><br><br>
-[ <a href="mstudent.php">Manage Student</a> ]<br>
-<br>
+<p><h1>:: นักศึกษาที่ลงทะเบียนผ่านเว็บ  ::</h1></center><br><br>
+<p><a href="main.php">Back Main</a>&gt;<a href="mstudent.php"> Student Management</a>&gt; นักศึกษาที่ลงทะเบียนผ่านเว็บ </p><br><br>
 <form name="form1" method="post" action="">
   <table border="1">
     <tr bgcolor="#D3D3D3">

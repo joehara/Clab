@@ -7,9 +7,7 @@ if ($sess_table<>admin) {
 ?>
 <HTML>
 <HEAD><TITLE>Import Student From File</TITLE></HEAD>
-<meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
-<meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
-<link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
+<link href="/Clab/templatemo_style.css" rel="stylesheet" type="text/css" />
 <meta content="text/html; charset=utf-8" http-equiv="content-type">
 <style type="text/css">
 <!--
@@ -79,15 +77,14 @@ if ($sess_table<>admin) {
         
     	<div id="templatemo_middle_column"><center>
 <h1>:: Import student from file ::</h1><br></center>
-[ <a href="mstudent.php">Manage Student</a> ]<br>
-<br>
+<p><a href="main.php">Back Main</a>&gt;<a href="mstudent.php"> Student Management</a>&gt; Import student from file</p><br><br>
 <table border="0">
 <tr>
 <tr><td><center><b>วิธีการนำข้อมูลนักเรียนเข้า database</b></center></td></tr>
-<tr><td>1.download file ต้นฉบับ นาสกุล CSV &nbsp;&nbsp;<a href="EXEM/Book1.csv">download here</a></td></tr>
-<tr><td>2.เปิด file โดยใช้ โปรแกรม microsoft excel หรือ  OpenOffice Spreadsheet</td></tr>
+<tr><td>1.download file ต้นฉบับ นามสกุล CSV &nbsp;&nbsp;<a href="EXEM/Book1.csv">download here</a></td></tr>
+<tr><td>2.เปิด file โดยใช้ โปรแกรม  OpenOffice Spreadsheet</td></tr>
 <tr><td>3.พิมพ์ข้อมูลโดยพิมพ์เรียงลงมาทีละแถวดังตัวอย่าง ของไฟล์ต้นฉบับ โดยข้อมูลต้องเรียงตามลงมา</td></tr>
-<tr><td>4. Save โดย Save ให้เป็น นาสกุล CSV ตามเดิม</td></tr>
+<tr><td>4. Save โดย Save ให้เป็น นามสกุล CSV ตามเดิม</td></tr>
 <tr><td>5.Browse ข้อมูลจากปุ่มด้านล่าง แล้วเลือกไฟล์ที่ทำการ Save ไว้</center></td></tr>
 <tr><td>
   <input name="fileCSV" type="file" id="fileCSV"><br>

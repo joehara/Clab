@@ -79,7 +79,7 @@ if ($sess_table<>admin) {
         
     	<div id="templatemo_middle_column"><center>
 <p><h1>:: Add Teacher ::</h1></center><br><br>
-<a href="main.php">Back Main</a>&gt;<a href="mteacher.php">Manage Teacher</a>&gt;Add Teacher<br><br>
+<a href="main.php">Back Main</a>&gt;<a href="mteacher.php"> Teacher Management</a>&gt; Add Teacher<br><br>
 <form METHOD="POST" action="addteacher2.php" name="teacher">
   <table  border="0" cellpadding="2" cellspacing="2">
     <tbody>

@@ -2,7 +2,7 @@
  include "../chksession.php";
  include "../function.php";
 if ($sess_table<>admin) {
-	header( "Location: ../index.html"); 	exit();
+	header( "Location: /Clab/index.html"); 	exit();
 }
 
 $section=$_GET[section];
@@ -13,9 +13,7 @@ $student_id=$_GET[id];
 
 <HTML>
 <HEAD><TITLE>ผลคะแนน</TITLE></HEAD>
-<meta name="keywords" content="Business Website, free templates, website templates, 3-column layout, CSS, XHTML" />
-<meta name="description" content="Business Website, 3-column layout, free CSS template from templatemo.com" />
-<link href="../templatemo_style.css" rel="stylesheet" type="text/css" />
+<link href="/Clab/templatemo_style.css" rel="stylesheet" type="text/css" />
 <meta content="text/html; charset=utf-8" http-equiv="content-type">
 <style type="text/css">
 <!--
@@ -106,7 +104,7 @@ $teacher_check=$record[teacher_check];
 $check_date=$record[check_date];
 ?>
     &nbsp;<br />
-    [ <a href="main.php">Back Main</a> &gt; <a href="m_scroll.php">Manage Score</a>&nbsp;&gt;<a href="m_scroll_name.php?section=<?=$section?>">รายชื่อที่ส่งงานเข้ามา</a>&gt;<a href="m_scroll_lesson.php?section=<?=$section?>&amp;id=<?=$student_id?>">บทต่างๆที่ส่งเข้ามา</a>&gt;<a href="m_scroll_question.php?section=<?=$section?>&amp;id=<?=$student_id?>&amp;lesson=<?=$lesson?>">ข้อต่างๆที่ส่งเข้ามา</a>&gt;ผลคะแนน</p><br>
+<a href="main.php">Back Main</a> &gt; <a href="m_scroll.php"> Score Management ]</a>&nbsp;&gt;<a href="m_scroll_name.php?section=<?=$section?>"> รายชื่อที่ส่งงานเข้ามา</a>&gt;<a href="m_scroll_lesson.php?section=<?=$section?>&amp;id=<?=$student_id?>"> บทต่างๆที่ส่งเข้ามา</a>&gt;<a href="m_scroll_question.php?section=<?=$section?>&amp;id=<?=$student_id?>&amp;lesson=<?=$lesson?>"> ข้อต่างๆที่ส่งเข้ามา</a>&gt; ผลคะแนน</p><br>
 <form id="form1" name="form1" method="post" action="m_scroll_result2.php">
   <table width="100%" border="0">
     <tr>

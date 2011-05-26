@@ -81,7 +81,7 @@ if ($sess_table<>admin) {
         
     	<div id="templatemo_middle_column"><center>
 <p><h1>:: Add Student ::</h1></center><br>
-<p><a href="main.php">Back Main</a>&gt;<a href="mstudent.php">Manage Student</a>&gt;Add Student</p><br>
+<p><a href="main.php">Back Main</a>&gt;<a href="mstudent.php"> Student Management</a>&gt; Add Student</p><br>
 
 <FORM METHOD="POST" ACTION="addstudent2.php">
   <TABLE CELLSPACING="2">
@@ -102,7 +102,7 @@ if ($sess_table<>admin) {
  ?>  
   <option value="<?=$rs[section_name]?>" selected><?=$rs[section_name]?></option>  
  <?php } ?>      
-                            </select>&nbsp;<a href="add_section.php" target="_blank">add</a></TD>
+                            </select>&nbsp;</TD>
     </TR>
     <TR>
       <TD><strong>ปีการศึกษา :</strong></TD>
@@ -116,7 +116,7 @@ if ($sess_table<>admin) {
   <option value="<?=$rs2[Academic_detail]?>" selected><?=$rs2[Academic_detail]?></option>  
  <?php } ?>      
                             </select>
-        <a href="add_academic_year.php">add</a>
+        
       </label></TD>
     </TR>
     <TR>

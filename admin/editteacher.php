@@ -98,7 +98,7 @@ mysql_close();
         
     	<div id="templatemo_middle_column"><center>
 <h1>:: Edit Teacher ::</h1></center><br><br>
-<a href="main.php">Back Main</a>&gt;<a href="mteacher.php">Manage Teacher</a>&gt;Edit Teacher<br>
+<a href="main.php">Back Main</a>&gt;<a href="mteacher.php"> Teacher Management</a>&gt; Edit Teacher<br>
 <br>
 <form METHOD="POST" action="editteacher2.php?id=<?=$id_edit?>" name="teacher">
   <table  border="0" cellpadding="2" cellspacing="2">

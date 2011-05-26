@@ -78,12 +78,13 @@ if ($sess_table<>admin) {
         <!-- start of middle column -->
         
     	<div id="templatemo_middle_column"><center>
- <H1>:: Manage Student ::</H1></center><br><br>
+ <H1>:: Student Management ::</H1></center><br><br>
+<a href="main.php">Back Main</a>&gt; Student Management<br><br><br>
 <table border="0">
 <tr>
-<td><center><a href="addstudent.php"><img src="../images/userblue_add.png" alt="Add Student" /><br> Add Student </a></center></td>
-<td><center><a href="import.php"><img src="../images/import_document.png" alt="Import file" /><br> Import file </a></center></td>
-<td><center><a href="register_st.php"><img src="../images/user_expert.png" alt="นักศึกษาที่ลงทะเบียนผ่านเว็บ" /><br> นักศึกษาที่ลงทะเบียนผ่านเว็บ </a></center></td>
+<td><center><a href="addstudent.php"><img src="/Clab/images/userblue_add.png" alt="Add Student" /><br> Add Student </a></center></td>
+<td><center><a href="import.php"><img src="/Clab/images/import_document.png" alt="Import file" /><br> Import file </a></center></td>
+<td><center><a href="register_st.php"><img src="/Clab/images/user_expert.png" alt="นักศึกษาที่ลงทะเบียนผ่านเว็บ" /><br> นักศึกษาที่ลงทะเบียนผ่านเว็บ </a></center></td>
 </tr>
 </table>
 

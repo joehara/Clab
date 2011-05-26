@@ -2,7 +2,7 @@
 include "../chksession.php";
 
 if ($sess_table<>admin) {
-	header( "Location: ../index.html"); 	exit();
+	header( "Location: /Clab/index.html"); 	exit();
 }
 $id=$_GET[id];
 $lesson=$_GET[lesson];
@@ -114,7 +114,7 @@ mysql_close();
         <!-- start of middle column -->
         
     	<div id="templatemo_middle_column">
-[ <a href="proposition.php?id=<?=$id?>&lesson=<?=$lesson?>">Back Question</a> ][ <a href="main.php">Back Main</a> ]
+<a href="main.php">Back Main</a> &gt;<a href="m_lesson.php"> Lesson Management</a>&gt;<a href="proposition.php?id=<?=$id?>&lesson=<?=$lesson?>"> Question</a>&gt; Edit Question<br>
 <script type="text/javascript" src="../ckeditor/ckeditor.js"></script>
   <title>Question</title>
 

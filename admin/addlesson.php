@@ -87,7 +87,7 @@ $code++;
         
     	<div id="templatemo_middle_column"><center>
 <h1>:: Add Lesson ::</h1></center><br><br>
- [ <a href="main.php">Back Main</a> &gt;<a href="m_lesson.php">Manage Lesson</a>&gt;Add Lesson<br>
+<a href="main.php">Back Main</a> &gt;<a href="m_lesson.php"> Lesson Management</a>&gt; Add Lesson<br>
     <br><form method="post" action="addlesson2.php">
   <table border="0" cellpadding="2" cellspacing="2">
     <tbody>

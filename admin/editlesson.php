@@ -90,7 +90,7 @@ $time=$record[time];
     	<div id="templatemo_middle_column">
 <center>
 <h1>: Edit Lesson::</h1></center><br><br>
-  <a href="main.php">&nbsp;Back Main</a>&gt;<a href="m_lesson.php">Manage Lesson</a>&gt;Edit Lesson<br>
+  <a href="main.php">&nbsp;Back Main</a>&gt;<a href="m_lesson.php"> Management Lesson</a>&gt; Edit Lesson<br>
   <br>
   <form method="post" action="editlesson2.php?id_edit=<?=$id_edit;?>">
   <table border="0" cellpadding="2" cellspacing="2">

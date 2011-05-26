@@ -82,7 +82,7 @@ $lesson=$_GET[lesson];
         
     	<div id="templatemo_middle_column"><center>
 <h1>:: QUESTION ::</h1></center><br><br>
-<p>[<a href="main.php">Main</a>&gt;<a href="m_lesson.php">Manage Lesson</a>&gt;Question<br>
+<p><a href="main.php">Back Main</a>&gt;<a href="m_lesson.php"> Lesson Management</a>&gt;Question<br>
 <br>
 <?
 include "../connect.php";
