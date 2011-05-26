@@ -8,14 +8,11 @@ $lesson=$_POST[headlesson];
 $section=$_POST[section];
 $year=$_POST[year];
 $time=$_POST[time];
-
-
 ?>
 
 <html>
-<body>
+<? require "_header.php"; ?>
 
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <?
 
 $today=date("Y-m-d"); 
@@ -49,5 +46,6 @@ if($result2){
 echo"<a href='fix_send.php'>เรียบร้อยแล้วครับ</a>";
 }
 ?>
-</body>
+
+<? require "_footer.php"; ?>
 </html>

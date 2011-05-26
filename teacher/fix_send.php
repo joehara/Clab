@@ -1,61 +1,14 @@
 <?
+include "../chksession.php";
+
+if ($sess_table<>teacher) {
+        header( "Location: ../index.html");     exit();
+}
+
 include "../connect.php";
 ?>
 <html>
-<body>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
-<link rel="stylesheet" type="text/css" href="../css/smoothness/jquery-ui-1.7.2.custom.css">  
-    <script type="text/javascript" src="../js/jquery-1.3.2.min.js"></script>  
-    <script type="text/javascript" src="../js/jquery-ui-1.7.2.custom.min.js"></script>  
-    <script type="text/javascript">  
-  
-$(function(){  
-    // แทรกโค้ต jquery  
-    $("#dateInput").datepicker({ dateFormat: 'yy-mm-dd' });  
-    // รูปแบบวันที่ที่ได้จะเป็น 2009-08-16  
-});
-	
-    </script>  
-    <style type="text/css">  
-.ui-datepicker{  
-    width:150px;  
-    font-family:tahoma;  
-    font-size:11px;  
-    text-align:center;  
-}  
-</style> 
-<style type="text/css">
-/* class สำหรับแถวส่วนหัวของตาราง */
-.tr_head{ 
-	background-color:#333333;
-	color:#FFFFFF;
-}
-/* class สำหรับแถวแรกของรายละเอียด */
-.tr_odd{
-	background-color:#99FFCC;
-}
-/* class สำหรับแถวสองของรายละเอียด */
-.tr_even{
-	background-color:#F2F2F2;
-}
-</style>
-
-<script language="javascript">
-  window.onload = function () {    
-	 	var a=document.getElementById('mytable'); // อ้างอิงตารางด้วยตัวแปร a
-		for(i=0;i<a.rows.length;i++){ // วน Loop นับจำนวนแถวในตาราง
-			if(i>0){  // ตรวจสอบถ้าไม่ใช่แถวหัวข้อ
-				if(i%2==1){   // ตรวจสอบถ้าไม่ใช่แถวรายละเอียด
-					a.rows[i].className="tr_odd";	  // กำหนด class แถวแรก
-				}else{
-					a.rows[i].className="tr_even";	// กำหนด class แถวที่สอง
-				}	
-			}else{ // ถ้าเป็นแถวหัวข้อกำหนด class 
-				a.rows[i].className="tr_head";	
-			}	
-		}
- }
- </script>
+<? require "_header.php"; ?>
 <h1>กำหนดระยะเวลาในการส่งงาน<br></h1>
 <a href="mstudent.php">Back</a>
 <form name="form1" method="post" action="fix_send2.php">
@@ -124,8 +77,6 @@ $count++;} ?>
     <td width="28%"><div align="center">กำหนดเวลาที่ต้องส่ง</div></td>
   </tr>
 
-
-
 <?
 
 $sql="select * from time_fix ";
@@ -149,5 +100,6 @@ echo"
 ?>
 <p>&nbsp;</p>
 </table>
-</body>
+
+<? require "_footer.php"; ?>
 </html>
