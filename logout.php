@@ -3,5 +3,5 @@
 	unset( $_SESSION['sess_userid']);
 	unset( $_SESSION['sess_username']);
 	session_destroy();
-	header('Location: ../index.html');
+	header('Location: index.html');
 ?>

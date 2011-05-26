@@ -13,7 +13,7 @@ if ($sess_table<>teacher) {
 <center>
 <table border="1">
 <tr bgcolor="#D3D3D3">
-<td>ลำดับ</td><td><center>ห้อง</center></td><td>ปีการศึกษา</td><td>รายงานผล</td>
+<td>ลำดับ</td><td>ปีการศึกษา</td><td><center>ห้อง</center></td><td>รายงานผล</td>
 </tr>
 
 <?
@@ -23,7 +23,7 @@ $sqlx="select * from teacher where username='$sess_username'";
 $resultx=mysql_db_query($dbname,$sqlx);
 $record=mysql_fetch_array($resultx);
 
-$sql="select * from check_answer,sendanswer,student where check_answer.ref_answer=sendanswer.answer_id and sendanswer.ref_student=student.student_id and student.teach='$record[name]' group by student.year";
+$sql="select distinct year,section from student where teach='$record[name]' order by year, section";
 
 
 $result=mysql_db_query($dbname,$sql);
@@ -31,9 +31,9 @@ $count=1;
 while($record=mysql_fetch_array($result)){
 echo"<tr>
 <td>$count</td>
-<td>$record[section]</td>
 <td><center>$record[year]</center></td>
-<td><center><a href='report_scroll2.php?section=$record[section]&year=$record[year]'><img src=\"../images/report_magnify.png\"></a></center></td>
+<td>$record[section]</td>
+<td><center><a href='report_score2.php?section=$record[section]&year=$record[year]'><img src=\"../images/report_magnify.png\"></a></center></td>
 </tr>";
 $count++;
 }

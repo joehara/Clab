@@ -23,16 +23,15 @@ if ($sess_table<>teacher) {
 $sqlx="select * from teacher where username='$sess_username'";
 $resultx=mysql_db_query($dbname,$sqlx);
 $record=mysql_fetch_array($resultx);
-
 		
-				$sql="select student.section,student.year from check_answer,sendanswer,student where check_answer.ref_answer=sendanswer.answer_id and sendanswer.ref_student=student.student_id and student.teach='$record[name]' GROUP BY student.section";
+	$sql="select student.section,student.year from sendanswer,student where sendanswer.ref_student=student.student_id and student.teach='$record[name]' and status = 1 GROUP BY student.section";
  		$result=mysql_db_query($dbname,$sql);
 	while($record=mysql_fetch_array($result)) {
 		
 		
 		echo "<tr> 
 			<td>$count</td>
-			<td><a href=\"check_al2.php?section=$record[section]\">$record[section]</a></td>
+			<td><a href=\"check_al2.php?section=$record[section]&year=$record[year]\">$record[section]</a></td>
 			<td>$record[year]</td>
 		    </tr>";
 			$count++;	
