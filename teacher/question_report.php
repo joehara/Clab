@@ -4,8 +4,6 @@ include "../chksession.php";
 if ($sess_table<>teacher) {
 	header( "Location: ../index.html"); 	exit();
 }
-
-  $lesson=$_GET[lesson];
   $section=$_GET[section];
   $student_id=$_GET[student];
   $year=$_GET[year];
@@ -21,15 +19,13 @@ if ($sess_table<>teacher) {
 <tr bgcolor="#D3D3D3">
 <td>NO.</td>
 <td>บทที่ส่งเข้ามา</td>
-<td>จำนวนข้อยาก</td>
-<td>จำนวนข้อง่าย</td>
 
 </tr>
 <?
 
 $count=1;
 include "../connect.php";
-$sql="select * from sendanswer,proposition,student,headlesson where (sendanswer.ref_question=proposition.question_id and sendanswer.ref_student=student.student_id and proposition.ref_lesson=headlesson.lesson) and student.student_id='$student_id' GROUP BY proposition.ref_lesson order by proposition.ref_lesson";
+$sql="select * from sendanswer,proposition,student,headlesson where (status = 0 and sendanswer.ref_question=proposition.question_id and sendanswer.ref_student=student.student_id and proposition.ref_lesson=headlesson.lesson) and student.student_id='$student_id' GROUP BY proposition.ref_lesson order by proposition.ref_lesson";
 $result=mysql_db_query($dbname,$sql);
 while($record=mysql_fetch_array($result)) {
 
@@ -37,9 +33,6 @@ echo "
 <tr>
 <td>$count</td>
 <td><a href=\"question_report2.php?id=$student_id&lesson=$record[ref_lesson]&section=$record[section]&year=$record[year]\">lesson $record[lesson] $record[detail]</a></td>
-<td><center>$record[hard]</center></td>
-<td><center>$record[easy]</center></td>
-
 </tr>";
 $count++;
 
