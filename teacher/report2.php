@@ -26,16 +26,16 @@ $record=mysql_fetch_array($resultx);
   $year=$_GET[year];
   $lesson=$_GET[lesson];
   $student_id=$_GET[student];
-	$count=1;
+  $count=1;
 	
-	$sql="select student.student_id,student.name,headlesson.lesson,student.section,student.year from sendanswer,proposition,student,headlesson  where (sendanswer.ref_question=proposition.question_id and sendanswer.ref_student=student.student_id and proposition.ref_lesson=headlesson.lesson )and student.section='$section' and student.teach='$record[name]'  and student.year='$year' GROUP BY student.name";
+	$sql="select student.student_id,student.name,student.section,student.year from sendanswer,proposition,student,headlesson  where (sendanswer.ref_question=proposition.question_id and sendanswer.ref_student=student.student_id and proposition.ref_lesson=headlesson.lesson )and student.section='$section' and student.teach='$record[name]'  and student.year='$year' and status = 0 GROUP BY student.name";
 	$result=mysql_db_query($dbname,$sql);
 	while($record=mysql_fetch_array($result)) {
 		
 
 		echo "<tr> 
 			<td>$count</td>
-			<td><a href=\"question_report.php?lesson=$record[lesson]&section=$record[section]&student=$record[student_id]&year=$record[year]\">$record[name]</a></td>
+			<td><a href=\"question_report.php?section=$record[section]&student=$record[student_id]&year=$record[year]\">$record[name]</a></td>
 			
 		</tr>";
 	
