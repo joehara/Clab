@@ -2,7 +2,7 @@
 include "../chksession.php";
 
 if ($sess_table<>admin) {
-	header( "Location: /Clab/index.html"); 	exit();
+	header( "Location: ../index.html"); 	exit();
 }
  $section=$_GET[section];
   $student_id=$_GET[id];
@@ -27,14 +27,13 @@ if ($sess_table<>admin) {
  
 	include "../connect.php";
 	$count=1;
-	$sql="select proposition.proposition,proposition.question_id from check_answer,sendanswer,proposition,student where (check_answer.ref_answer=sendanswer.answer_id and sendanswer.ref_student=student.student_id and   									    sendanswer.ref_question=proposition.question_id ) and sendanswer.ref_student='$student_id'  and proposition.ref_lesson='$lesson' GROUP BY proposition.proposition ORDER BY proposition.question_id";
+	$sql="select proposition.proposition,proposition.question_id from sendanswer,proposition,student where (sendanswer.ref_student=student.student_id and sendanswer.ref_question=proposition.question_id ) and sendanswer.ref_student='$student_id'  and proposition.ref_lesson='$lesson' GROUP BY proposition.proposition and status = 1 ORDER BY proposition.question_id";
  		$result=mysql_db_query($dbname,$sql);
 	while($record=mysql_fetch_array($result)) {
 	
-
 		echo "<tr> 
 			<td>$count</td>
-			<td><a href=\"m_scroll_result.php?section=$section&id=$student_id&question_id=$record[question_id]\">$record[proposition]</a></td>
+			<td><a href=\"m_score_result.php?section=$section&id=$student_id&question_id=$record[question_id]\">$record[proposition]</a></td>
 		</tr>";
 			
 $count++;

@@ -1,4 +1,3 @@
-
 <?
 include "../chksession.php";
 
@@ -25,13 +24,13 @@ if ($sess_table<>admin) {
   <?
  
 	include "../connect.php";
-	$sql="select headlesson.lesson,headlesson.detail from check_answer,sendanswer,proposition,headlesson,student where (check_answer.ref_answer=sendanswer.answer_id and sendanswer.ref_student=student.student_id and sendanswer.ref_question=proposition.question_id and proposition.ref_lesson=headlesson.lesson) and student.student_id='$student_id' GROUP BY headlesson.lesson";
+	$sql="select headlesson.lesson,headlesson.detail from sendanswer,proposition,headlesson,student where (sendanswer.ref_student=student.student_id and sendanswer.ref_question=proposition.question_id and proposition.ref_lesson=headlesson.lesson) and student.student_id='$student_id' and status = 1 GROUP BY headlesson.lesson";
  		$result=mysql_db_query($dbname,$sql);
 	while($record=mysql_fetch_array($result)) {
 
 		echo "<tr> 
 			<td>$record[lesson]</td>
-			<td><a href=\"m_scroll_question.php?section=$section&id=$student_id&lesson=$record[lesson]\">$record[detail]</a></td>
+			<td><a href=\"m_score_question.php?section=$section&id=$student_id&lesson=$record[lesson]\">$record[detail]</a></td>
 		</tr>";
 			
 
